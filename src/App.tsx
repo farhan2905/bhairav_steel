@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
   Menu, X, ArrowRight, Phone, Mail, MapPin,
   Factory, Shield, Globe, Lightbulb, Users, Award,
-  CheckCircle2, TrendingUp, Clock, Truck, ChevronDown, Linkedin
+  CheckCircle2, TrendingUp, Clock, Truck, Linkedin
 } from 'lucide-react';
 import './App.css';
 
@@ -37,31 +37,16 @@ function Navigation() {
       ref={navRef}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'glass shadow-lg py-3' 
-          : 'bg-transparent py-5'
+          ? 'bg-white shadow-lg py-3 border-b border-slate-200/80' 
+          : 'bg-slate-950/50 backdrop-blur-md py-5'
       }`}
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 relative transition-transform duration-300 group-hover:scale-110">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <defs>
-                <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#1E3A5F" />
-                  <stop offset="50%" stopColor="#2563eb" />
-                  <stop offset="100%" stopColor="#3b82f6" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M20 20 L50 20 L50 45 L20 45 Z M55 20 L80 20 L80 45 L55 45 Z M20 55 L50 55 L50 80 L20 80 Z M55 55 L80 55 L80 80 L55 80 Z"
-                fill="url(#logoGrad)"
-              />
-              <circle cx="85" cy="15" r="8" fill="#1a56db" />
-            </svg>
-          </div>
-          <span className="font-display font-bold text-xl text-slate-900">
-            Bhairav <span className="text-blue-600">Steel</span>
+          <img src="/brand-logo.png" alt="Bhairav Steel logo" className="brand-logo-nav transition-transform duration-300 group-hover:scale-105" />
+          <span className={`font-display font-bold text-xl ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
+            Bhairav <span className={isScrolled ? 'text-blue-600' : 'text-blue-300'}>Steel</span>
           </span>
         </a>
 
@@ -71,7 +56,9 @@ function Navigation() {
             <a 
               key={link.label} 
               href={link.href} 
-              className="nav-link text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
+              className={`nav-link text-sm font-medium transition-colors ${
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+              }`}
             >
               {link.label}
             </a>
@@ -86,10 +73,16 @@ function Navigation() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          className={`lg:hidden p-2 rounded-lg transition-colors ${
+            isScrolled ? 'hover:bg-slate-100' : 'hover:bg-white/15'
+          }`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X size={24} className="text-slate-700" /> : <Menu size={24} className="text-slate-700" />}
+          {isOpen ? (
+            <X size={24} className={isScrolled ? 'text-slate-700' : 'text-white'} />
+          ) : (
+            <Menu size={24} className={isScrolled ? 'text-slate-700' : 'text-white'} />
+          )}
         </button>
       </div>
 
@@ -127,23 +120,40 @@ function Navigation() {
 function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const heroSlides = [
+    {
+      src: '/hero_foundry.jpg',
+      title: 'Precision Steel, Delivered Fast',
+      subtitle: 'Reliable supply for high-demand projects.',
+    },
+    {
+      src: '/products_stack.jpg',
+      title: 'Built for Infrastructure',
+      subtitle: 'Durable grades for structural performance.',
+    },
+    {
+      src: '/quality_lab.jpg',
+      title: 'Every Batch Tested',
+      subtitle: 'Strict quality control at every stage.',
+    },
+    {
+      src: '/logistics_train.jpg',
+      title: 'Ready for Global Dispatch',
+      subtitle: 'Strong logistics with dependable timelines.',
+    },
+  ];
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Initial load animation
-      gsap.fromTo(contentRef.current,
+      gsap.fromTo(
+        contentRef.current,
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.3 }
       );
-      
-      gsap.fromTo(imageRef.current,
-        { opacity: 0, scale: 1.1 },
-        { opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out', delay: 0.5 }
-      );
 
-      // Scroll parallax for image
-      const heroImage = imageRef.current?.querySelector('img');
+      const heroImage = heroRef.current?.querySelector('.hero-slide-image');
       if (heroImage) {
         gsap.to(heroImage, {
           yPercent: 15,
@@ -153,7 +163,7 @@ function HeroSection() {
             start: 'top top',
             end: 'bottom top',
             scrub: true,
-          }
+          },
         });
       }
     }, heroRef);
@@ -161,201 +171,176 @@ function HeroSection() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 4200);
+
+    return () => window.clearInterval(timer);
+  }, [heroSlides.length]);
+
   return (
-    <section 
-      ref={heroRef} 
-      className="relative min-h-screen flex items-center overflow-hidden gradient-hero"
-    >
-      {/* Background blobs */}
-      <div className="blob bg-blue-200 w-96 h-96 -top-48 -right-48" />
-      <div className="blob bg-slate-200 w-80 h-80 bottom-0 -left-40" />
-      
+    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+      <div className="absolute inset-0 bg-slate-900">
+        {heroSlides.map((slide, index) => (
+          <div key={slide.src} className={`hero-slide ${index === activeSlide ? 'is-active' : ''}`}>
+            <img src={slide.src} alt={slide.title} className="hero-slide-image w-full h-full object-cover" />
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/55 to-slate-900/20" />
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(37,99,235,0.28)_0%,rgba(2,6,23,0.22)_45%,rgba(15,23,42,0.72)_100%)]" />
+      </div>
+
       <div className="container-custom relative z-10 pt-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
-          <div ref={contentRef} className="order-2 lg:order-1">
-            <div className="tag mb-6">
-              <Award size={16} className="mr-2" />
-              Leading Steel Manufacturer
+        <div ref={contentRef} className="max-w-2xl">
+            <div className="inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-xs tracking-wide uppercase text-white/90 mb-5 border border-white/25">
+              Bhairav Steel Industry Partner
             </div>
-            
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-tight mb-6">
-              Forged to <span className="text-blue-600">Last</span>
+
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 max-w-2xl">
+              {heroSlides[activeSlide].title}
             </h1>
-            
-            <p className="text-lg lg:text-xl text-slate-600 mb-8 max-w-xl leading-relaxed">
-              High-strength steel and precision components for infrastructure, 
-              energy, and heavy industry. Quality that stands the test of time.
+
+            <p className="text-sm sm:text-base text-slate-100/90 mb-7 max-w-lg leading-relaxed">
+              {heroSlides[activeSlide].subtitle}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <a href="#products" className="btn-primary">
+            <div className="flex flex-wrap gap-3">
+              <a href="#products" className="btn-primary !py-3 !px-6 text-sm">
                 Explore Products
-                <ArrowRight size={18} />
+                <ArrowRight size={16} />
               </a>
-              <a href="#contact" className="btn-secondary">
+              <a href="#contact" className="btn-secondary !py-3 !px-6 text-sm bg-white/95">
                 Contact Us
               </a>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-200">
-              <div>
-                <div className="stat-number">25+</div>
-                <div className="text-sm text-slate-500 mt-1">Years Experience</div>
-              </div>
-              <div>
-                <div className="stat-number">500+</div>
-                <div className="text-sm text-slate-500 mt-1">Projects Done</div>
-              </div>
-              <div>
-                <div className="stat-number">50+</div>
-                <div className="text-sm text-slate-500 mt-1">Countries Served</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div ref={imageRef} className="order-1 lg:order-2 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="/hero_foundry.jpg" 
-                alt="Steel Manufacturing" 
-                className="w-full h-[400px] lg:h-[600px] object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent" />
-            </div>
-            
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 hidden lg:block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Shield className="text-blue-600" size={24} />
-                </div>
-                <div>
-                  <div className="font-bold text-slate-900">ISO Certified</div>
-                  <div className="text-sm text-slate-500">Quality Assured</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-sm text-slate-400">Scroll to explore</span>
-        <ChevronDown size={20} className="text-slate-400 animate-bounce-slow" />
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2.5">
+        {heroSlides.map((slide, index) => (
+          <button
+            type="button"
+            key={`dot-${slide.src}`}
+            onClick={() => setActiveSlide(index)}
+            className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[11px] tracking-[0.28em] uppercase text-white/75">
+        Scroll
       </div>
     </section>
   );
 }
 
 // About Section
-function AboutSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+      function AboutSection() {
+        const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.about-content',
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 70%',
-            toggleActions: 'play none none reverse',
-          }
-        }
-      );
+        useEffect(() => {
+          const ctx = gsap.context(() => {
+            gsap.fromTo('.about-content',
+              { opacity: 0, y: 40 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                  trigger: sectionRef.current,
+                  start: 'top 70%',
+                  toggleActions: 'play none none reverse',
+                }
+              }
+            );
 
-      gsap.fromTo('.about-image',
-        { opacity: 0, x: 50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 60%',
-            toggleActions: 'play none none reverse',
-          }
-        }
-      );
-    }, sectionRef);
+            gsap.fromTo('.about-image',
+              { opacity: 0, x: 50 },
+              {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+                scrollTrigger: {
+                  trigger: sectionRef.current,
+                  start: 'top 60%',
+                  toggleActions: 'play none none reverse',
+                }
+              }
+            );
+          }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+          return () => ctx.revert();
+        }, []);
 
-  const features = [
-    'State-of-the-art manufacturing facility',
-    'ISO 9001:2015 certified processes',
-    'Dedicated R&D team',
-    'Global supply chain network',
-  ];
+        const features = [
+          'State-of-the-art manufacturing facility',
+          'ISO 9001:2015 certified processes',
+          'Dedicated R&D team',
+          'Global supply chain network',
+        ];
 
-  return (
-    <section ref={sectionRef} id="about" className="section-padding bg-white relative">
-      <div className="blob bg-blue-100 w-64 h-64 top-20 right-0" />
+        return (
+          <section ref={sectionRef} id="about" className="section-padding bg-white relative">
+            <div className="blob bg-blue-100 w-64 h-64 top-20 right-0" />
       
-      <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
-          <div className="about-image relative">
-            <div className="rounded-3xl overflow-hidden shadow-xl img-zoom">
-              <img 
-                src="/about_facade.jpg" 
-                alt="Bhairav Steel Facility" 
-                className="w-full h-[400px] lg:h-[500px] object-cover"
-              />
+            <div className="container-custom relative z-10">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                {/* Image */}
+                <div className="about-image relative">
+                  <div className="rounded-3xl overflow-hidden shadow-xl img-zoom">
+                    <img 
+                      src="/about_facade.jpg" 
+                      alt="Bhairav Steel Facility" 
+                      className="w-full h-[400px] lg:h-[500px] object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-blue-600 rounded-3xl -z-10 hidden lg:block" />
+                </div>
+
+                {/* Content */}
+                <div className="about-content">
+                  <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">About Us</span>
+                  <div className="line-deco mt-4 mb-6" />
+            
+                  <h2 className="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-6">
+                    Decades of Excellence in Steel Manufacturing
+                  </h2>
+            
+                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                    Founded on principles of precision and quality, Bhairav Steel has evolved 
+                    into a leading manufacturer of high-performance steel products. Our journey 
+                    from a modest beginning to an industry leader reflects our unwavering 
+                    commitment to excellence.
+                  </p>
+            
+                  <p className="text-slate-600 leading-relaxed mb-8">
+                    We serve diverse sectors including infrastructure, energy, automotive, 
+                    and heavy industry with products that meet the highest international standards.
+                  </p>
+
+                  <ul className="space-y-4 mb-8">
+                    {features.map((feature, index) => (
+                      <li key={index} className="flex items-center gap-3">
+                        <CheckCircle2 className="text-blue-600 flex-shrink-0" size={20} />
+                        <span className="text-slate-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href="#contact" className="btn-primary">
+                    Learn More
+                    <ArrowRight size={18} />
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-blue-600 rounded-3xl -z-10 hidden lg:block" />
-          </div>
-
-          {/* Content */}
-          <div className="about-content">
-            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <div className="line-deco mt-4 mb-6" />
-            
-            <h2 className="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-6">
-              Decades of Excellence in Steel Manufacturing
-            </h2>
-            
-            <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Founded on principles of precision and quality, Bhairav Steel has evolved 
-              into a leading manufacturer of high-performance steel products. Our journey 
-              from a modest beginning to an industry leader reflects our unwavering 
-              commitment to excellence.
-            </p>
-            
-            <p className="text-slate-600 leading-relaxed mb-8">
-              We serve diverse sectors including infrastructure, energy, automotive, 
-              and heavy industry with products that meet the highest international standards.
-            </p>
-
-            <ul className="space-y-4 mb-8">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <CheckCircle2 className="text-blue-600 flex-shrink-0" size={20} />
-                  <span className="text-slate-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <a href="#contact" className="btn-primary">
-              Learn More
-              <ArrowRight size={18} />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+          </section>
+        );
+      }
 
 // Products Section
 function ProductsSection() {
@@ -982,20 +967,8 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 relative">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#60a5fa" />
-                      <stop offset="100%" stopColor="#3b82f6" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M20 20 L50 20 L50 45 L20 45 Z M55 20 L80 20 L80 45 L55 45 Z M20 55 L50 55 L50 80 L20 80 Z M55 55 L80 55 L80 80 L55 80 Z"
-                    fill="url(#footerLogoGrad)"
-                  />
-                  <circle cx="85" cy="15" r="8" fill="#3b82f6" />
-                </svg>
+              <div className="footer-logo-badge">
+                <img src="/brand-logo.png" alt="Bhairav Steel logo" className="brand-logo-footer" />
               </div>
               <span className="font-display font-bold text-xl">
                 Bhairav <span className="text-blue-400">Steel</span>
@@ -1103,3 +1076,4 @@ function App() {
 }
 
 export default App;
+
