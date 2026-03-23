@@ -281,6 +281,43 @@
   background: rgba(255, 255, 255, 0.98);
 }
 
+.hero-dot-light {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.hero-dot-light.is-active {
+  background: #1d4ed8;
+}
+
+.hero-box-wrap {
+  position: relative;
+}
+
+.hero-box-frame {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  height: clamp(320px, 50vw, 520px);
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 28px 65px -38px rgba(15, 23, 42, 0.55);
+  background: #ffffff;
+}
+
+.hero-box-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.8s ease, transform 4s ease;
+}
+
+.hero-box-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .brand-logo-nav {
   width: 60px;
   height: 60px;

@@ -38,15 +38,15 @@ function Navigation() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
           ? 'bg-white shadow-lg py-3 border-b border-slate-200/80' 
-          : 'bg-slate-950/50 backdrop-blur-md py-5'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
           <img src="/brand-logo.png" alt="Bhairav Steel logo" className="brand-logo-nav transition-transform duration-300 group-hover:scale-105" />
-          <span className={`font-display font-bold text-xl ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
-            Bhairav <span className={isScrolled ? 'text-blue-600' : 'text-blue-300'}>Steel</span>
+          <span className={`font-display font-bold text-xl ${isScrolled ? 'text-slate-900' : 'text-slate-900'}`}>
+            Bhairav <span className={isScrolled ? 'text-blue-600' : 'text-blue-600'}>Steel</span>
           </span>
         </a>
 
@@ -57,7 +57,7 @@ function Navigation() {
               key={link.label} 
               href={link.href} 
               className={`nav-link text-sm font-medium transition-colors ${
-                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white/90 hover:text-white'
+                isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-slate-700 hover:text-blue-600'
               }`}
             >
               {link.label}
@@ -74,14 +74,14 @@ function Navigation() {
         {/* Mobile Menu Button */}
         <button
           className={`lg:hidden p-2 rounded-lg transition-colors ${
-            isScrolled ? 'hover:bg-slate-100' : 'hover:bg-white/15'
+            isScrolled ? 'hover:bg-slate-100' : 'hover:bg-slate-100'
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <X size={24} className={isScrolled ? 'text-slate-700' : 'text-white'} />
+            <X size={24} className={isScrolled ? 'text-slate-700' : 'text-slate-700'} />
           ) : (
-            <Menu size={24} className={isScrolled ? 'text-slate-700' : 'text-white'} />
+            <Menu size={24} className={isScrolled ? 'text-slate-700' : 'text-slate-700'} />
           )}
         </button>
       </div>
@@ -143,6 +143,11 @@ function HeroSection() {
       title: 'Ready for Global Dispatch',
       subtitle: 'Strong logistics with dependable timelines.',
     },
+    {
+      src: '/about_facade.jpg',
+      title: 'Experience You Can Build On',
+      subtitle: 'Decades of steel expertise for demanding industries.',
+    },
   ];
 
   useEffect(() => {
@@ -152,20 +157,6 @@ function HeroSection() {
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.3 }
       );
-
-      const heroImage = heroRef.current?.querySelector('.hero-slide-image');
-      if (heroImage) {
-        gsap.to(heroImage, {
-          yPercent: 15,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: heroRef.current,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true,
-          },
-        });
-      }
     }, heroRef);
 
     return () => ctx.revert();
@@ -180,28 +171,21 @@ function HeroSection() {
   }, [heroSlides.length]);
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-slate-900">
-        {heroSlides.map((slide, index) => (
-          <div key={slide.src} className={`hero-slide ${index === activeSlide ? 'is-active' : ''}`}>
-            <img src={slide.src} alt={slide.title} className="hero-slide-image w-full h-full object-cover" />
-          </div>
-        ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/55 to-slate-900/20" />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(37,99,235,0.28)_0%,rgba(2,6,23,0.22)_45%,rgba(15,23,42,0.72)_100%)]" />
-      </div>
+    <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-slate-100 pt-28 pb-16 lg:pb-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.12),transparent_52%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_45%)]" />
 
-      <div className="container-custom relative z-10 pt-24">
-        <div ref={contentRef} className="max-w-2xl">
-            <div className="inline-flex items-center rounded-full bg-white/15 px-4 py-2 text-xs tracking-wide uppercase text-white/90 mb-5 border border-white/25">
+      <div className="container-custom relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div ref={contentRef} className="max-w-2xl">
+            <div className="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs tracking-wide uppercase text-slate-700 mb-5 border border-slate-200 shadow-sm">
               Bhairav Steel Industry Partner
             </div>
 
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 max-w-2xl">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-4 max-w-2xl">
               {heroSlides[activeSlide].title}
             </h1>
 
-            <p className="text-sm sm:text-base text-slate-100/90 mb-7 max-w-lg leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 mb-7 max-w-lg leading-relaxed">
               {heroSlides[activeSlide].subtitle}
             </p>
 
@@ -214,23 +198,30 @@ function HeroSection() {
                 Contact Us
               </a>
             </div>
+          </div>
+
+          <div className="hero-box-wrap">
+            <div className="hero-box-frame">
+              {heroSlides.map((slide, index) => (
+                <div key={slide.src} className={`hero-box-slide ${index === activeSlide ? 'is-active' : ''}`}>
+                  <img src={slide.src} alt={slide.title} className="hero-slide-image w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-2.5">
-        {heroSlides.map((slide, index) => (
-          <button
-            type="button"
-            key={`dot-${slide.src}`}
-            onClick={() => setActiveSlide(index)}
-            className={`hero-dot ${index === activeSlide ? 'is-active' : ''}`}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[11px] tracking-[0.28em] uppercase text-white/75">
-        Scroll
+        <div className="flex gap-2.5 mt-8 lg:mt-10">
+          {heroSlides.map((slide, index) => (
+            <button
+              type="button"
+              key={`dot-${slide.src}`}
+              onClick={() => setActiveSlide(index)}
+              className={`hero-dot hero-dot-light ${index === activeSlide ? 'is-active' : ''}`}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
