@@ -1,0 +1,52 @@
+/* App-specific styles for light theme */
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main layout */
+main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Selection color for light theme */
+::selection {
+  background: rgba(26, 86, 219, 0.2);
+  color: #1e293b;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #f1f5f9;
+}
+
+/* Prevent layout shift */
+img[src] {
+  background-color: transparent;
+}
