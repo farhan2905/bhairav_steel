@@ -1,4 +1,4 @@
-import { CheckCircle2, ExternalLink, Factory, FlaskConical, Package, Tag, Layers, Beaker } from 'lucide-react';
+import { CheckCircle2, Factory, FlaskConical, Package, Tag, Layers, Beaker } from 'lucide-react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { DetailLayout } from '../components/detail-layout';
 import { getProductBySlugs } from '../lib/products-data';
@@ -148,7 +148,7 @@ export default function ProductDetailPage() {
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600">
                   <FlaskConical className="text-white" size={18} />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-slate-900">Product Specifications</h3>
+                <h3 className="font-display text-2xl font-bold text-slate-900">Specifications & Composition</h3>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[480px] border-collapse">
@@ -161,7 +161,7 @@ export default function ProductDetailPage() {
                   <tbody>
                     {product.specTable.map((row, idx) => (
                       <tr
-                        key={`${row.parameter}-${idx}`}
+                        key={`${row.parameter}-${idx}-spec`}
                         className={`border-b border-slate-100 text-sm ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}`}
                       >
                         <td className="py-3.5 pr-6 font-semibold text-slate-800">{row.parameter}</td>
@@ -200,22 +200,7 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
-          {/* ── Reference Source ── */}
-          <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="flex-1">
-              <p className="text-xs uppercase tracking-wide text-slate-500 font-medium">Reference Source</p>
-              <p className="text-slate-700 text-sm mt-1">This product is part of RSFA Metaliks' verified product portfolio. View the original product page for additional context.</p>
-            </div>
-            <a
-              href={product.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
-            >
-              <ExternalLink size={15} />
-              View Source Page
-            </a>
-          </div>
+
 
         </div>
       </section>
