@@ -31,23 +31,24 @@ export default function ProductCategoryPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
             {category.products.map((item) => (
-              <article key={item.slug} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1">
+              <Link
+                key={item.slug}
+                to={`/products/${category.slug}/${item.slug}`}
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1"
+              >
                 <div className="h-36 sm:h-40 overflow-hidden">
-                  <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+                  <img src={item.image} alt={item.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-4 sm:p-5">
-                  <h3 className="font-display text-lg font-bold text-slate-900">{item.name}</h3>
+                  <h3 className="font-display text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{item.name}</h3>
                   <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2">{item.shortDescription}</p>
                   <p className="mt-2 text-xs sm:text-sm font-semibold text-blue-600">{item.commonSpecs}</p>
-                  <Link
-                    to={`/products/${category.slug}/${item.slug}`}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
-                  >
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
                     View Details
                     <ArrowRight size={16} />
-                  </Link>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
 

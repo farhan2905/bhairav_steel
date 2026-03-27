@@ -3,6 +3,11 @@ export type SpecRow = {
   value: string;
 };
 
+export type SubProductItem = {
+  name: string;
+  specTable: SpecRow[];
+};
+
 export type ProductItem = {
   name: string;
   slug: string;
@@ -14,6 +19,7 @@ export type ProductItem = {
   specTable: SpecRow[];
   physicalSpecs?: string[];
   variants?: string[];
+  subProducts?: SubProductItem[];
   productionMethod?: string;
   applications: string[];
   keyPoints: string[];
@@ -40,161 +46,215 @@ export const productCatalog: ProductCategory[] = [
       'Primary high-volume ferro additives used in industrial steelmaking as deoxidizers and alloying elements for chemistry and strength control.',
     image: '/hero_foundry.jpg',
     products: [
-      /* ─── 1.1 High-Carbon Silico Manganese ─── */
+      /* ═══ 1.1 Silico Manganese (consolidated: HC / MC / LC) ═══ */
       {
-        name: 'High-Carbon Silico Manganese',
-        slug: 'high-carbon-silico-manganese',
+        name: 'Silico Manganese',
+        slug: 'silico-manganese',
         shortDescription:
-          'High-carbon silico manganese alloy used as a deoxidizer and alloying element in steel.',
+          'Manganese-silicon ferro alloy used as a deoxidizer and alloying element in all grades of steel production.',
         overview:
-          'High-carbon silico manganese is an alloy that contains 2.25–2.5% carbon. It\'s produced by smelting manganese ore with coke and a quartz flux, or by smelting slag from high-carbon ferro manganese. It\'s used as a deoxidizer and alloying element in steel and as a hardening agent in aluminum production.',
+          'Silico Manganese (SiMn) is a ferro alloy composed of manganese, silicon, and iron. It is one of the most widely consumed ferro alloys in the steelmaking industry, serving simultaneously as a deoxidizer and an alloying element. It is produced by smelting manganese ore with coke and a quartz flux in submerged arc electric furnaces.',
         detailedDescription:
-          'Dust-free, folded silicomanganese in lumps is not a health hazard when properly handled and stored. Inhalation of manganese vapor oxide fumes can result in acute chemical pneumonia (manganese fever). Prolonged exposure can lead to chronic manganese poisoning with damage to the central nervous system.',
+          'Silico Manganese is available in High Carbon, Medium Carbon, and Low Carbon grades. High-carbon varieties (C 1.5–2%) provide maximum strength to steel but can increase brittleness. Medium-carbon (C ≤ 0.5%) strikes a balance between strength and ductility, commonly used in steel foundries and electrode coating. Low-carbon (C 0.1–0.5%) improves the decarburization process and is preferred for stainless steel and special steel production. Dust-free SiMn lumps are not a health hazard when properly handled; however, inhalation of manganese vapor fumes can cause manganese fever.',
         productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 60–68%, Si 14–21%, C 1.5–2%',
+        commonSpecs: 'Mn 40–74%, Si 10–30%, C 0.1–2%',
         specTable: [
-          { parameter: 'Manganese (Mn)', value: '60–68%' },
-          { parameter: 'Silicon (Si)', value: '14–21%' },
-          { parameter: 'Carbon (C)', value: '1.5–2%' },
+          { parameter: 'Manganese (Mn)', value: '40–74%' },
+          { parameter: 'Silicon (Si)', value: '10–30%' },
+          { parameter: 'Carbon (C)', value: '0.1–2% (grade dependent)' },
+          { parameter: 'Phosphorus (P)', value: '0.1–0.3% Max' },
+          { parameter: 'Sulfur (S)', value: '0.01–0.04% Max' },
         ],
-        variants: ['Grade: Mn 40-45% / 50-55% / 60-65% / 65-70% / 70-74%'],
+        subProducts: [
+          {
+            name: 'High Carbon Silico Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '60–68%' },
+              { parameter: 'Silicon (Si)', value: '14–21%' },
+              { parameter: 'Carbon (C)', value: '1.5–2%' },
+              { parameter: 'Phosphorus (P)', value: '0.3% Max' },
+              { parameter: 'Sulfur (S)', value: '0.04% Max' },
+            ],
+          },
+          {
+            name: 'Medium Carbon Silico Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '53–60%' },
+              { parameter: 'Silicon (Si)', value: '22–30%' },
+              { parameter: 'Carbon (C)', value: '0.5% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.20% Max' },
+              { parameter: 'Sulfur (S)', value: '0.03% Max' },
+            ],
+          },
+          {
+            name: 'Low Carbon Silico Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '53–60%' },
+              { parameter: 'Silicon (Si)', value: '22–30%' },
+              { parameter: 'Carbon (C)', value: '0.1–0.5%' },
+              { parameter: 'Phosphorus (P)', value: '0.10% Max' },
+              { parameter: 'Sulfur (S)', value: '0.01% Max' },
+            ],
+          },
+        ],
         productionMethod:
-          'Produced by smelting manganese ore with coke and a quartz flux, or by smelting slag from high-carbon ferro manganese.',
+          'Produced by smelting manganese ore with coke and a quartz flux in submerged arc electric furnaces. Carbon content is controlled by adjusting reductant ratios and smelting parameters.',
         applications: [
           'Deoxidizer and alloying element in steel production',
           'Increases the strength of steel',
-          'Used in the manufacture of stainless steel',
+          'Manufacture of stainless steel',
           'Hardening agent in aluminium production',
+          'Steel foundries',
+          'Electrode coating work',
+          'Special steel production',
         ],
         keyPoints: [
-          'Mn 60–68%, Si 14–21%, C 1.5–2%',
-          'Deoxidizer and alloying element',
-          'Multiple grades available based on Mn %',
-          'Used to increase steel strength',
+          'Available in High Carbon, Medium Carbon, and Low Carbon grades',
+          'Mn 40–74%, Si 10–30%',
+          'Simultaneously acts as deoxidizer and alloying element',
+          'Low carbon grades eliminate final-step decarburization in stainless production',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-silico-manganese/',
         image: '/products_stack.jpg',
       },
 
-      /* ─── 1.2 High Carbon Ferro Manganese ─── */
+      /* ═══ 1.2 Ferro Manganese (consolidated: HC / MC / LC) ═══ */
       {
-        name: 'High Carbon Ferro Manganese',
-        slug: 'high-carbon-ferro-manganese',
+        name: 'Ferro Manganese',
+        slug: 'ferro-manganese',
         shortDescription:
-          'The largest tonnage ferro alloy — a deoxidizing agent and alloying element in steelmaking.',
+          'The most widely used ferro alloy in steelmaking — essential deoxidizer, desulfurizer, and alloying element.',
         overview:
-          'High-carbon ferromanganese, generally with 70–80% Mn and 6–7% C, is the by far the largest tonnage ferro alloy used. It serves as a deoxidizing agent in steelmaking and is an important alloying element. It also has the property of controlling the harmful effect of sulfur.',
+          'Ferro Manganese (FeMn) is the single largest tonnage ferro alloy consumed worldwide. It is an iron-manganese alloy that serves as a deoxidizing agent, desulfurizer, and alloying element in steelmaking. Manganese combines with sulfur to form manganese sulfide (MnS), which floats out of the liquid steel, thereby neutralizing the harmful effects of sulfur.',
         detailedDescription:
-          'Manganese combines with sulfur and forms manganese sulfide, which tends to float out of the liquid steel. Manganese has the effect of stabilizing the austenite phase; steels with 12–14% Mn are fully austenitic, used for wear and abrasion-resisting characteristics.',
+          'Ferro Manganese is available in High Carbon (C 6–8%), Medium Carbon (C 0.01–3%), and Low Carbon (C 1.0–1.5% Max) grades. High-carbon FeMn is the most widely traded grade and stabilizes the austenite phase — steels with 12–14% Mn are fully austenitic for superior wear resistance. Medium-carbon FeMn is produced by the aluminothermic or MOR process and is used for E6013 electrode production and welding. Low-carbon FeMn is used in tool steel, 18-8 austenitic non-magnetic stainless steel, and structural steel applications.',
         productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 65–80%, C 6–8%, Si 1.5% max',
+        commonSpecs: 'Mn 65–85%, C 0.01–8%',
         specTable: [
-          { parameter: 'Manganese (Mn)', value: '65–80%' },
-          { parameter: 'Carbon (C)', value: '6–8%' },
-          { parameter: 'Silicon (Si)', value: '1.5% max' },
-          { parameter: 'Phosphorus (P)', value: '0.3% max' },
-          { parameter: 'Sulfur (S)', value: '0.02-0.05%' },
+          { parameter: 'Manganese (Mn)', value: '65–85%' },
+          { parameter: 'Carbon (C)', value: '0.01–8% (grade dependent)' },
+          { parameter: 'Silicon (Si)', value: '1.2–3.0% Max' },
+          { parameter: 'Phosphorus (P)', value: '0.20–0.30% Max' },
+          { parameter: 'Sulfur (S)', value: '0.02–0.05% Max' },
+        ],
+        subProducts: [
+          {
+            name: 'High Carbon Ferro Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '65–80%' },
+              { parameter: 'Carbon (C)', value: '6–8%' },
+              { parameter: 'Silicon (Si)', value: '1.5% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.3% Max' },
+              { parameter: 'Sulfur (S)', value: '0.02–0.05%' },
+            ],
+          },
+          {
+            name: 'Medium Carbon Ferro Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '74–85%' },
+              { parameter: 'Carbon (C)', value: '0.01–3.0%' },
+              { parameter: 'Silicon (Si)', value: '3.0% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.30% Max' },
+              { parameter: 'Sulfur (S)', value: '0.05% Max' },
+            ],
+          },
+          {
+            name: 'Low Carbon Ferro Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '70–80% Min' },
+              { parameter: 'Carbon (C)', value: '1.0–1.5% Max' },
+              { parameter: 'Silicon (Si)', value: '1.2% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.20% Max' },
+              { parameter: 'Sulfur (S)', value: '0.03% Max' },
+            ],
+          },
         ],
         productionMethod:
-          'Carbothermic reduction of manganese ores containing both iron and manganese oxides in submerged arc electric furnaces.',
+          'High Carbon: Carbothermic reduction in submerged arc electric furnaces. Medium Carbon: Aluminothermic process or MOR process. Low Carbon: Aluminothermic process.',
         applications: [
-          'Stainless Steel Mills',
-          'Automobile Industry',
-          'Casting',
           'Steelmaking as deoxidizing agent',
-          'Alloying element for steel production',
-          'Wear and abrasion-resistant steel production (12-14% Mn steels)',
           'Sulfur control in liquid steel',
+          'Wear and abrasion-resistant steel (12-14% Mn steels)',
+          'Tool Steel',
+          '18-8 Austenitic Non-Magnetic Stainless Steel',
+          'E6013 welding electrodes',
+          'Casting industries',
         ],
         keyPoints: [
           'Largest tonnage ferro alloy used globally',
-          'Mn 65–80%, C 6–8%',
+          'Available in High Carbon, Medium Carbon, and Low Carbon grades',
           'Combines with sulfur to form MnS that floats out of melt',
           'Stabilizes austenite phase in high-Mn steels',
+          'HC/MC/LC grades produced via different processes',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-manganese/',
         image: '/products_stack.jpg',
       },
 
-      /* ─── 1.3 High Carbon Ferro Chrome ─── */
+      /* ═══ 1.3 Ferro Chrome (consolidated: HC / LC) ═══ */
       {
-        name: 'High Carbon Ferro Chrome',
-        slug: 'high-carbon-ferro-chrome',
+        name: 'Ferro Chrome',
+        slug: 'ferro-chrome',
         shortDescription:
-          'One of the most common ferroalloys, used almost exclusively in stainless steel and high chromium steels.',
+          'One of the most common ferroalloys — used almost exclusively in stainless steel and high chromium steels.',
         overview:
-          'High carbon ferrochrome is one of the most common ferroalloys produced and is almost exclusively used in the production of stainless steel and high chromium steels.',
+          'Ferro Chrome (FeCr) is a ferro alloy composed of chromium and iron. It is one of the most commonly produced ferroalloys and is almost exclusively used in the production of stainless steel and high chromium steels. Chromium imparts corrosion resistance, oxidation resistance, and high-temperature stability to steel.',
         detailedDescription:
-          'Production processes have become more energy and metallurgically efficient through prereduction, preheating, agglomeration of ore, and CO gas utilization.',
+          'Ferro Chrome is available in High Carbon (C 8–9.5%) and Low Carbon (C 0.15–0.25%) grades. High Carbon FeCr is the primary grade for stainless steel production and is smelted in submerged arc (AC) or open arc (DC) furnaces. Low Carbon FeCr (LC FeCr) is used where minimal carbon pick-up is critical — in acid-resistant, heat-resistant, and specialty stainless steels. LC FeCr is resistant to wear, tear, rust, and oxidation, and remains stable at high temperatures.',
         productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Cr 57–63%, C 8–9.5% Max, Si 2–4% Max',
+        commonSpecs: 'Cr 57–65%, C 0.15–9.5%',
         specTable: [
-          { parameter: 'Chromium (Cr)', value: '57%–63% (Typical: 58%–60% Min)' },
-          { parameter: 'Carbon (C)', value: '8%–9.5% Max' },
-          { parameter: 'Silicon (Si)', value: '2%–4% Max' },
-          { parameter: 'Phosphorus (P)', value: '0.015%–0.05% Max' },
-          { parameter: 'Sulfur (S)', value: '0.05%–0.06% Max' },
+          { parameter: 'Chromium (Cr)', value: '57–65%' },
+          { parameter: 'Carbon (C)', value: '0.15–9.5% (grade dependent)' },
+          { parameter: 'Silicon (Si)', value: '1.5–4% Max' },
+          { parameter: 'Phosphorus (P)', value: '0.015–0.05% Max' },
+          { parameter: 'Sulfur (S)', value: '0.05–0.06% Max' },
         ],
-        variants: ['Multiple grades from Cr 58% to 60% Min'],
+        subProducts: [
+          {
+            name: 'High Carbon Ferro Chrome',
+            specTable: [
+              { parameter: 'Chromium (Cr)', value: '57–63% (Typical: 58–60% Min)' },
+              { parameter: 'Carbon (C)', value: '8–9.5% Max' },
+              { parameter: 'Silicon (Si)', value: '2–4% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.015–0.05% Max' },
+              { parameter: 'Sulfur (S)', value: '0.05–0.06% Max' },
+            ],
+          },
+          {
+            name: 'Low Carbon Ferro Chrome',
+            specTable: [
+              { parameter: 'Chromium (Cr)', value: '60–65% Min' },
+              { parameter: 'Carbon (C)', value: '0.15–0.25% Max' },
+              { parameter: 'Silicon (Si)', value: '1.5% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.05% Max' },
+              { parameter: 'Sulfur (S)', value: '0.05% Max' },
+            ],
+          },
+        ],
         productionMethod:
-          'Submerged arc smelting in AC furnaces, open arc smelting in DC furnaces, and advanced prereduction routes.',
+          'High Carbon: Submerged arc smelting in AC furnaces or open arc smelting in DC furnaces with advanced prereduction routes. Low Carbon: Fusing chromium ore and lime, then adding intermediate-grade ferrochrome silicon to the ladle.',
         applications: [
           'Stainless Steel Mills',
           'Automobile Industry',
           'Casting',
-        ],
-        keyPoints: [
-          'One of the most common ferroalloys produced',
-          'Almost exclusively used for stainless and high-Cr steels',
-          'Cr typically 58-60% Min',
-          'Produced via submerged arc smelting (AC) or open arc smelting (DC)',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-chrome/',
-        image: '/quality_lab.jpg',
-      },
-
-      /* ─── 1.4 Low Carbon Ferro Chrome ─── */
-      {
-        name: 'Low Carbon Ferro Chrome',
-        slug: 'low-carbon-ferro-chrome',
-        shortDescription:
-          'Ferroalloy additive used in producing stainless, acid-resistant, and heat-resistant steels.',
-        overview:
-          'Low carbon ferrochrome (LC FeCr) is a ferroalloy additive used in the production of stainless steel, acid-resistant steel, and heat-resistant steel. It can also be used to make chrome metal and ferrochrome.',
-        detailedDescription:
-          'LC FeCr is resistant to wear and tear, improves anti-oxidation and corrosion resistance of steel, is resistant to rust and oxidation, and is stable at high temperatures.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Cr 60–65%, C 0.15–0.25% Max',
-        specTable: [
-          { parameter: 'Chromium (Cr)', value: '60–65% Min' },
-          { parameter: 'Carbon (C)', value: '0.15–0.25% Max' },
-          { parameter: 'Silicon (Si)', value: '1.5% Max' },
-          { parameter: 'Phosphorus (P)', value: '0.05% Max' },
-          { parameter: 'Sulfur (S)', value: '0.05% Max' },
-        ],
-        productionMethod:
-          'Produced by fusing chromium ore and lime in a furnace, then adding intermediate-grade ferrochrome silicon to the ladle.',
-        applications: [
-          'Stainless Steel Mills',
-          'Automobile Industry',
-          'Casting',
-          'Production of stainless steel',
           'Production of acid-resistant steel',
           'Production of heat-resistant steel',
           'Making chrome metal',
           'Making ferrochrome',
         ],
         keyPoints: [
-          'Resistant to wear, tear, rust, and oxidation',
-          'Improves anti-oxidation and corrosion resistance',
-          'Stable at high temperatures',
-          'Cr 60-65% Min, C 0.15-0.25% Max',
+          'Available in High Carbon and Low Carbon grades',
+          'One of the most common ferroalloys produced',
+          'Almost exclusively used for stainless and high-Cr steels',
+          'LC FeCr: resistant to wear, rust, oxidation; stable at high temperatures',
+          'Produced via submerged arc smelting (AC) or open arc smelting (DC)',
         ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/low-carbon-ferrochrome/',
+        sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-chrome/',
         image: '/quality_lab.jpg',
       },
 
-      /* ─── 1.5 Ferro Silicon ─── */
+      /* ─── 1.4 Ferro Silicon ─── */
       {
         name: 'Ferro Silicon',
         slug: 'ferro-silicon',
@@ -234,158 +294,7 @@ export const productCatalog: ProductCategory[] = [
         image: '/capabilities_worker.jpg',
       },
 
-      /* ─── 1.6 Low Carbon Silico Manganese ─── */
-      {
-        name: 'Low Carbon Silico Manganese',
-        slug: 'low-carbon-silico-manganese',
-        shortDescription:
-          'Low-carbon Mn-Si alloy that improves decarburization in stainless and special steel.',
-        overview:
-          'Low Carbon Silico Manganese (LCSiMn) is a ferrous alloy that contains carbon, silica, and manganese. It is used in the production of steel. LCSiMn has a lower ratio of carbon to silicon and manganese than other varieties.',
-        detailedDescription:
-          'LCSiMn can contain between 0.1% and 0.5% carbon and more silicon than a high-carbon variety. The lower carbon content improves the decarburization process when reducing slag. LCSiMn and ultra low carbon silico manganese can improve productivity in the manufacture of stainless steel and special steel by eliminating decarburization in the final step.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 53–60%, Si 22–30%, C 0.1–0.5%',
-        specTable: [
-          { parameter: 'Manganese (Mn)', value: '53–60%' },
-          { parameter: 'Silicon (Si)', value: '22–30%' },
-          { parameter: 'Carbon (C)', value: '0.1–0.5%' },
-        ],
-        productionMethod:
-          'Production in submerged arc furnaces with controlled reduction to maintain low carbon while achieving target Mn and Si.',
-        applications: [
-          'Stainless Steel Mills',
-          'Automobile Industry',
-          'Casting',
-          'Steel Production',
-          'Manufacture of Stainless Steel',
-          'Manufacture of Special Steel',
-        ],
-        keyPoints: [
-          'Carbon: 0.1–0.5%',
-          'More silicon than high-carbon variety',
-          'Improves decarburization process when reducing slag',
-          'Eliminates final-step decarburization in stainless production',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/low-carbon-silico-manganese/',
-        image: '/capabilities_worker.jpg',
-      },
-
-      /* ─── 1.7 Medium Carbon Silico Manganese ─── */
-      {
-        name: 'Medium Carbon Silico Manganese',
-        slug: 'medium-carbon-silico-manganese',
-        shortDescription:
-          'Medium-carbon Mn-Si alloy used in steel foundries and electrode coating work.',
-        overview:
-          'Medium carbon silico manganese is a ferrous alloy that contains a high amount of carbon and silicon. It is used in steel foundries, electrode coating work, and other industrial applications.',
-        detailedDescription:
-          'High-carbon ferro alloys can increase the strength of steel, but too much carbon can make steel more brittle. Medium carbon strikes a balance between adding strength and avoiding excess brittleness.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 53–60%, Si 22–30%, C max 0.5%',
-        specTable: [
-          { parameter: 'Manganese (Mn)', value: '53–60%' },
-          { parameter: 'Silicon (Si)', value: '22–30%' },
-          { parameter: 'Carbon (C)', value: 'Max 0.5%' },
-        ],
-        productionMethod:
-          'Smelting of manganese ore with silicon-rich inputs in electric arc furnaces with controlled carbon reduction.',
-        applications: [
-          'Steel foundries',
-          'Electrode coating work',
-          'Stainless steel',
-          'Increases the strength of steel',
-          'Hardening agent in aluminium production',
-        ],
-        keyPoints: [
-          'Carbon max 0.5%',
-          'Less brittle than high-carbon variants',
-          'Used in steel foundries and electrode coatings',
-          'Balances strength gain with reduced brittleness risk',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/medium-carbon-silico-manganese/',
-        image: '/products_stack.jpg',
-      },
-
-      /* ─── 1.8 Medium Carbon Ferro Manganese ─── */
-      {
-        name: 'Medium Carbon Ferro Manganese',
-        slug: 'medium-carbon-ferro-manganese',
-        shortDescription:
-          'Key manganese ferroalloy for steel and casting industries, also used in welding electrodes.',
-        overview:
-          'Medium carbon ferro manganese is a ferroalloy that contains a high amount of manganese. It\'s a key component in the production of steel and iron.',
-        detailedDescription:
-          'Used in steel and casting industries to remove sulfur and improve durability, machinability, and malleability. Also used for deoxidizing molten metal, producing E6013 electrodes, and in the welding industry. Ferro manganese powders are useful in the welding industry. Made by the aluminothermic process or by the MOR Process.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 74–85%, C 0.01–3.0%, Si max 3%',
-        specTable: [
-          { parameter: 'Manganese (Mn)', value: '74–85%' },
-          { parameter: 'Carbon (C)', value: '0.01–3.0%' },
-          { parameter: 'Silicon (Si)', value: 'Max 3.0%' },
-          { parameter: 'Process', value: 'Aluminothermic or MOR Process' },
-        ],
-        variants: ['FeMn 80', 'FeMn 76', 'FeMn 83 Grades 1-5'],
-        productionMethod:
-          'Made by the aluminothermic process or by the MOR Process.',
-        applications: [
-          'Steel and casting industries',
-          'Deoxidizing molten metal',
-          'E6013 electrodes production',
-          'Welding industry',
-        ],
-        keyPoints: [
-          'Mn 74–85%, C 0.01–3.0%',
-          'Removes sulfur and improves steel properties',
-          'Deoxidizes molten metal',
-          'Mainly used to produce E6013 electrodes',
-          'Made by aluminothermic or MOR process',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/medium-carbon-ferro-manganese/',
-        image: '/products_stack.jpg',
-      },
-
-      /* ─── 1.9 Low Carbon Ferro Manganese ─── */
-      {
-        name: 'Low Carbon Ferro Manganese',
-        slug: 'low-carbon-ferro-manganese',
-        shortDescription:
-          'Low-carbon manganese additive for tool steel, austenitic SS, and welding electrodes.',
-        overview:
-          'Low carbon ferro manganese is a ferro manganese grade produced by the alumino thermic process. It is used in the steel industry for various applications.',
-        detailedDescription:
-          'Steel industry uses this grade in the production of tool steel, 18-8 Austenitic non-magnetic SS, and structural steel. MS welding electrodes (E6013) and other electrodes are also produced using it. It is mainly packaged in jumbo bags and steel drums for convenient handling and transport.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 70–80% Min, C 1.0-1.5% Max, Si 1.2% Max',
-        specTable: [
-          { parameter: 'Manganese (Mn)', value: '70–80% Min' },
-          { parameter: 'Carbon (C)', value: '1.0-1.5% Max' },
-          { parameter: 'Silicon (Si)', value: '1.2% Max' },
-          { parameter: 'Phosphorus (P)', value: '0.20% Max' },
-          { parameter: 'Sulfur (S)', value: '0.03% Max' },
-        ],
-        physicalSpecs: ['Jumbo bags', 'Steel drums'],
-        productionMethod:
-          'Produced by the aluminothermic process.',
-        applications: [
-          'Tool Steel',
-          '18-8 Austenitic Non-Magnetic Stainless Steel',
-          'Structural Steel',
-          'MS Welding Electrodes (E6013)',
-          'Other Electrodes',
-        ],
-        keyPoints: [
-          'Produced by aluminothermic process',
-          'Used in tool steel, structural steel',
-          'Used for 18-8 Austenitic non-magnetic SS',
-          'Packaged in jumbo bags and steel drums',
-          'Also used for E6013 electrode production',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/low-carbon-ferro-manganese/',
-        image: '/quality_lab.jpg',
-      },
-
-      /* ─── 1.10 Silico Chrome ─── */
+      /* ─── 1.5 Silico Chrome ─── */
       {
         name: 'Silico Chrome',
         slug: 'silico-chrome',
@@ -485,15 +394,39 @@ export const productCatalog: ProductCategory[] = [
         overview:
           'Ferrovanadium (FeV) is a grayish silver crystalline solid alloy made from iron and vanadium. The alloy contains 35–85% vanadium. It is used as a hardener, strengthener, and anti-corrosive additive for steels and other ferrous-based products.',
         detailedDescription:
-          'Ferro vanadium supports high-strength low-alloy (HSLA) steel development and improves wear and fatigue performance in engineering steels. It enables grain refinement in micro-alloyed products, enhancing yield strength and toughness simultaneously.',
+          'Ferro vanadium supports high-strength low-alloy (HSLA) steel development and improves wear and fatigue performance in engineering steels. It enables grain refinement in micro-alloyed products, enhancing yield strength and toughness simultaneously. Available in two primary grades: FeV 78% and FeV 50-52%.',
         productType: 'Noble Ferro Alloy',
-        commonSpecs: 'V 35–85%',
+        commonSpecs: 'V 50–78%',
         specTable: [
-          { parameter: 'Vanadium (V)', value: '50-80%' },
-          { parameter: 'Carbon (C)', value: '0.2% max' },
-          { parameter: 'Silicon (Si)', value: '2.0% max' },
-          { parameter: 'Aluminum (Al)', value: '1.5% max' },
-          { parameter: 'Form', value: 'Grayish silver crystalline solid' },
+          { parameter: 'Vanadium (V)', value: '50–78%' },
+          { parameter: 'Carbon (C)', value: '0.02% Max' },
+          { parameter: 'Silicon (Si)', value: '1.5–4% Max' },
+          { parameter: 'Sulphur (S)', value: '0.08–0.1% Max' },
+          { parameter: 'Aluminium (Al)', value: '1–1.5% Max' },
+        ],
+        subProducts: [
+          {
+            name: 'Ferro Vanadium FeV 78%',
+            specTable: [
+              { parameter: 'Vanadium (V)', value: '78%' },
+              { parameter: 'Carbon (C)', value: '0.02% Max' },
+              { parameter: 'Silicon (Si)', value: '1.5% Max' },
+              { parameter: 'Sulphur (S)', value: '0.08% Max' },
+              { parameter: 'Aluminium (Al)', value: '1.5% Max' },
+              { parameter: 'Size', value: '10–50 mm' },
+            ],
+          },
+          {
+            name: 'Ferro Vanadium FeV 50-52%',
+            specTable: [
+              { parameter: 'Vanadium (V)', value: '50–52% Min' },
+              { parameter: 'Carbon (C)', value: '0.02% Max' },
+              { parameter: 'Silicon (Si)', value: '4% Max' },
+              { parameter: 'Sulphur (S)', value: '0.1% Max' },
+              { parameter: 'Aluminium (Al)', value: '1% Max' },
+              { parameter: 'Size', value: '20–70 mm' },
+            ],
+          },
         ],
         productionMethod:
           'Produced by reduction of vanadium pentoxide with iron and reducing agents in electric furnaces.',
@@ -505,7 +438,7 @@ export const productCatalog: ProductCategory[] = [
           'Anti-corrosive steel formulations',
         ],
         keyPoints: [
-          'Vanadium content: 50–80% typically',
+          'Available in FeV 78% and FeV 50-52% grades',
           'Grayish silver crystalline solid',
           'Hardener, strengthener, and anti-corrosive additive',
           'Enhances yield strength and toughness',
@@ -561,17 +494,40 @@ export const productCatalog: ProductCategory[] = [
         overview:
           'Ferronickel is a ferroalloy that contains about 35% nickel and 65% iron. It is a shiny, metallic solid material produced by the rotary kiln-electric furnace (RKEF) smelting process from lateritic nickel ores.',
         detailedDescription:
-          'Produced as small ingots or water-granulated beans convenient for alloy-making furnaces. Can substitute for nickel pellets or nickel cathodes with potential cost savings. Low-carbon ferronickel can be used directly in stainless steel manufacture.',
+          'Produced as small ingots or water-granulated beans convenient for alloy-making furnaces. Available in Low-Carbon and High-Carbon grades. Low-carbon ferronickel (C ≤ 0.02%) can be used directly in stainless steel manufacture. High-carbon ferronickel (C up to 2%) is used as a cost-effective nickel source in general steelmaking. Can substitute for nickel pellets or nickel cathodes with potential cost savings.',
         productType: 'Noble Ferro Alloy',
-        commonSpecs: 'Ni ~35%, Fe ~65%',
+        commonSpecs: 'Ni 20–40%, Fe Balance',
         specTable: [
-          { parameter: 'Nickel (Ni)', value: '20-40%' },
+          { parameter: 'Nickel (Ni)', value: '20–40%' },
           { parameter: 'Iron (Fe)', value: 'Balance' },
-          { parameter: 'Carbon (C)', value: '0.02-0.05% max' },
-          { parameter: 'Silicon (Si)', value: '0.5-3.0% max' },
-          { parameter: 'Form', value: 'Small ingots or water-granulated beans' },
+          { parameter: 'Carbon (C)', value: '0.02–2.0% (grade dependent)' },
+          { parameter: 'Silicon (Si)', value: '0.5–3.0% Max' },
+          { parameter: 'Cobalt (Co)', value: '1% Max' },
         ],
-        variants: ['Low-carbon Ferro Nickel', 'High-carbon Ferro Nickel'],
+        subProducts: [
+          {
+            name: 'Low Carbon Ferro Nickel',
+            specTable: [
+              { parameter: 'Nickel (Ni)', value: '30% Min' },
+              { parameter: 'Carbon (C)', value: '0.02% Max' },
+              { parameter: 'Silicon (Si)', value: '0.5% Max' },
+              { parameter: 'Cobalt (Co)', value: '1% Max' },
+              { parameter: 'Chromium (Cr)', value: '0.05% Max' },
+              { parameter: 'Sulfur + Phosphorus', value: '0.03% Max' },
+            ],
+          },
+          {
+            name: 'High Carbon Ferro Nickel',
+            specTable: [
+              { parameter: 'Nickel (Ni)', value: '20–25%' },
+              { parameter: 'Carbon (C)', value: '1.0–2.0%' },
+              { parameter: 'Silicon (Si)', value: '1.5–3.0% Max' },
+              { parameter: 'Cobalt (Co)', value: '1% Max' },
+              { parameter: 'Chromium (Cr)', value: '1.5–2.0%' },
+              { parameter: 'Sulfur (S)', value: '0.05% Max' },
+            ],
+          },
+        ],
         productionMethod:
           'RKEF (rotary kiln-electric furnace) smelting from lateritic nickel ores. Also from carbothermic reduction of serpentine, limonite, or garnierite.',
         physicalSpecs: ['Small ingots', 'Water-granulated beans'],
@@ -582,9 +538,9 @@ export const productCatalog: ProductCategory[] = [
           'Alloy-making furnace additions',
         ],
         keyPoints: [
-          'Ni 20-40%, Fe Balance',
+          'Available in Low Carbon and High Carbon grades',
+          'Ni 20–40%, Fe Balance',
           'Shiny metallic solid material',
-          'Available as small ingots or water-granulated beans',
           'Produced by RKEF process from lateritic nickel ores',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-nickel/',
@@ -671,16 +627,57 @@ export const productCatalog: ProductCategory[] = [
         shortDescription:
           'Deoxidizing agent composed of iron and aluminum utilized to remove excess oxygen during steel production.',
         overview:
-          'Ferro Aluminum is an alloy containing varying amounts of aluminum and iron, most typically used as a strong deoxidizing agent in steelmaking to remove oxygen and refine the grain size of the steel.',
+          'Ferro Aluminum (FeAl) is an alloy containing varying amounts of aluminum and iron, most typically used as a strong deoxidizing agent in steelmaking to remove oxygen and refine the grain size of the steel. The metal typically contains 30% to 60% aluminum.',
         detailedDescription:
-          'The addition of Ferro Aluminum effectively mitigates porosity and ensures sound casting. It is preferred over pure aluminum because its higher density allows it to penetrate the slag and enter the molten steel more effectively, resulting in better aluminum recovery.',
+          'The addition of Ferro Aluminum effectively mitigates porosity and ensures sound casting. It is preferred over pure aluminum because its higher density allows it to penetrate the slag and enter the molten steel more effectively, resulting in better aluminum recovery. Available in multiple grades — FeAl 30, FeAl 40, and FeAl 50 — to match different steelmaking requirements.',
         productType: 'Noble Ferro Alloy',
-        commonSpecs: 'Al 30–75%',
+        commonSpecs: 'Al 30–60%',
         specTable: [
-          { parameter: 'Aluminum (Al)', value: '30–75%' },
-          { parameter: 'Carbon (C)', value: 'Small quantities' },
-          { parameter: 'Silicon (Si)', value: 'Small quantities' },
+          { parameter: 'Aluminum (Al)', value: '30–60%' },
+          { parameter: 'Carbon (C)', value: '0.10–1.50% Max' },
+          { parameter: 'Sulphur (S)', value: '0.03% Max' },
+          { parameter: 'Phosphorus (P)', value: '0.03% Max' },
+          { parameter: 'Silicon (Si)', value: '0.05–0.60% Max' },
+          { parameter: 'Manganese (Mn)', value: '1.0% Max' },
           { parameter: 'Iron (Fe)', value: 'Balance' },
+        ],
+        subProducts: [
+          {
+            name: 'FeAl 30 (30-35% Al)',
+            specTable: [
+              { parameter: 'Aluminum (Al)', value: '30–35%' },
+              { parameter: 'Carbon (C)', value: '0.10% Max' },
+              { parameter: 'Sulphur (S)', value: '0.03% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.03% Max' },
+              { parameter: 'Silicon (Si)', value: '0.05% Max' },
+              { parameter: 'Manganese (Mn)', value: '1.0% Max' },
+              { parameter: 'Copper (Cu)', value: '0.30% Max' },
+            ],
+          },
+          {
+            name: 'FeAl 40 (35-40% Al)',
+            specTable: [
+              { parameter: 'Aluminum (Al)', value: '35–40%' },
+              { parameter: 'Carbon (C)', value: '0.10% Max' },
+              { parameter: 'Sulphur (S)', value: '0.03% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.03% Max' },
+              { parameter: 'Silicon (Si)', value: '0.05% Max' },
+              { parameter: 'Manganese (Mn)', value: '1.0% Max' },
+              { parameter: 'Copper (Cu)', value: '0.30% Max' },
+            ],
+          },
+          {
+            name: 'FeAl 50 (45-50% Al)',
+            specTable: [
+              { parameter: 'Aluminum (Al)', value: '45–50%' },
+              { parameter: 'Carbon (C)', value: '0.50% Max' },
+              { parameter: 'Sulphur (S)', value: '0.03% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.03% Max' },
+              { parameter: 'Silicon (Si)', value: '0.60% Max' },
+              { parameter: 'Manganese (Mn)', value: '1.0% Max' },
+              { parameter: 'Copper (Cu)', value: '0.50% Max' },
+            ],
+          },
         ],
         productionMethod:
           'Manufactured by melting aluminum and iron scrap together in an induction furnace.',
@@ -689,9 +686,12 @@ export const productCatalog: ProductCategory[] = [
           'Grain refinement in steels',
           'Casting and foundry operations',
           'Aluminothermic reactions',
+          'Hardfacing applications',
+          'AlNiCo magnets',
+          'Aluminothermic welding',
         ],
         keyPoints: [
-          'Al 30–75%',
+          'Available in FeAl 30, FeAl 40, and FeAl 50 grades',
           'Higher density than pure aluminum ensures better recovery',
           'Prevents porosity in cast steel',
           'Controls grain size in killed steels',

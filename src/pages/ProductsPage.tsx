@@ -14,25 +14,23 @@ export default function ProductsPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
             {productCatalog.map((category) => (
-              <article key={category.slug} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1">
+              <Link
+                key={category.slug}
+                to={`/products/${category.slug}`}
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1"
+              >
                 <div className="h-36 overflow-hidden">
-                  <img src={category.image} alt={category.name} className="h-full w-full object-cover" />
+                  <img src={category.image} alt={category.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
-                  <h2 className="font-display text-xl font-bold text-slate-900">{category.name}</h2>
+                  <h2 className="font-display text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{category.name}</h2>
                   <p className="mt-2 text-sm text-slate-600 line-clamp-2">{category.description}</p>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-600">
-                    {category.products.length} subproducts
-                  </p>
-                  <Link
-                    to={`/products/${category.slug}`}
-                    className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700"
-                  >
-                    View Subproducts
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-600">
+                    View Products
                     <ArrowRight size={16} />
-                  </Link>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

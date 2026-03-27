@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { CheckCircle2, Factory, FlaskConical, Package, Tag, Layers, Beaker } from 'lucide-react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { DetailLayout } from '../components/detail-layout';
@@ -5,6 +6,7 @@ import { getProductBySlugs } from '../lib/products-data';
 
 export default function ProductDetailPage() {
   const { categorySlug, productSlug } = useParams();
+  const [activeSubIdx, setActiveSubIdx] = useState(0);
 
   if (!categorySlug || !productSlug) {
     return <Navigate to="/products" replace />;
@@ -16,6 +18,15 @@ export default function ProductDetailPage() {
   }
 
   const { category, product } = resolved;
+
+  /* Determine which spec table to display */
+  const hasSubProducts = product.subProducts && product.subProducts.length > 0;
+  const activeSpecTable = hasSubProducts
+    ? product.subProducts![activeSubIdx].specTable
+    : product.specTable;
+  const activeSpecTitle = hasSubProducts
+    ? product.subProducts![activeSubIdx].name
+    : 'Specifications & Composition';
 
   return (
     <DetailLayout
@@ -141,15 +152,46 @@ export default function ProductDetailPage() {
             </div>
           )}
 
-          {/* ── Specification Table ── */}
-          {product.specTable && product.specTable.length > 0 && (
+          {/* ── Sub-Product Type Selector + Specification Table ── */}
+          {activeSpecTable && activeSpecTable.length > 0 && (
             <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-5">
                 <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600">
                   <FlaskConical className="text-white" size={18} />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-slate-900">Specifications & Composition</h3>
+                <h3 className="font-display text-2xl font-bold text-slate-900">
+                  {hasSubProducts ? 'Product Specifications' : 'Specifications & Composition'}
+                </h3>
               </div>
+
+              {/* ── Sub-product variant pill buttons ── */}
+              {hasSubProducts && (
+                <div className="mb-6">
+                  <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-3">Select Type</p>
+                  <div className="flex flex-wrap gap-2">
+                    {product.subProducts!.map((sub, idx) => (
+                      <button
+                        key={sub.name}
+                        onClick={() => setActiveSubIdx(idx)}
+                        className={`rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 border ${
+                          activeSubIdx === idx
+                            ? 'bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-200'
+                            : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400 hover:text-blue-600'
+                        }`}
+                      >
+                        {sub.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* ── Active spec table heading ── */}
+              {hasSubProducts && (
+                <h4 className="font-display text-lg font-bold text-blue-700 mb-4">{activeSpecTitle}</h4>
+              )}
+
+              {/* ── Specification Table ── */}
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[480px] border-collapse">
                   <thead>
@@ -159,7 +201,7 @@ export default function ProductDetailPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {product.specTable.map((row, idx) => (
+                    {activeSpecTable.map((row, idx) => (
                       <tr
                         key={`${row.parameter}-${idx}-spec`}
                         className={`border-b border-slate-100 text-sm ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}`}
@@ -199,8 +241,6 @@ export default function ProductDetailPage() {
               ))}
             </div>
           </div>
-
-
 
         </div>
       </section>
