@@ -283,28 +283,24 @@ function ProductsSection() {
       title: 'Bulk Ferro Alloys',
       description: 'Primary high-volume ferro additives used in industrial steelmaking.',
       image: '/hero_foundry.jpg',
-      specs: '10 subproducts',
       to: '/products/bulk-ferro-alloys',
     },
     {
       title: 'Noble Ferro Alloys',
       description: 'Special alloys for advanced steel chemistry and premium grades.',
       image: '/quality_lab.jpg',
-      specs: '5 subproducts',
       to: '/products/noble-ferro-alloys',
     },
     {
       title: 'ORE & Metals',
       description: 'Raw and semi-processed metal inputs supporting steel value chain.',
       image: '/contact_yard.jpg',
-      specs: '4 subproducts',
       to: '/products/ore-and-metals',
     },
     {
       title: 'Steel Products',
       description: 'Finished steel products for infrastructure and fabrication needs.',
       image: '/products_stack.jpg',
-      specs: '3 subproducts',
       to: '/products/steel-products',
     },
   ];
@@ -329,27 +325,28 @@ function ProductsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
           {products.map((product, index) => (
             <div key={index} className="product-card product-card-item">
-              <div className="h-36 sm:h-40 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-              </div>
-              <div className="p-4 sm:p-5">
-                <h3 className="font-display text-lg font-bold text-slate-900 mb-1.5">
-                  {product.title}
-                </h3>
-                <p className="text-slate-600 text-xs sm:text-sm mb-3 line-clamp-2">
-                  {product.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-blue-600 text-xs sm:text-sm font-medium">{product.specs}</span>
-                  <Link to={product.to} className="text-blue-600 hover:text-blue-700 transition-colors">
-                    <ArrowRight size={16} />
-                  </Link>
+              <Link to={product.to} className="block w-full h-full group">
+                <div className="h-36 sm:h-40 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-              </div>
+                <div className="p-4 sm:p-5">
+                  <h3 className="font-display text-lg font-bold text-slate-900 mb-1.5 group-hover:text-blue-600 transition-colors">
+                    {product.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm mb-3 line-clamp-2">
+                    {product.description}
+                  </p>
+                  <div className="flex items-center justify-end">
+                    <span className="text-blue-600 hover:text-blue-700 transition-colors">
+                      <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
