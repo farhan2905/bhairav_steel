@@ -52,7 +52,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'bulk-ferro-alloys',
     description:
       'Primary high-volume ferro additives used in industrial steelmaking as deoxidizers and alloying elements for chemistry and strength control.',
-    image: 'https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?q=80&w=1400&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
     products: [
       /* ═══ 1.1 Silico Manganese (consolidated: HC / MC / LC) ═══ */
       {
@@ -139,7 +139,7 @@ export const productCatalog: ProductCategory[] = [
           'Low carbon grades eliminate final-step decarburization in stainless production',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-silico-manganese/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Manganese_element.jpg/800px-Manganese_element.jpg',
+        image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
       },
 
       /* ═══ 1.2 Ferro Manganese (consolidated: HC / MC / LC) ═══ */
@@ -223,7 +223,7 @@ export const productCatalog: ProductCategory[] = [
           'HC/MC/LC grades produced via different processes',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-manganese/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ferromanganese.jpg/800px-Ferromanganese.jpg',
+        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       },
 
       /* ═══ 1.3 Ferro Chrome (consolidated: HC / LC) ═══ */
@@ -303,7 +303,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced via submerged arc smelting (AC) or open arc smelting (DC)',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-chrome/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Ferrochrome.jpg/800px-Ferrochrome.jpg',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
       },
 
       /* ─── 1.4 Ferro Silicon ─── */
@@ -357,7 +357,7 @@ export const productCatalog: ProductCategory[] = [
           'Used in silicon steel for electrical applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-silicon/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Ferrosilicon.jpg/800px-Ferrosilicon.jpg',
+        image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200',
       },
 
       /* ─── 1.5 Silico Chrome ─── */
@@ -415,7 +415,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'steel-products',
     description:
       'Finished and semi-finished steel products supplied across structural, fabrication, and industrial sectors.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Steel_wire_rope.png/800px-Steel_wire_rope.png',
+    image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
     products: [
       /* ─── 4.1 Billets & Blooms ─── */
       {
@@ -459,7 +459,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['TMT bar rolling', 'Structural section rolling', 'Seamless pipe manufacturing', 'Forging components'],
         keyPoints: ['Available in 100mm to 200mm+ cross-sections', 'Uniform microstructure', 'Low inclusion content', 'Available in custom alloy chemistries'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1533663045663-88da1e2db29f?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
       },
 
       /* ─── 4.2 Carbon, Alloy & Spring Steel ─── */
@@ -504,7 +504,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Automotive forgings', 'Gear & shaft manufacturing', 'Suspension systems (Leaf Springs)', 'Precision machined components'],
         keyPoints: ['Rounds from 20-125mm', 'RCS from 40-125mm', 'Superior fatigue life', 'Tight dimensional tolerances'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1577708534062-8e1e7e408ec2?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200',
       },
 
       /* ─── 4.3 Structural Sections ─── */
@@ -549,7 +549,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Pre-Engineered Buildings (PEB)', 'Telecom and Transmission Towers', 'Bridge Girders', 'Heavy Industrial Sheds'],
         keyPoints: ['Comprehensive range of cross-sections', 'High load-bearing capacity', 'Weldable and formable', 'IS 2062 compliant'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200',
       },
 
       /* ─── 4.4 Steel Sheets & Coils ─── */
@@ -594,7 +594,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Automotive body manufacturing', 'Roofing and cladding', 'Home appliances', 'HVAC ducting'],
         keyPoints: ['High dimensional accuracy', 'Consistent surface finish', 'Superior drawing and forming properties', 'Excellent corrosion resistance in GI'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1627993072314-fde6d8f28fa5?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
       },
 
       /* ─── 4.5 TMT Rebars ─── */
@@ -639,7 +639,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Residential & Commercial construction', 'Bridges and flyovers', 'Dams and heavy infrastructure', 'Earthquake-prone areas'],
         keyPoints: ['Earthquake and fire resistant', 'High rib depth for superior concrete grip', 'Excellent weldability and bendability', 'Corrosion-resistant grades available (CRS/Epoxy)'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356f78?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
       },
 
       /* ─── 4.6 Industrial Wires & Fencing ─── */
@@ -684,7 +684,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Construction rebar tying', 'Agricultural boundaries', 'High-security fencing', 'Wire mesh and nail manufacturing'],
         keyPoints: ['Available in black annealed or galvanized finishes', 'High rust resistance in GI grades', 'Consistent wire diameter and tensile strength', 'Easy to twist and tie'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1581093196277-9fd546d1bfec?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
       },
 
       /* ─── 4.7 Steel Pipes & Tubes ─── */
@@ -729,7 +729,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Water and gas distribution', 'Industrial scaffolding systems', 'Architectural space frames', 'Firefighting sprinkler systems'],
         keyPoints: ['Rigorous hydrostatic testing for fluid grades', 'Uniform zinc coating for GI pipes', 'High strength-to-weight ratio for SHS/RHS', 'Seamless variants available for high pressure'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1580983546091-628a55ed238f?q=80&w=1200',
+        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
       },
       
       /* ─── 4.8 Primary Feedstock ─── */
@@ -774,7 +774,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Steel making via EAF or IF', 'Diluting impurities from scrap metal', 'Manufacturing of cast iron components'],
         keyPoints: ['Consistent chemistry to stabilize furnace operations', 'Low sulphur and phosphorus content', 'Enhances steel purity', 'Available in varying sizes/grades'],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Pig_iron.jpg/800px-Pig_iron.jpg',
+        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       }
     ],
   },
@@ -786,7 +786,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'ore-and-metals',
     description:
       'Raw and semi-processed metal inputs supporting steel value chain — from ore to metal.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manganese_ore_macro.jpg/800px-Manganese_ore_macro.jpg',
+    image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
     products: [
       /* ─── 3.1 Iron Ore ─── */
       {
@@ -820,7 +820,7 @@ export const productCatalog: ProductCategory[] = [
           'Fundamental to blast furnace operations',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/iron-ore/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Iron_ore.jpg/800px-Iron_ore.jpg',
+        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       },
 
       /* ─── 3.2 Sponge Iron ─── */
@@ -871,7 +871,7 @@ export const productCatalog: ProductCategory[] = [
           'Physical sizes: Lump +3mm, Fines 0–3mm',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/sponge-iron/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Sponge_iron.jpg/800px-Sponge_iron.jpg',
+        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       },
 
       /* ─── 3.3 Pig Iron ─── */
@@ -919,7 +919,7 @@ export const productCatalog: ProductCategory[] = [
           'Cornerstone in the metallurgical industry',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/pig-iron/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Pig_iron.jpg/800px-Pig_iron.jpg',
+        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       },
 
       /* ─── 3.4 Manganese Ore ─── */
@@ -967,7 +967,7 @@ export const productCatalog: ProductCategory[] = [
           'Mn has greater affinity for sulfur than iron',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/manganese-ore/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manganese_ore_macro.jpg/800px-Manganese_ore_macro.jpg',
+        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       },
     ],
   },
@@ -980,7 +980,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'noble-ferro-alloys',
     description:
       'Special alloys for advanced steel chemistry and premium grades, used for micro-alloying and precision property control.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ferrotitanium.jpg/800px-Ferrotitanium.jpg',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
     products: [
       /* ─── 2.1 Ferro Molybdenum ─── */
       {
@@ -1031,7 +1031,7 @@ export const productCatalog: ProductCategory[] = [
           'Milled and sieved to correct particle size',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-molybdenum/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Ferromolybdenum_macro.jpg/800px-Ferromolybdenum_macro.jpg',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
       },
 
       /* ─── 2.2 Ferro Vanadium ─── */
@@ -1103,7 +1103,7 @@ export const productCatalog: ProductCategory[] = [
           'Enhances yield strength and toughness',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-vanadium/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ferrovanadium.jpg/800px-Ferrovanadium.jpg',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
       },
 
       /* ─── 2.3 Ferro Titanium ─── */
@@ -1150,7 +1150,7 @@ export const productCatalog: ProductCategory[] = [
           'Yields finer grain structure in steel',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-titanium/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ferrotitanium.jpg/800px-Ferrotitanium.jpg',
+        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
       },
 
       /* ─── 2.4 Ferro Nickel ─── */
@@ -1221,7 +1221,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced by RKEF process from lateritic nickel ores',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-nickel/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Nickel_chunk.jpg/800px-Nickel_chunk.jpg',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
       },
 
       /* ─── 2.5 Ferro Niobium ─── */
@@ -1267,7 +1267,7 @@ export const productCatalog: ProductCategory[] = [
           'Made by aluminothermy in electric furnace',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-niobium/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Niobium_strip.jpg/800px-Niobium_strip.jpg',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
       },
 
       /* ─── 2.6 Ferro Boron ─── */
@@ -1383,7 +1383,7 @@ export const productCatalog: ProductCategory[] = [
           'Controls grain size in killed steels',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-aluminum/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Aluminium.jpg/800px-Aluminium.jpg',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
       },
 
       /* ─── 2.8 Ferro Tungsten ─── */
@@ -1424,7 +1424,7 @@ export const productCatalog: ProductCategory[] = [
           'Essential for high-temperature cutting applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-tungsten/',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tungsten_rods.jpg/800px-Tungsten_rods.jpg',
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
       },
     ],
   },

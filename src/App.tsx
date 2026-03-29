@@ -43,27 +43,27 @@ function HeroSection() {
 
   const heroSlides = [
     {
-      src: 'https://images.unsplash.com/photo-1541888081622-4464c8fefcc9?q=80&w=1920&auto=format&fit=crop',
+      src: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
       title: 'Precision Steel, Delivered Fast',
       subtitle: 'Reliable supply for high-demand projects.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1577708534062-8e1e7e408ec2?q=80&w=1920&auto=format&fit=crop',
+      src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200',
       title: 'Built for Infrastructure',
       subtitle: 'Durable grades for structural performance.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1920&auto=format&fit=crop',
+      src: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200',
       title: 'Every Batch Tested',
       subtitle: 'Strict quality control at every stage.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1580983546091-628a55ed238f?q=80&w=1920&auto=format&fit=crop',
+      src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200',
       title: 'Ready for Global Dispatch',
       subtitle: 'Strong logistics with dependable timelines.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1627993072314-fde6d8f28fa5?q=80&w=1920&auto=format&fit=crop',
+      src: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
       title: 'Experience You Can Build On',
       subtitle: 'Decades of steel expertise for demanding industries.',
     },
@@ -282,25 +282,25 @@ function ProductsSection() {
     {
       title: 'Bulk Ferro Alloys',
       description: 'Primary high-volume ferro additives used in industrial steelmaking.',
-      image: 'https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?q=80&w=1400&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
       to: '/products/bulk-ferro-alloys',
     },
     {
       title: 'Steel Products',
       description: 'Finished steel products for infrastructure and fabrication needs.',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Steel_wire_rope.png/800px-Steel_wire_rope.png',
+      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
       to: '/products/steel-products',
     },
     {
       title: 'ORE & Metals',
       description: 'Raw and semi-processed metal inputs supporting steel value chain.',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manganese_ore_macro.jpg/800px-Manganese_ore_macro.jpg',
+      image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
       to: '/products/ore-and-metals',
     },
     {
       title: 'Noble Ferro Alloys',
       description: 'Special alloys for advanced steel chemistry and premium grades.',
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ferrotitanium.jpg/800px-Ferrotitanium.jpg',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
       to: '/products/noble-ferro-alloys',
     },
   ];
