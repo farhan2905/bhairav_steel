@@ -167,61 +167,65 @@ export default function ProductDetailPage() {
 
               
               {/* Specification Table */}
-              {product.gradeTables && product.gradeTables.length > 0 ? (
-                <div className="space-y-8 mt-2">
-                  {product.gradeTables.map((gt, gIdx) => (
-                    <div key={gIdx} className="overflow-hidden rounded-xl border border-slate-200">
-                      {gt.name && (
-                        <div className="bg-slate-100 py-3 px-5 border-b border-slate-200">
-                          <h4 className="font-semibold text-slate-800">{gt.name}</h4>
-                        </div>
-                      )}
-                      <div className="overflow-x-auto">
-                        <table className="w-full text-left border-collapse">
-                          <thead>
-                            <tr className="border-b-2 border-slate-200 bg-slate-50">
-                              {gt.headers.map((h, hIdx) => (
-                                <th key={hIdx} className="py-3 px-5 text-sm font-bold text-slate-700 whitespace-nowrap">
-                                  {h}
-                                </th>
-                              ))}
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {gt.rows.map((row, rIdx) => (
-                              <tr key={rIdx} className="border-b border-slate-100 last:border-0 hover:bg-slate-50/50 transition-colors">
-                                {row.map((cell, cIdx) => (
-                                  <td key={cIdx} className="py-3 px-5 text-sm text-slate-700 whitespace-nowrap">
-                                    {cell}
-                                  </td>
+              <div className="overflow-x-auto rounded-xl border border-slate-200 mt-2">
+                <table className="w-full text-left border-collapse">
+                  <tbody>
+                    {activeSpecTable.map((row, idx) => (
+                      <tr
+                        key={`${row.parameter}-${idx}-spec`}
+                        className="border-b border-slate-200 last:border-0 hover:bg-slate-50/50 transition-colors"
+                      >
+                        <td className="py-3.5 px-6 font-medium text-slate-700 bg-slate-50/50 w-1/2 border-r border-slate-200">
+                          {row.parameter}
+                        </td>
+                        <td className="py-3.5 px-6 text-slate-800 font-semibold">
+                          {row.value}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              
+              {/* Detailed Grade Composition Tables */}
+              {product.gradeTables && product.gradeTables.length > 0 && (
+                <div className="mt-10">
+                  <h4 className="font-display text-xl font-bold text-blue-800 mb-5">Detailed Grade Matrix</h4>
+                  <div className="space-y-8">
+                    {product.gradeTables.map((gt, gIdx) => (
+                      <div key={gIdx} className="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                        {gt.name && (
+                          <div className="bg-slate-100 py-3 px-5 border-b border-slate-200">
+                            <h4 className="font-semibold text-slate-800">{gt.name}</h4>
+                          </div>
+                        )}
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-left border-collapse bg-white">
+                            <thead>
+                              <tr className="border-b-2 border-slate-200 bg-slate-50">
+                                {gt.headers.map((h, hIdx) => (
+                                  <th key={hIdx} className="py-3 px-5 text-sm font-bold text-slate-700 whitespace-nowrap">
+                                    {h}
+                                  </th>
                                 ))}
                               </tr>
-                            ))}
-                          </tbody>
-                        </table>
+                            </thead>
+                            <tbody>
+                              {gt.rows.map((row, rIdx) => (
+                                <tr key={rIdx} className="border-b border-slate-100 last:border-0 hover:bg-slate-50/50 transition-colors">
+                                  {row.map((cell, cIdx) => (
+                                    <td key={cIdx} className="py-3 px-5 text-sm text-slate-700 whitespace-nowrap">
+                                      {cell}
+                                    </td>
+                                  ))}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="overflow-x-auto rounded-xl border border-slate-200">
-                  <table className="w-full text-left border-collapse">
-                    <tbody>
-                      {activeSpecTable.map((row, idx) => (
-                        <tr
-                          key={`${row.parameter}-${idx}-spec`}
-                          className="border-b border-slate-200 last:border-0 hover:bg-slate-50/50 transition-colors"
-                        >
-                          <td className="py-3.5 px-6 font-medium text-slate-700 bg-slate-50/50 w-1/2 border-r border-slate-200">
-                            {row.parameter}
-                          </td>
-                          <td className="py-3.5 px-6 text-slate-800 font-semibold">
-                            {row.value}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
