@@ -43,27 +43,27 @@ function HeroSection() {
 
   const heroSlides = [
     {
-      src: '/hero_foundry.jpg',
+      src: 'https://images.unsplash.com/photo-1541888081622-4464c8fefcc9?q=80&w=1920&auto=format&fit=crop',
       title: 'Precision Steel, Delivered Fast',
       subtitle: 'Reliable supply for high-demand projects.',
     },
     {
-      src: '/products_stack.jpg',
+      src: 'https://images.unsplash.com/photo-1577708534062-8e1e7e408ec2?q=80&w=1920&auto=format&fit=crop',
       title: 'Built for Infrastructure',
       subtitle: 'Durable grades for structural performance.',
     },
     {
-      src: '/quality_lab.jpg',
+      src: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1920&auto=format&fit=crop',
       title: 'Every Batch Tested',
       subtitle: 'Strict quality control at every stage.',
     },
     {
-      src: '/logistics_train.jpg',
+      src: 'https://images.unsplash.com/photo-1580983546091-628a55ed238f?q=80&w=1920&auto=format&fit=crop',
       title: 'Ready for Global Dispatch',
       subtitle: 'Strong logistics with dependable timelines.',
     },
     {
-      src: '/about_facade.jpg',
+      src: 'https://images.unsplash.com/photo-1627993072314-fde6d8f28fa5?q=80&w=1920&auto=format&fit=crop',
       title: 'Experience You Can Build On',
       subtitle: 'Decades of steel expertise for demanding industries.',
     },
@@ -203,7 +203,7 @@ function AboutSection() {
           <div className="about-image relative">
             <div className="rounded-3xl overflow-hidden shadow-xl img-zoom">
               <img
-                src="/about_facade.jpg"
+                src="https://images.unsplash.com/photo-1565439399856-11f8e6c46a6f?q=80&w=1200&auto=format&fit=crop"
                 alt="Bhairav Steel Facility"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -282,26 +282,26 @@ function ProductsSection() {
     {
       title: 'Bulk Ferro Alloys',
       description: 'Primary high-volume ferro additives used in industrial steelmaking.',
-      image: '/hero_foundry.jpg',
+      image: 'https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?q=80&w=1400&auto=format&fit=crop',
       to: '/products/bulk-ferro-alloys',
-    },
-    {
-      title: 'Noble Ferro Alloys',
-      description: 'Special alloys for advanced steel chemistry and premium grades.',
-      image: '/quality_lab.jpg',
-      to: '/products/noble-ferro-alloys',
-    },
-    {
-      title: 'ORE & Metals',
-      description: 'Raw and semi-processed metal inputs supporting steel value chain.',
-      image: '/contact_yard.jpg',
-      to: '/products/ore-and-metals',
     },
     {
       title: 'Steel Products',
       description: 'Finished steel products for infrastructure and fabrication needs.',
-      image: '/products_stack.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Steel_wire_rope.png/800px-Steel_wire_rope.png',
       to: '/products/steel-products',
+    },
+    {
+      title: 'ORE & Metals',
+      description: 'Raw and semi-processed metal inputs supporting steel value chain.',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manganese_ore_macro.jpg/800px-Manganese_ore_macro.jpg',
+      to: '/products/ore-and-metals',
+    },
+    {
+      title: 'Noble Ferro Alloys',
+      description: 'Special alloys for advanced steel chemistry and premium grades.',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ferrotitanium.jpg/800px-Ferrotitanium.jpg',
+      to: '/products/noble-ferro-alloys',
     },
   ];
 
@@ -549,9 +549,9 @@ function QualitySection() {
           {/* Image */}
           <div className="quality-image relative">
             <div className="rounded-3xl overflow-hidden shadow-xl img-zoom">
-              <img 
-                src="/quality_lab.jpg" 
-                alt="Quality Testing Laboratory" 
+              <img
+                src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=1200&auto=format&fit=crop"
+                alt="Quality Testing Laboratory"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
             </div>
