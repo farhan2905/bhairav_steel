@@ -1,0 +1,852 @@
+{
+  "company": {
+    "name": "Bhairav Steel",
+    "tagline": "Precision Steel, Delivered Fast",
+    "description": "Manufacturing high-performance steel products for infrastructure, energy, and heavy industry worldwide.",
+    "contact": {
+      "email": "sales@bhairavsteel.com",
+      "phone": "+91 98765 43210",
+      "address": "Mumbai, Maharashtra, India"
+    },
+    "certifications": ["ISO 9001:2015", "ISO 14001:2015", "OHSAS 18001"],
+    "stats": {
+      "qualityPassRate": "99.9%",
+      "tonsProduced": "2M+",
+      "happyClients": "1000+",
+      "countries": "50+",
+      "support": "24/7"
+    }
+  },
+  "productCategories": [
+    {
+      "id": "bulk-ferro-alloys",
+      "name": "Bulk Ferro Alloys",
+      "description": "Primary high-volume ferro additives used in industrial steelmaking.",
+      "products": [
+        {
+          "id": "high-carbon-silico-manganese",
+          "name": "High-Carbon Silico Manganese",
+          "aliases": ["HC SiMn", "High Carbon Silicomanganese"],
+          "description": "An alloy containing 2.25-2.5% carbon, produced by smelting manganese ore with coke and quartz flux. Used as deoxidizer and alloying element in steel production.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard Grade 1",
+              "Mn": "40-45%",
+              "Si": "10-12%",
+              "C": "3.50% max",
+              "P": "0.30% max",
+              "S": "0.04% max"
+            },
+            {
+              "grade": "Standard Grade 2",
+              "Mn": "50-55%",
+              "Si": "12-14%",
+              "C": "3.00% max",
+              "P": "0.30% max",
+              "S": "0.04% max"
+            },
+            {
+              "grade": "Standard Grade 3",
+              "Mn": "60-65%",
+              "Si": "14-15%",
+              "C": "2.50% max",
+              "P": "0.30% max",
+              "S": "0.04% max"
+            },
+            {
+              "grade": "Standard Grade 4",
+              "Mn": "65-70%",
+              "Si": "15-17%",
+              "C": "2.00% max",
+              "P": "2.00% max",
+              "S": "0.04% max"
+            },
+            {
+              "grade": "Standard Grade 5",
+              "Mn": "70-74%",
+              "Si": "15-18%",
+              "C": "2.00% max",
+              "P": "2.00% max",
+              "S": "0.04% max"
+            },
+            {
+              "grade": "Low Phosphorus Grade 1",
+              "Mn": "60% min",
+              "Si": "14% min",
+              "C": "2.5% max",
+              "P": "0.15% max",
+              "S": "0.03% max"
+            },
+            {
+              "grade": "Low Phosphorus Grade 2",
+              "Mn": "60% min",
+              "Si": "14% min",
+              "C": "2.5% max",
+              "P": "0.02% max",
+              "S": "0.02% max"
+            },
+            {
+              "grade": "Low Phosphorus Grade 3",
+              "Mn": "65% min",
+              "Si": "16% min",
+              "C": "2.5% max",
+              "P": "0.15% max",
+              "S": "0.03% max"
+            }
+          ],
+          "applications": ["Steelmaking deoxidizer", "Alloying element in steel", "Hardening agent in aluminum production"],
+          "manufacturingProcess": "Produced by smelting manganese ore with coke and quartz flux, or by smelting slag from high-carbon ferro manganese",
+          "safetyInformation": "Dust-free, folded silico manganese in lumps is not a health hazard when properly handled. Inhalation of manganese vapor oxide fumes can result in acute chemical pneumonia. Prolonged exposure can lead to chronic manganese poisoning."
+        },
+        {
+          "id": "high-carbon-ferro-manganese",
+          "name": "High Carbon Ferro Manganese",
+          "aliases": ["HC FeMn", "FeMn"],
+          "description": "The largest tonnage ferro alloy used in steelmaking, typically containing 70-80% Mn and 6-7% C. Serves as deoxidizing agent and important alloying element.",
+          "chemicalComposition": [
+            {
+              "grade": "Grade 1",
+              "Mn": "65%-70%",
+              "Si": "1.5% max",
+              "C": "6%-8%",
+              "P": "0.3% max",
+              "S": "0.02%-0.05%"
+            },
+            {
+              "grade": "Grade 2",
+              "Mn": "70%-75%",
+              "Si": "1.5% max",
+              "C": "6%-8%",
+              "P": "0.3% max",
+              "S": "0.02%-0.05%"
+            },
+            {
+              "grade": "Grade 3",
+              "Mn": "75%-80%",
+              "Si": "1.5% max",
+              "C": "6%-8%",
+              "P": "0.3% max",
+              "S": "0.02%-0.05%"
+            }
+          ],
+          "keyProperties": [
+            "Deoxidizing Agent - Used in steelmaking process",
+            "Sulfur Control - Manganese combines with sulfur forming manganese sulfide (MnS)",
+            "Austenite Stabilizer - Manganese stabilizes the austenite phase in steel",
+            "Wear Resistance - Steels with 12-14% Mn provide excellent wear and abrasion-resisting characteristics"
+          ],
+          "applications": ["Deoxidizing agent in steelmaking", "Sulfur control in steel", "Austenite stabilization", "Wear-resistant steel production"],
+          "manufacturingProcess": "Produced by carbothermic reduction of manganese ores containing both iron and manganese oxides using submerged arc electric furnaces"
+        },
+        {
+          "id": "high-carbon-ferro-chrome",
+          "name": "High Carbon Ferro Chrome",
+          "aliases": ["HC FeCr", "HCFC"],
+          "description": "Primarily used in stainless steel and high chromium steels production. Produced using submerged arc smelting in AC furnaces.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard Grade 1",
+              "Cr": "58% min",
+              "Si": "4% max",
+              "C": "8% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "Standard Grade 2",
+              "Cr": "60% min",
+              "Si": "4% max",
+              "C": "8% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "Standard Grade 3",
+              "Cr": "58% min",
+              "Si": "3.5% max",
+              "C": "8% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "Standard Grade 4",
+              "Cr": "60% min",
+              "Si": "3.5% max",
+              "C": "8% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "Standard Grade 5",
+              "Cr": "60% min",
+              "Si": "3% max",
+              "C": "8.5% max",
+              "P": "0.04% max",
+              "S": "0.06% max"
+            },
+            {
+              "grade": "Standard Grade 6",
+              "Cr": "60% min",
+              "Si": "2.5% max",
+              "C": "9% max",
+              "P": "0.04% max",
+              "S": "0.06% max"
+            },
+            {
+              "grade": "Standard Grade 7",
+              "Cr": "60% min",
+              "Si": "2% max",
+              "C": "9.5% max",
+              "P": "0.04% max",
+              "S": "0.06% max"
+            },
+            {
+              "grade": "LP HC FeCr Standard",
+              "Cr": "57%-63%",
+              "Si": "4% max",
+              "C": "8% max",
+              "P": "0.020% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "LP HC FeCr Premium",
+              "Cr": "57%-63%",
+              "Si": "4% max",
+              "C": "8% max",
+              "P": "0.015% max",
+              "S": "0.05% max"
+            }
+          ],
+          "applications": ["Stainless steel production", "High chromium steels", "Chrome alloys"],
+          "physicalSpecs": {
+            "size": "As per buyer's requirement"
+          }
+        },
+        {
+          "id": "low-carbon-ferro-chrome",
+          "name": "Low Carbon Ferro Chrome",
+          "aliases": ["LC FeCr", "LCFC"],
+          "description": "Ferroalloy additive used in production of stainless steel, acid-resistant steel, and heat-resistant steel. Can also be used to make chrome metal.",
+          "chemicalComposition": [
+            {
+              "grade": "LC FeCr 60-A",
+              "Cr": "60% min",
+              "Si": "1.5% max",
+              "C": "0.15% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "LC FeCr 60-B",
+              "Cr": "60% min",
+              "Si": "1.5% max",
+              "C": "0.20% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "LC FeCr 60-C",
+              "Cr": "60% min",
+              "Si": "1.5% max",
+              "C": "0.25% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "LC FeCr 65-A",
+              "Cr": "65% min",
+              "Si": "1.5% max",
+              "C": "0.15% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "LC FeCr 65-B",
+              "Cr": "65% min",
+              "Si": "1.5% max",
+              "C": "0.20% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            },
+            {
+              "grade": "LC FeCr 65-C",
+              "Cr": "65% min",
+              "Si": "1.5% max",
+              "C": "0.25% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            }
+          ],
+          "properties": [
+            "Resistant to wear and tear",
+            "Improves anti-oxidation and corrosion resistance of steel",
+            "Resistant to rust and oxidation",
+            "Stable at high temperatures"
+          ],
+          "applications": ["Stainless steel production", "Acid-resistant steel", "Heat-resistant steel", "Chrome metal production", "Ferrochrome production"],
+          "manufacturingProcess": "Made from silicon-chromium alloys, chromite, lime, and other metallurgical materials by fusing chromium ore and lime in a furnace"
+        },
+        {
+          "id": "ferro-silicon",
+          "name": "Ferro Silicon",
+          "aliases": ["FeSi", "Ferrosilicon"],
+          "description": "Produced by carbothermic reduction in a submerged arc furnace. Available in 50% and 75% grades for various industrial applications.",
+          "chemicalComposition": [
+            {
+              "grade": "FeSi50 Option 1",
+              "Si": "65% min",
+              "C": "0.2% max",
+              "Al": "2.5% max",
+              "P": "0.05% max",
+              "S": "0.05% max",
+              "size": "10-150mm"
+            },
+            {
+              "grade": "FeSi50 Option 2",
+              "Si": "70% min",
+              "C": "0.15% max",
+              "Al": "1.5% max",
+              "P": "0.05% max",
+              "S": "0.05% max",
+              "size": "10-60mm"
+            },
+            {
+              "grade": "FeSi50 Option 3",
+              "Si": "70% min",
+              "C": "1% max",
+              "Al": "1% max",
+              "P": "0.05% max",
+              "S": "0.05% max",
+              "size": "10-60mm"
+            },
+            {
+              "grade": "FeSi75 Option 1",
+              "Si": "75% min",
+              "C": "0.1% max",
+              "Al": "1% max",
+              "P": "0.05% max",
+              "S": "0.05% max",
+              "size": "10-60mm"
+            },
+            {
+              "grade": "FeSi75 Low Carbon",
+              "Si": "75% min",
+              "C": "0.05% max",
+              "Al": "0.5% max",
+              "P": "0.05% max",
+              "S": "0.05% max",
+              "size": "10-60mm"
+            },
+            {
+              "grade": "FeSi75 Ultra Low Carbon",
+              "Si": "75% min",
+              "C": "0.03% max",
+              "Al": "1% max",
+              "P": "0.05% max",
+              "S": "0.05% max",
+              "size": "10-60mm"
+            }
+          ],
+          "applications": ["Manufacture of silicon", "Corrosion-resistant alloys", "High-temperature-resistant ferrous silicon alloys", "Silicon steel for electromotors and transformer cores"],
+          "manufacturingProcess": "Produced by carbothermic reduction using iron ores or scrap and quartz or quartzite in submerged arc furnace"
+        },
+        {
+          "id": "low-carbon-silico-manganese",
+          "name": "Low Carbon Silico Manganese",
+          "aliases": ["LC SiMn", "Low Carbon Silicomanganese"],
+          "description": "Low carbon variant of silico manganese for applications requiring minimal carbon addition.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard LC SiMn",
+              "Mn": "65% min",
+              "Si": "28% min",
+              "C": "0.10% max",
+              "P": "0.20% max",
+              "S": "0.05% max"
+            }
+          ],
+          "applications": ["Low carbon steel production", "Stainless steel alloys", "Specialty steel production"]
+        },
+        {
+          "id": "medium-carbon-silico-manganese",
+          "name": "Medium Carbon Silico Manganese",
+          "aliases": ["MC SiMn", "Medium Carbon Silicomanganese"],
+          "description": "Medium carbon variant balancing manganese and silicon content for specific steel grades.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard MC SiMn",
+              "Mn": "65% min",
+              "Si": "25% min",
+              "C": "1.0-1.5%",
+              "P": "0.25% max",
+              "S": "0.05% max"
+            }
+          ],
+          "applications": ["Medium carbon steel production", "Alloy steel production", "Engineering steel"]
+        },
+        {
+          "id": "medium-carbon-ferro-manganese",
+          "name": "Medium Carbon Ferro Manganese",
+          "aliases": ["MC FeMn"],
+          "description": "Medium carbon content ferro manganese for controlled carbon addition in steelmaking.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard MC FeMn",
+              "Mn": "80% min",
+              "Si": "2% max",
+              "C": "1.0-1.5%",
+              "P": "0.30% max",
+              "S": "0.03% max"
+            }
+          ],
+          "applications": ["Steelmaking with controlled carbon", "Alloying element addition"]
+        },
+        {
+          "id": "low-carbon-ferro-manganese",
+          "name": "Low Carbon Ferro Manganese",
+          "aliases": ["LC FeMn"],
+          "description": "Low carbon variant of ferro manganese for precision steel chemistry control.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard LC FeMn",
+              "Mn": "80% min",
+              "Si": "2% max",
+              "C": "0.10% max",
+              "P": "0.30% max",
+              "S": "0.03% max"
+            }
+          ],
+          "applications": ["Low carbon steel production", "Precision alloying"]
+        },
+        {
+          "id": "silico-chrome",
+          "name": "Silico Chrome",
+          "aliases": ["SiCr", "Silicochromium"],
+          "description": "Alloy of silicon and chromium used as deoxidizer and alloying element.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard SiCr",
+              "Cr": "30-35%",
+              "Si": "40-45%",
+              "C": "0.5% max",
+              "P": "0.05% max",
+              "S": "0.05% max"
+            }
+          ],
+          "applications": ["Deoxidizer in steelmaking", "Chromium and silicon addition"]
+        }
+      ]
+    },
+    {
+      "id": "noble-ferro-alloys",
+      "name": "Noble Ferro Alloys",
+      "description": "Special alloys for advanced steel chemistry and premium grades.",
+      "products": [
+        {
+          "id": "ferro-molybdenum",
+          "name": "Ferro Molybdenum",
+          "aliases": ["FeMo"],
+          "description": "Versatile alloy of iron and molybdenum serving as hardening agent in heat-treatable alloy steels, high-strength low alloys, stainless steels, and superalloys.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard FeMo",
+              "Mo": "60% min",
+              "C": "0.10% max",
+              "S": "0.08% max",
+              "P": "0.06% max",
+              "Si": "1.50% max",
+              "Al": "0.50% max"
+            }
+          ],
+          "physicalSpecs": {
+            "particleSize": "10-100 mm",
+            "meltingPoint": "1900°C",
+            "numberOfGrades": "Two major grades",
+            "pureMolybdenumContent": "60-75%"
+          },
+          "applications": [
+            "Heat-treatable alloy steels",
+            "High-strength low alloys",
+            "Stainless steels",
+            "Cast irons",
+            "High-speed tool steels",
+            "Superalloy applications"
+          ],
+          "manufacturingProcess": "Made by reducing technical grade molybdic oxide and ferrosilicon through aluminothermic reduction"
+        },
+        {
+          "id": "ferro-vanadium",
+          "name": "Ferro Vanadium",
+          "aliases": ["FeV"],
+          "description": "Grayish silver crystalline solid alloy of iron and vanadium containing 35-85% vanadium. Used as hardener, strengthener, and anti-corrosive additive.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard Grade 1",
+              "V": "78%",
+              "C": "0.02% max",
+              "Si": "1.5% max",
+              "S": "0.08% max",
+              "Al": "1.5% max",
+              "size": "10-50mm (90% Min)"
+            },
+            {
+              "grade": "Standard Grade 2",
+              "V": "50-52% min",
+              "C": "0.02% max",
+              "Si": "4% max",
+              "S": "0.10% max",
+              "Al": "1% max",
+              "size": "20-70mm (90% Min)"
+            }
+          ],
+          "applications": [
+            "Hardener for steels",
+            "Strengthener for ferrous-based products",
+            "Anti-corrosive additive",
+            "High-strength low-alloy steel"
+          ],
+          "manufacturingProcess": "Produced by reducing vanadium pentoxide with aluminum or silicon"
+        },
+        {
+          "id": "ferro-titanium",
+          "name": "Ferro Titanium",
+          "aliases": ["FeTi"],
+          "description": "Alloy of iron and titanium with 10-20% iron and 45-75% titanium. Used as cleansing agent for iron and steel with deoxidizing, desulfurization, and denitrogenation properties.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard FeTi",
+              "Ti": "28% min",
+              "C": "0.10% max",
+              "S": "0.05% max",
+              "P": "0.05% max",
+              "Si": "1.50% max",
+              "Al": "8.00% max",
+              "Fe": "Balance"
+            }
+          ],
+          "keyCharacteristics": [
+            "Primary Use: Cleansing agent for iron and steel",
+            "Highly reactive with sulfur, carbon, oxygen, and nitrogen",
+            "Deoxidizing, desulfurization, denitrogenation",
+            "Yields metal with finer grain structure",
+            "Grain refinement in steel"
+          ],
+          "applications": [
+            "Deoxidizing agent in steelmaking",
+            "Desulfurization agent",
+            "Denitrogenation agent",
+            "Grain refinement in steel",
+            "Pyrotechnic compositions (as powder fuel)"
+          ],
+          "manufacturingProcess": "Produced by mixing titanium sponge and scrap with iron, melting in an induction furnace"
+        },
+        {
+          "id": "ferro-nickel",
+          "name": "Ferro Nickel",
+          "aliases": ["FeNi"],
+          "description": "Ferroalloy containing approximately 35% nickel and 65% iron. Shiny, metallic solid material produced by RKEF smelting process from lateritic nickel ores.",
+          "chemicalComposition": [
+            {
+              "grade": "Low Carbon FeNi",
+              "Ni": "30% min",
+              "Co": "1% max",
+              "Cr": "0.05% max",
+              "S": "0.03% max",
+              "P": "0.03% max",
+              "C": "0.05% max",
+              "Si": "0.5% max"
+            }
+          ],
+          "physicalForm": "Produced in small ingots or water-granulated beans convenient for adding to alloy-making furnaces",
+          "applications": [
+            "Substitute for nickel pellets or nickel cathodes",
+            "Stainless steel manufacture",
+            "Nickel alloy production"
+          ],
+          "manufacturingProcess": "Rotary Kiln-Electric Furnace (RKEF) smelting process from lateritic nickel ores"
+        },
+        {
+          "id": "ferro-niobium",
+          "name": "Ferro Niobium",
+          "aliases": ["FeNb", "Ferroniobium"],
+          "description": "Alloy of iron and niobium containing 60-70% niobium. Primary source of niobium for high-strength low-alloy (HSLA) steel.",
+          "chemicalComposition": [
+            {
+              "grade": "Standard FeNb",
+              "Nb": "60% min",
+              "C": "0.10% max",
+              "S": "0.10% max",
+              "P": "0.60% max",
+              "Si": "1.50% max",
+              "Al": "1.50% max",
+              "Fe": "Balance"
+            }
+          ],
+          "applications": [
+            "High-strength low-alloy (HSLA) steel production",
+            "Heat-resistant alloy smelting",
+            "Steel strengthening",
+            "Corrosion resistance enhancement"
+          ],
+          "manufacturingProcess": "Manufactured in electric furnace using aluminothermy method"
+        }
+      ]
+    },
+    {
+      "id": "ore-and-metals",
+      "name": "ORE & Metals",
+      "description": "Raw and semi-processed metal inputs supporting steel value chain.",
+      "products": [
+        {
+          "id": "iron-ore",
+          "name": "Iron Ore",
+          "aliases": ["Fe Ore", "Iron Ore Lumps", "Iron Ore Fines"],
+          "description": "Primary raw material for steel production, available in lump and fines form with various grades.",
+          "specifications": [
+            {
+              "product": "Iron Ore Lumps (CLO)",
+              "size": "5-18 mm",
+              "grade": "60-62% Fe"
+            },
+            {
+              "product": "Iron Ore Lumps (CLO)",
+              "size": "5-18 mm",
+              "grade": "58-60% Fe"
+            },
+            {
+              "product": "Iron Ore Lumps (CLO)",
+              "size": "10-30 mm",
+              "grade": "58-60% Fe"
+            },
+            {
+              "product": "Iron Ore Lumps (CLO)",
+              "size": "10-40 mm",
+              "grade": "58-60% Fe"
+            },
+            {
+              "product": "Iron Ore Lumps (CLO)",
+              "size": "4-10 mm",
+              "grade": "56-58% Fe"
+            },
+            {
+              "product": "Natural Iron Ore Fines",
+              "size": "0-10 mm",
+              "grade": "62%+ Fe"
+            },
+            {
+              "product": "Natural Iron Ore Fines",
+              "size": "0-10 mm",
+              "grade": "60%+ Fe"
+            },
+            {
+              "product": "Iron Ore Fines",
+              "size": "0-10 mm",
+              "grade": "58-60% Fe"
+            },
+            {
+              "product": "Iron Ore Fines Screened",
+              "size": "0-10 mm",
+              "grade": "54-55% Fe"
+            },
+            {
+              "product": "Iron Ore Fines Screened",
+              "size": "0-10 mm",
+              "grade": "52-53% Fe"
+            }
+          ],
+          "notes": {
+            "CLO": "Calcined Lumpy Ore",
+            "FePercentage": "Iron content percentage - Higher Fe% indicates higher quality"
+          },
+          "applications": ["Blast furnace feed", "Sintering", "Pelletizing", "Direct reduction"]
+        },
+        {
+          "id": "manganese-ore",
+          "name": "Manganese Ore",
+          "aliases": ["Mn Ore"],
+          "description": "Key indicator of industrial development, primarily used in ferro and silicomanganese alloys for steel production.",
+          "chemicalComposition": [
+            {
+              "grade": "Grade 1",
+              "Mn": "2%",
+              "SiO2": "32-36%",
+              "Fe": "7-9%"
+            },
+            {
+              "grade": "Grade 2",
+              "Mn": "30%",
+              "SiO2": "30-34%",
+              "Fe": "7-9%"
+            },
+            {
+              "grade": "Grade 3",
+              "Mn": "32%",
+              "SiO2": "28-32%",
+              "Fe": "7-9%"
+            }
+          ],
+          "productTypes": ["Carbonated ore", "Sinter"],
+          "applications": ["Ferromanganese production", "Silicomanganese production", "Steel production"],
+          "note": "Steels generally contain less than 1 percent manganese. Produced without manganese, steel breaks up when hot-rolled or forged."
+        },
+        {
+          "id": "sponge-iron",
+          "name": "Sponge Iron",
+          "aliases": ["Direct Reduced Iron", "DRI"],
+          "description": "Crucial intermediate in steel production produced by reducing iron ore in a direct reduction process. High purity and uniform composition.",
+          "chemicalComposition": [
+            {
+              "element": "Fe, Metallic",
+              "percentage": "82% AVG"
+            },
+            {
+              "element": "Metallization",
+              "percentage": "92% AVG"
+            },
+            {
+              "element": "Sulphur",
+              "percentage": "0.05%"
+            },
+            {
+              "element": "Phosphorus",
+              "percentage": "0.035% to 0.050%"
+            },
+            {
+              "element": "Carbon",
+              "percentage": "0.15% to 0.25% (0.2% avg)"
+            },
+            {
+              "element": "Gangue content",
+              "percentage": "5.0% avg"
+            }
+          ],
+          "physicalSize": {
+            "lump": "+3 mm",
+            "fines": "0-3 mm"
+          },
+          "applications": [
+            "Electric arc furnaces",
+            "Induction furnaces",
+            "Steelmaking"
+          ],
+          "benefits": [
+            "High purity",
+            "Uniform composition",
+            "Superior steel quality",
+            "Enhanced efficiency",
+            "Reduced greenhouse gas emissions",
+            "Cost-effective manufacturing",
+            "Eco-friendly attributes"
+          ]
+        },
+        {
+          "id": "pig-iron",
+          "name": "Pig Iron",
+          "aliases": ["Hot Metal", "Crude Iron"],
+          "description": "Obtained by smelting iron ore in blast furnace. Characterized by high carbon content as primary raw material for steelmaking.",
+          "chemicalComposition": [
+            {
+              "type": "Basic",
+              "C": "3.5-4.5%",
+              "Si": "1.25% max",
+              "Mn": "1.0% max",
+              "S": "0.05% max",
+              "P": "0.08-0.15%"
+            },
+            {
+              "type": "Foundry",
+              "C": "3.5-4.1%",
+              "Si": "2.5-3.5%",
+              "Mn": "0.5-1.2%",
+              "S": "0.04% max",
+              "P": "0.12% max"
+            },
+            {
+              "type": "High Purity/Nodular",
+              "C": "3.7-4.7%",
+              "Si": "0.05-1.5%",
+              "Mn": "0.05% max",
+              "S": "0.025% max",
+              "P": "0.035% max"
+            }
+          ],
+          "applications": [
+            "Steelmaking",
+            "Cast iron production",
+            "Foundry applications",
+            "Ductile iron production"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "steel-products",
+      "name": "Steel Products",
+      "description": "Finished steel products for infrastructure and fabrication needs.",
+      "subcategories": [
+        {
+          "name": "Billet / Bloom",
+          "products": [
+            {
+              "dimensions": ["100x100 sq.mm", "125x125 sq.mm", "160x160 sq.mm", "160x200 mm", "160x250 mm"]
+            }
+          ]
+        },
+        {
+          "name": "Carbon, Low Alloy & Spring Steel",
+          "forms": [
+            {
+              "form": "Round",
+              "sizeRange": "20 mm to 125 mm"
+            },
+            {
+              "form": "RCS (Rounded Corner Square)",
+              "sizeRange": "40 mm to 125 mm"
+            },
+            {
+              "form": "Flat",
+              "sizeRange": "70x8 mm - 360x20 mm"
+            }
+          ]
+        }
+      ],
+      "grades": {
+        "lowCarbonSteel": ["SAE 1008", "C20", "CLII", "AI05"],
+        "plainCarbonSteel": ["EN8D", "EN42", "C30", "C40", "C45", "C50"],
+        "carbonManganeseSteel": ["EN 15", "37C15", "SAE 1541"],
+        "freeCuttingSteel": ["EN 1A", "SAE 1118", "SAE 1140"],
+        "niCrMoSteel": ["SAE8620", "SAE8622", "EN353", "EN24", "637H 17"],
+        "chromeManganeseSteel": ["16MnCr5", "20MnCr5", "EN 18"],
+        "chromeMolySteel": ["EN 19", "SAE 4140", "SCM 415"],
+        "ballBearingSteel": ["SAE 52100"],
+        "chromeVanadiumSteel": ["31 CrV3"],
+        "springSteel": ["EN 45A", "65Si7", "SUP 11A", "SUP 9", "55Si7", "EN47", "EN48"]
+      },
+      "structuralSteelProducts": [
+        "MS Angle",
+        "MS Channel",
+        "Beams (Flat/Round/Square)",
+        "GI Pipes",
+        "GI Wire",
+        "MS Pipes",
+        "HB Wire",
+        "Crane Rails",
+        "Tees",
+        "Chequered Plates",
+        "Bright Bars",
+        "Binding Wire",
+        "Barbed Wire",
+        "Ingot",
+        "MS Sheet",
+        "HR Sheet (Hot Rolled)",
+        "CR Sheet (Cold Rolled)",
+        "MS Coil",
+        "HR Coil",
+        "CR Coil",
+        "GI & GP Coils",
+        "Aluminum Coils",
+        "TMT Bars"
+      ]
+    }
+  ]
+}

@@ -1,3 +1,9 @@
+export type GradeTable = {
+  name?: string;
+  headers: string[];
+  rows: string[][];
+};
+
 export type SpecRow = {
   parameter: string;
   value: string;
@@ -6,6 +12,7 @@ export type SpecRow = {
 export type SubProductItem = {
   name: string;
   specTable: SpecRow[];
+  gradeTables?: GradeTable[];
 };
 
 export type ProductItem = {
@@ -17,6 +24,7 @@ export type ProductItem = {
   productType: string;
   commonSpecs: string;
   specTable: SpecRow[];
+  gradeTables?: GradeTable[];
   physicalSpecs?: string[];
   variants?: string[];
   subProducts?: SubProductItem[];
@@ -44,7 +52,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'bulk-ferro-alloys',
     description:
       'Primary high-volume ferro additives used in industrial steelmaking as deoxidizers and alloying elements for chemistry and strength control.',
-    image: '/hero_foundry.jpg',
+    image: 'https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?q=80&w=1400&auto=format&fit=crop',
     products: [
       /* ═══ 1.1 Silico Manganese (consolidated: HC / MC / LC) ═══ */
       {
@@ -65,6 +73,22 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Phosphorus (P)', value: '0.1–0.3% Max' },
           { parameter: 'Sulfur (S)', value: '0.01–0.04% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Mn","Si","C","P","S"],
+        rows: [
+          ["Standard Grade 1","40-45%","10-12%","3.50% max","0.30% max","0.04% max"],
+          ["Standard Grade 2","50-55%","12-14%","3.00% max","0.30% max","0.04% max"],
+          ["Standard Grade 3","60-65%","14-15%","2.50% max","0.30% max","0.04% max"],
+          ["Standard Grade 4","65-70%","15-17%","2.00% max","2.00% max","0.04% max"],
+          ["Standard Grade 5","70-74%","15-18%","2.00% max","2.00% max","0.04% max"],
+          ["Low Phosphorus Grade 1","60% min","14% min","2.5% max","0.15% max","0.03% max"],
+          ["Low Phosphorus Grade 2","60% min","14% min","2.5% max","0.02% max","0.02% max"],
+          ["Low Phosphorus Grade 3","65% min","16% min","2.5% max","0.15% max","0.03% max"],
+        ]
+      }
+    ],
         subProducts: [
           {
             name: 'High Carbon Silico Manganese',
@@ -115,7 +139,7 @@ export const productCatalog: ProductCategory[] = [
           'Low carbon grades eliminate final-step decarburization in stainless production',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-silico-manganese/',
-        image: '/products_stack.jpg',
+        image: 'https://images.unsplash.com/photo-1587327903256-2265e70fb5ce?q=80&w=1400&auto=format&fit=crop',
       },
 
       /* ═══ 1.2 Ferro Manganese (consolidated: HC / MC / LC) ═══ */
@@ -137,6 +161,17 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Phosphorus (P)', value: '0.20–0.30% Max' },
           { parameter: 'Sulfur (S)', value: '0.02–0.05% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Mn","Si","C","P","S"],
+        rows: [
+          ["Grade 1","65%-70%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
+          ["Grade 2","70%-75%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
+          ["Grade 3","75%-80%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
+        ]
+      }
+    ],
         subProducts: [
           {
             name: 'High Carbon Ferro Manganese',
@@ -188,7 +223,7 @@ export const productCatalog: ProductCategory[] = [
           'HC/MC/LC grades produced via different processes',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-manganese/',
-        image: '/products_stack.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ferromanganese.jpg/800px-Ferromanganese.jpg',
       },
 
       /* ═══ 1.3 Ferro Chrome (consolidated: HC / LC) ═══ */
@@ -210,6 +245,23 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Phosphorus (P)', value: '0.015–0.05% Max' },
           { parameter: 'Sulfur (S)', value: '0.05–0.06% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Cr","Si","C","P","S"],
+        rows: [
+          ["Standard Grade 1","58% min","4% max","8% max","0.05% max","0.05% max"],
+          ["Standard Grade 2","60% min","4% max","8% max","0.05% max","0.05% max"],
+          ["Standard Grade 3","58% min","3.5% max","8% max","0.05% max","0.05% max"],
+          ["Standard Grade 4","60% min","3.5% max","8% max","0.05% max","0.05% max"],
+          ["Standard Grade 5","60% min","3% max","8.5% max","0.04% max","0.06% max"],
+          ["Standard Grade 6","60% min","2.5% max","9% max","0.04% max","0.06% max"],
+          ["Standard Grade 7","60% min","2% max","9.5% max","0.04% max","0.06% max"],
+          ["LP HC FeCr Standard","57%-63%","4% max","8% max","0.020% max","0.05% max"],
+          ["LP HC FeCr Premium","57%-63%","4% max","8% max","0.015% max","0.05% max"],
+        ]
+      }
+    ],
         subProducts: [
           {
             name: 'High Carbon Ferro Chrome',
@@ -251,7 +303,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced via submerged arc smelting (AC) or open arc smelting (DC)',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-chrome/',
-        image: '/quality_lab.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Ferrochrome.jpg/800px-Ferrochrome.jpg',
       },
 
       /* ─── 1.4 Ferro Silicon ─── */
@@ -273,6 +325,20 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Phosphorus (P)', value: '0.05% Max' },
           { parameter: 'Sulfur (S)', value: '0.05% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Si","C","Al","P","S","size"],
+        rows: [
+          ["FeSi50 Option 1","65% min","0.2% max","2.5% max","0.05% max","0.05% max","10-150mm"],
+          ["FeSi50 Option 2","70% min","0.15% max","1.5% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi50 Option 3","70% min","1% max","1% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi75 Option 1","75% min","0.1% max","1% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi75 Low Carbon","75% min","0.05% max","0.5% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi75 Ultra Low Carbon","75% min","0.03% max","1% max","0.05% max","0.05% max","10-60mm"],
+        ]
+      }
+    ],
         variants: ['Option 1 (65-70% Si, 10-150mm)', 'Option 2 (75% Min Si, 10-60mm)', 'LC Option (75% Min Si, LC 0.05% Max)'],
         productionMethod:
           'Carbothermic reduction in submerged arc furnace. Iron ore/scrap provides Fe; quartz/quartzite provides Si.',
@@ -291,7 +357,7 @@ export const productCatalog: ProductCategory[] = [
           'Used in silicon steel for electrical applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-silicon/',
-        image: '/capabilities_worker.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ferrosilicon.JPG/800px-Ferrosilicon.JPG',
       },
 
       /* ─── 1.5 Silico Chrome ─── */
@@ -313,6 +379,15 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Phosphorus (P)', value: '0.05% Max' },
           { parameter: 'Sulfur (S)', value: '0.05% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Cr","Si","C","P","S"],
+        rows: [
+          ["Standard SiCr","30-35%","40-45%","0.5% max","0.05% max","0.05% max"],
+        ]
+      }
+    ],
         productionMethod:
           'Produced in electric arc furnaces using chromite ore and silica-rich reductants.',
         applications: [
@@ -327,7 +402,572 @@ export const productCatalog: ProductCategory[] = [
           'Dual-action: deoxidizer + chromium additive',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/silico-chrome/',
-        image: '/quality_lab.jpg',
+        image: 'https://images.unsplash.com/photo-1621217036214-722a557b4202?q=80&w=1400&auto=format&fit=crop',
+      },
+    ],
+  },
+
+  /* ═══════════════════════════════════════════════════════ */
+  /*  4. STEEL PRODUCTS                                      */
+  /* ═══════════════════════════════════════════════════════ */
+  {
+    name: 'Steel Products',
+    slug: 'steel-products',
+    description:
+      'Finished and semi-finished steel products supplied across structural, fabrication, and industrial sectors.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Steel_wire_rope.png/800px-Steel_wire_rope.png',
+    products: [
+      /* ─── 4.1 Billets & Blooms ─── */
+      {
+        name: 'Billets & Blooms',
+        slug: 'billets-and-blooms',
+        shortDescription: 'Semi-finished solid steel lengths used as primary feed for rolling mills.',
+        overview: 'Steel billets and blooms are semi-finished cast products used as primary feed for hot rolling mills and forging. They form the building blocks for a vast array of wire rods, seamless pipes, and structural steel.',
+        detailedDescription: 'Available in various dimensions, our billets and blooms are cast using advanced continuous casting machines to ensure structural integrity. They are carefully cooled and inspected for internal soundness and surface finish. Suitable for structural, forging, and special engineering applications depending on the carbon and alloy grades.',
+        productType: 'Semi-finished Steel',
+        commonSpecs: 'Cast to precise dimensional tolerances',
+        specTable: [
+          { parameter: 'Length', value: '3m to 12m' },
+          { parameter: 'Surface', value: 'Hot Cast / Unmachined' }
+        ],
+        subProducts: [
+          {
+            name: '100x100 Billet',
+            specTable: [
+              { parameter: 'Size', value: '100x100 mm' },
+              { parameter: 'Grade', value: 'Carbon Steel / IS 2830' },
+              { parameter: 'Application', value: 'Light Sections, TMT Bars' }
+            ]
+          },
+          {
+            name: '160x160 Billet',
+            specTable: [
+              { parameter: 'Size', value: '160x160 mm' },
+              { parameter: 'Grade', value: 'Carbon / Alloy Steel' },
+              { parameter: 'Application', value: 'Medium Structural Sections' }
+            ]
+          },
+          {
+            name: '200x250 Bloom',
+            specTable: [
+              { parameter: 'Size', value: '200x250 mm' },
+              { parameter: 'Grade', value: 'High Carbon / Alloy' },
+              { parameter: 'Application', value: 'Heavy Beams, Forging Applications' }
+            ]
+          }
+        ],
+        applications: ['TMT bar rolling', 'Structural section rolling', 'Seamless pipe manufacturing', 'Forging components'],
+        keyPoints: ['Available in 100mm to 200mm+ cross-sections', 'Uniform microstructure', 'Low inclusion content', 'Available in custom alloy chemistries'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1563062067-731ff6fb4ec4?q=80&w=1400&auto=format&fit=crop',
+      },
+
+      /* ─── 4.2 Carbon, Alloy & Spring Steel ─── */
+      {
+        name: 'Carbon & Alloy Steel',
+        slug: 'carbon-alloy-spring-steel',
+        shortDescription: 'High-grade rounds, squares, and flats formulated for precision automotive and engineering uses.',
+        overview: 'Specialized steel products crafted with precise carbon, alloy, and spring steel compositions. These are critical inputs for automotive parts, industrial machinery, and heavy equipment manufacturing.',
+        detailedDescription: 'From versatile Round Bars to Rounded Corner Squares (RCS) and Spring Steel Flats, our alloy products meet demanding strength, wear, and fatigue resistance criteria. Manufactured to stringent global standards including SAE, EN, and IS specifications.',
+        productType: 'Finished Steel Product',
+        commonSpecs: 'Available in diverse structural formats',
+        specTable: [
+          { parameter: 'Finish', value: 'Hot Rolled / Bright Bar Finish' },
+          { parameter: 'Standard', value: 'SAE, EN, IS, DIN' }
+        ],
+        subProducts: [
+          {
+            name: 'Round Bars',
+            specTable: [
+              { parameter: 'Size Range', value: '20mm - 125mm' },
+              { parameter: 'Common Grades', value: 'SAE 1008, EN8D, SAE 4140, EN1A' },
+              { parameter: 'Application', value: 'Axles, Shafts, Fasteners' }
+            ]
+          },
+          {
+            name: 'RCS (Rounded Corner Square)',
+            specTable: [
+              { parameter: 'Size Range', value: '40mm - 125mm' },
+              { parameter: 'Common Grades', value: 'SAE 8620, EN353, 20MnCr5, EN19' },
+              { parameter: 'Application', value: 'Gears, Automotive Forgings' }
+            ]
+          },
+          {
+            name: 'Spring Steel Flats',
+            specTable: [
+              { parameter: 'Dimensions', value: '70x8mm to 360x20mm' },
+              { parameter: 'Common Grades', value: 'EN45A, 65Si7, SUP9, 55Si7' },
+              { parameter: 'Application', value: 'Leaf Springs, Suspension Systems' }
+            ]
+          }
+        ],
+        applications: ['Automotive forgings', 'Gear & shaft manufacturing', 'Suspension systems (Leaf Springs)', 'Precision machined components'],
+        keyPoints: ['Rounds from 20-125mm', 'RCS from 40-125mm', 'Superior fatigue life', 'Tight dimensional tolerances'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1581093196277-9f608988f615?q=80&w=1400&auto=format&fit=crop',
+      },
+
+      /* ─── 4.3 Structural Sections ─── */
+      {
+        name: 'Structural Sections',
+        slug: 'structural-sections',
+        shortDescription: 'Hot-rolled steel beams, channels, and angles forming the backbone of infrastructure.',
+        overview: 'Structural steel sections are hot-rolled products available in an array of cross-sections like I, U, and L shapes. They are designed to carry high continuous loads efficiently.',
+        detailedDescription: 'Essential for the construction of pre-engineered buildings, bridges, and industrial structures. Our range covers Angles, Channels, and Beams manufactured to high yield strength standards to ensure maximum structural stability and safety.',
+        productType: 'Construction Steel',
+        commonSpecs: 'Hot-rolled structural shapes',
+        specTable: [
+          { parameter: 'Grades', value: 'IS 2062 E250 / E350, ASTM A36' },
+          { parameter: 'Length', value: 'Standard 6m, 9m, 12m or custom cut' }
+        ],
+        subProducts: [
+          {
+            name: 'MS Angles',
+            specTable: [
+              { parameter: 'Size Range', value: '25x25x3mm to 200x200x20mm' },
+              { parameter: 'Type', value: 'Equal & Unequal' },
+              { parameter: 'Application', value: 'Transmission Towers, Sheds' }
+            ]
+          },
+          {
+            name: 'MS Channels',
+            specTable: [
+              { parameter: 'Size Range', value: '75x40mm to 400x100mm' },
+              { parameter: 'Profile', value: 'U-Shape (ISMC)' },
+              { parameter: 'Application', value: 'Industrial Factory Frames, Chassis' }
+            ]
+          },
+          {
+            name: 'Beams & Joists',
+            specTable: [
+              { parameter: 'Size Range', value: '100x50mm to 600x210mm' },
+              { parameter: 'Profile', value: 'I-Beam (ISMB / NPB / W-Shape)' },
+              { parameter: 'Application', value: 'Pre-Engineered Buildings, Bridges' }
+            ]
+          }
+        ],
+        applications: ['Pre-Engineered Buildings (PEB)', 'Telecom and Transmission Towers', 'Bridge Girders', 'Heavy Industrial Sheds'],
+        keyPoints: ['Comprehensive range of cross-sections', 'High load-bearing capacity', 'Weldable and formable', 'IS 2062 compliant'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1400&auto=format&fit=crop',
+      },
+
+      /* ─── 4.4 Steel Sheets & Coils ─── */
+      {
+        name: 'Steel Sheets & Coils',
+        slug: 'steel-sheets-coils',
+        shortDescription: 'Flat-rolled steel items available in hot-rolled, cold-rolled, and galvanized finishes.',
+        overview: 'Flat steel products form the basis of countless fabricated end-products. They are rolled into precise thicknesses and are available in continuous coils or precut sheets.',
+        detailedDescription: 'Whether you need the rugged malleability of Hot Rolled (HR) steel, the precise finish of Cold Rolled (CR) steel, or the corrosion resistance of Galvanized (GP/GI) materials, our product line meets stringent thickness and flatness tolerances.',
+        productType: 'Flat Steel Product',
+        commonSpecs: 'Available in Coil or Cut-to-length Sheet form',
+        specTable: [
+          { parameter: 'Form', value: 'Coil or Sheet' },
+          { parameter: 'Width', value: '1000mm to 2000mm standard' }
+        ],
+        subProducts: [
+          {
+            name: 'HR Coils / Sheets',
+            specTable: [
+              { parameter: 'Thickness', value: '1.2mm to 20mm' },
+              { parameter: 'Finish', value: 'Black / Pickled & Oiled' },
+              { parameter: 'Application', value: 'Heavy structures, Pipes, Tanks' }
+            ]
+          },
+          {
+            name: 'CR Coils / Sheets',
+            specTable: [
+              { parameter: 'Thickness', value: '0.15mm to 3.0mm' },
+              { parameter: 'Finish', value: 'Bright / Matte / Dull' },
+              { parameter: 'Application', value: 'White goods, Auto body panels' }
+            ]
+          },
+          {
+            name: 'Galvanized (GI) Coils',
+            specTable: [
+              { parameter: 'Coating', value: 'Z60 to Z275 (Zinc)' },
+              { parameter: 'Spangle', value: 'Zero, Minimized, or Regular' },
+              { parameter: 'Application', value: 'Roofing, Ducting, White goods' }
+            ]
+          }
+        ],
+        applications: ['Automotive body manufacturing', 'Roofing and cladding', 'Home appliances', 'HVAC ducting'],
+        keyPoints: ['High dimensional accuracy', 'Consistent surface finish', 'Superior drawing and forming properties', 'Excellent corrosion resistance in GI'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1509390874189-d7585098e94a?q=80&w=1400&auto=format&fit=crop',
+      },
+
+      /* ─── 4.5 TMT Rebars ─── */
+      {
+        name: 'TMT Rebars',
+        slug: 'tmt-rebars',
+        shortDescription: 'Thermo-Mechanically Treated bars providing superior strength and ductility for concrete reinforcement.',
+        overview: 'TMT (Thermo-Mechanically Treated) bars are high-strength reinforcement bars essential for all types of concrete structures. They feature a tough outer core and a soft, ductile inner core.',
+        detailedDescription: 'Produced using an advanced quenching and self-tempering process, our TMT bars resist seismic forces, fire, and corrosion. They offer superior bendability and weldability without loss of structural strength. Available in standard lengths of 12 meters.',
+        productType: 'Construction Steel',
+        commonSpecs: 'Sizes from 8mm to 36mm',
+        specTable: [
+          { parameter: 'Standard', value: 'IS 1786' },
+          { parameter: 'Length', value: '12 meters standard' }
+        ],
+        subProducts: [
+          {
+            name: 'Fe 500',
+            specTable: [
+              { parameter: 'Yeild Strength', value: '≥ 500 N/sq.mm' },
+              { parameter: 'Elongation', value: '≥ 12%' },
+              { parameter: 'Application', value: 'General Residential & Commercial Buildings' }
+            ]
+          },
+          {
+            name: 'Fe 500D',
+            specTable: [
+              { parameter: 'Yeild Strength', value: '≥ 500 N/sq.mm' },
+              { parameter: 'Elongation', value: '≥ 16% (High Ductility)' },
+              { parameter: 'Application', value: 'High-Rise, Bridges, Seismic Zones' }
+            ]
+          },
+          {
+            name: 'Fe 550D',
+            specTable: [
+              { parameter: 'Yeild Strength', value: '≥ 550 N/sq.mm' },
+              { parameter: 'Elongation', value: '≥ 14.5% (High Ductility)' },
+              { parameter: 'Application', value: 'Heavy Infrastructure, Dams, Tunnels' }
+            ]
+          }
+        ],
+        applications: ['Residential & Commercial construction', 'Bridges and flyovers', 'Dams and heavy infrastructure', 'Earthquake-prone areas'],
+        keyPoints: ['Earthquake and fire resistant', 'High rib depth for superior concrete grip', 'Excellent weldability and bendability', 'Corrosion-resistant grades available (CRS/Epoxy)'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Reinforcing_bar.jpg/800px-Reinforcing_bar.jpg',
+      },
+
+      /* ─── 4.6 Industrial Wires & Fencing ─── */
+      {
+        name: 'Industrial Wires',
+        slug: 'industrial-wires',
+        shortDescription: 'From mild steel binding wires to heavy-duty galvanized fencing solutions.',
+        overview: 'Steel wires are versatile products drawn from wire rods. They serve critical roles in construction tie-downs, manufacturing applications, and agricultural fencing.',
+        detailedDescription: 'We provide uniformly drawn steel wires featuring consistent tensile strength and clean surface finishes. Galvanized variants offer excellent resistance to rust, making them ideal for outdoor and agricultural applications.',
+        productType: 'Wire Products',
+        commonSpecs: 'Supplied in coils or spool formats',
+        specTable: [
+          { parameter: 'Material', value: 'Low to Medium Carbon Steel' },
+          { parameter: 'Packaging', value: 'Coil, Spool, or Bundle' }
+        ],
+        subProducts: [
+          {
+            name: 'Binding Wire',
+            specTable: [
+              { parameter: 'Gauge', value: '18 SWG to 22 SWG' },
+              { parameter: 'Finish', value: 'Soft Annealed' },
+              { parameter: 'Application', value: 'Tying rebars in construction' }
+            ]
+          },
+          {
+            name: 'GI Wire',
+            specTable: [
+              { parameter: 'Gauge', value: '8 SWG to 24 SWG' },
+              { parameter: 'Coating', value: 'Hot-dip Galvanized' },
+              { parameter: 'Application', value: 'Fencing, Wire Meshes' }
+            ]
+          },
+          {
+            name: 'Barbed / Fencing Wire',
+            specTable: [
+              { parameter: 'Format', value: 'Stranded with 4-point barbs' },
+              { parameter: 'Spacing', value: '3 to 6 inches between barbs' },
+              { parameter: 'Application', value: 'Agricultural, Security Fencing' }
+            ]
+          }
+        ],
+        applications: ['Construction rebar tying', 'Agricultural boundaries', 'High-security fencing', 'Wire mesh and nail manufacturing'],
+        keyPoints: ['Available in black annealed or galvanized finishes', 'High rust resistance in GI grades', 'Consistent wire diameter and tensile strength', 'Easy to twist and tie'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1400&auto=format&fit=crop',
+      },
+
+      /* ─── 4.7 Steel Pipes & Tubes ─── */
+      {
+        name: 'Steel Pipes & Tubes',
+        slug: 'steel-pipes-tubes',
+        shortDescription: 'Durable piping solutions for water, gas, and structural scaffolding.',
+        overview: 'Steel pipes and tubular hollow sections are critical for fluid transport and structural scaffolding. Our range includes both welded and seamless tubular products in various schedules.',
+        detailedDescription: 'Manufactured with high-strength seam welds (ERW) or through seamless extrusion, our pipes meet a broad spectrum of pressure and environmental requirements. Hollow sections (SHS/RHS) are also widely favored for modern architectural and structural frameworks.',
+        productType: 'Tubular Steel',
+        commonSpecs: 'Circular, Square, and Rectangular profiles',
+        specTable: [
+          { parameter: 'Standard Length', value: '6 meters (Custom cuts available)' },
+          { parameter: 'Standards', value: 'IS 1239, IS 3589, IS 4923' }
+        ],
+        subProducts: [
+          {
+            name: 'MS Black Pipes',
+            specTable: [
+              { parameter: 'NB Size', value: '15mm to 300mm' },
+              { parameter: 'Wall Thickness', value: 'Light, Medium, Heavy' },
+              { parameter: 'Application', value: 'Scaffolding, Structural, Non-critical fluids' }
+            ]
+          },
+          {
+            name: 'GI Pipes',
+            specTable: [
+              { parameter: 'NB Size', value: '15mm to 150mm' },
+              { parameter: 'Coating', value: 'Hot-Dip Galvanized Zinc' },
+              { parameter: 'Application', value: 'Water supply, Firefighting, Plumbing' }
+            ]
+          },
+          {
+            name: 'Hollow Sections (RHS/SHS)',
+            specTable: [
+              { parameter: 'Shape', value: 'Square & Rectangular' },
+              { parameter: 'Thickness', value: '1.2mm to 10.0mm' },
+              { parameter: 'Application', value: 'PEB trusses, Aesthetic structures' }
+            ]
+          }
+        ],
+        applications: ['Water and gas distribution', 'Industrial scaffolding systems', 'Architectural space frames', 'Firefighting sprinkler systems'],
+        keyPoints: ['Rigorous hydrostatic testing for fluid grades', 'Uniform zinc coating for GI pipes', 'High strength-to-weight ratio for SHS/RHS', 'Seamless variants available for high pressure'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1585644837583-8a3fc0cd24b3?q=80&w=1400&auto=format&fit=crop',
+      },
+      
+      /* ─── 4.8 Primary Feedstock ─── */
+      {
+        name: 'Primary Feedstock',
+        slug: 'primary-feedstock',
+        shortDescription: 'Sponge iron and pig iron serving as essential raw material for steelmaking.',
+        overview: 'These primary iron products act as the fundamental metallic feed for electric arc, induction, and basic oxygen furnaces. They govern the purity and chemical baseline of the finished steel.',
+        detailedDescription: 'Sponge Iron (Direct Reduced Iron) is produced by reducing iron ore without melting, maintaining high metallization and low tramp elements. Pig Iron, cast from blast furnaces, offers higher carbon content perfect for foundries and specific steelmaking chemistries.',
+        productType: 'Raw Materials',
+        commonSpecs: 'High iron content materials for smelting',
+        specTable: [
+          { parameter: 'Form', value: 'Lumps, Fines, or Ingots' },
+          { parameter: 'Handling', value: 'Bulk bulk-loaded or bagged (for fines)' }
+        ],
+        subProducts: [
+          {
+            name: 'Sponge Iron (DRI)',
+            specTable: [
+              { parameter: 'Total Iron (Fe)', value: '78% - 82% Min' },
+              { parameter: 'Metallization', value: '85% - 88% Min' },
+              { parameter: 'Application', value: 'Induction / Electric Arc Furnaces' }
+            ]
+          },
+          {
+            name: 'Steel Grade Pig Iron',
+            specTable: [
+              { parameter: 'Silicon (Si)', value: '1.25% Max' },
+              { parameter: 'Carbon (C)', value: '3.5% - 4.5%' },
+              { parameter: 'Application', value: 'Diluting scrap, Basic oxygen steelmaking' }
+            ]
+          },
+          {
+            name: 'Foundry Grade Pig Iron',
+            specTable: [
+              { parameter: 'Silicon (Si)', value: '1.5% - 2.5% Min' },
+              { parameter: 'Carbon (C)', value: '3.5% - 4.5%' },
+              { parameter: 'Application', value: 'Cast iron production in foundries' }
+            ]
+          }
+        ],
+        applications: ['Steel making via EAF or IF', 'Diluting impurities from scrap metal', 'Manufacturing of cast iron components'],
+        keyPoints: ['Consistent chemistry to stabilize furnace operations', 'Low sulphur and phosphorus content', 'Enhances steel purity', 'Available in varying sizes/grades'],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
+        image: 'https://images.unsplash.com/photo-1621217036495-2cc3514ac01f?q=80&w=1400&auto=format&fit=crop',
+      }
+    ],
+  },
+  /* ═══════════════════════════════════════════════════════ */
+  /*  3. ORE & METALS                                        */
+  /* ═══════════════════════════════════════════════════════ */
+  {
+    name: 'ORE & Metals',
+    slug: 'ore-and-metals',
+    description:
+      'Raw and semi-processed metal inputs supporting steel value chain — from ore to metal.',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manganese_ore_macro.jpg/800px-Manganese_ore_macro.jpg',
+    products: [
+      /* ─── 3.1 Iron Ore ─── */
+      {
+        name: 'Iron Ore',
+        slug: 'iron-ore',
+        shortDescription:
+          'Vital raw material in steel production — high iron content fuels manufacturing of steel products.',
+        overview:
+          'Iron ore, a vital raw material in steel production, is a key player in global industrial processes. Mined from abundant reserves worldwide, its high iron content fuels the manufacturing of essential steel products.',
+        detailedDescription:
+          'As steel demand continues to rise, iron ore significance in sustaining various industries remains indispensable. Iron ore is fundamental to blast furnace operations, sinter plant feed, and pellet production across the globe.',
+        productType: 'Ore',
+        commonSpecs: 'Fe 52–62%+ (Lumps / Fines)',
+        specTable: [
+          { parameter: 'Iron (Fe) Grade', value: '52%–62%+' },
+          { parameter: 'Type', value: 'Ore' },
+          { parameter: 'Size', value: 'Lumps / Fines' },
+          { parameter: 'Application', value: 'Blast furnaces, sinter plants, pellet plants' },
+        ],
+        physicalSpecs: ['Lumps', 'Fines'],
+        applications: [
+          'Blast furnace feed',
+          'Sinter plants',
+          'Pellet production',
+          'Steel manufacturing',
+        ],
+        keyPoints: [
+          'Vital raw material in global steel production',
+          'Supplied in lumps and fines',
+          'Fe grade: 52%–62%+',
+          'Fundamental to blast furnace operations',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/iron-ore/',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Iron_ore.jpg/800px-Iron_ore.jpg',
+      },
+
+      /* ─── 3.2 Sponge Iron ─── */
+      {
+        name: 'Sponge Iron',
+        slug: 'sponge-iron',
+        shortDescription:
+          'Crucial intermediate in steel production — high purity, uniform composition, eco-friendly.',
+        overview:
+          'Sponge iron, a crucial intermediate in steel production, is produced by reducing iron ore in a direct reduction process. It exhibits high purity and uniform composition, contributing to superior steel quality.',
+        detailedDescription:
+          'Widely used in electric arc furnaces, sponge iron enhances efficiency, reduces greenhouse gas emissions, and ensures cost-effective steel manufacturing. Its adaptability and eco-friendly attributes make sponge iron a pivotal component in modern metallurgy.',
+        productType: 'Direct Reduced Iron (DRI)',
+        commonSpecs: 'Fe 80–88%, Lump +3mm, Fines 0–3mm',
+        specTable: [
+          { parameter: 'Iron (Fe) Grade', value: '80%–88%' },
+          { parameter: 'Type', value: 'Direct Reduced Iron (DRI)' },
+          { parameter: 'Size (Lump)', value: '+3mm' },
+          { parameter: 'Size (Fines)', value: '0–3mm' },
+        ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["element","percentage"],
+        rows: [
+          ["Fe, Metallic","82% AVG"],
+          ["Metallization","92% AVG"],
+          ["Sulphur","0.05%"],
+          ["Phosphorus","0.035% to 0.050%"],
+          ["Carbon","0.15% to 0.25% (0.2% avg)"],
+          ["Gangue content","5.0% avg"],
+        ]
+      }
+    ],
+        physicalSpecs: ['Lump +3 mm', 'Fines 0–3 mm'],
+        productionMethod:
+          'Produced by reducing iron ore in a direct reduction process (DRI). Oxygen is removed without melting.',
+        applications: [
+          'Electric arc furnaces (EAF)',
+          'Induction furnaces',
+          'Mini steel plants',
+          'Blended metallic charge',
+        ],
+        keyPoints: [
+          'Produced by direct reduction (DRI)',
+          'High purity and uniform composition',
+          'Fe Grade: 80%–88%',
+          'Physical sizes: Lump +3mm, Fines 0–3mm',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/sponge-iron/',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Sponge_iron.jpg/800px-Sponge_iron.jpg',
+      },
+
+      /* ─── 3.3 Pig Iron ─── */
+      {
+        name: 'Pig Iron',
+        slug: 'pig-iron',
+        shortDescription:
+          'Fundamental in iron and steel production — obtained by smelting iron ore in a blast furnace.',
+        overview:
+          'Pig iron, a fundamental stage in iron and steel production, is obtained by smelting iron ore in a blast furnace. Characterized by high carbon content, pig iron serves as the primary raw material for various steelmaking processes.',
+        detailedDescription:
+          'Its versatility lies in its ability to be refined into diverse steel grades, making it a cornerstone in the metallurgical industry. Pig iron plays a pivotal role in meeting the growing global demand for steel products.',
+        productType: 'Blast Furnace Iron',
+        commonSpecs: 'C 3.5–4.5%, Si 1.0–3.0%, Ingots',
+        specTable: [
+          { parameter: 'Carbon (C) Grade', value: '3.5%–4.5%' },
+          { parameter: 'Silicon (Si) Grade', value: '1.0%–3.0%' },
+          { parameter: 'Type', value: 'Blast Furnace Iron' },
+          { parameter: 'Size / Form', value: 'Ingots' },
+        ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["type","C","Si","Mn","S","P"],
+        rows: [
+          ["Basic","3.5-4.5%","1.25% max","1.0% max","0.05% max","0.08-0.15%"],
+          ["Foundry","3.5-4.1%","2.5-3.5%","0.5-1.2%","0.04% max","0.12% max"],
+          ["High Purity/Nodular","3.7-4.7%","0.05-1.5%","0.05% max","0.025% max","0.035% max"],
+        ]
+      }
+    ],
+        physicalSpecs: ['Ingots'],
+        productionMethod:
+          'Obtained by smelting iron ore in a blast furnace. Then refined into diverse steel grades.',
+        applications: [
+          'Foundry castings',
+          'Steelmaking hot metal mix',
+          'Cast iron production',
+          'Machinery cast components',
+        ],
+        keyPoints: [
+          'C 3.5–4.5%, Si 1.0–3.0%',
+          'Obtained from blast furnace smelting of iron ore',
+          'Supplied as ingots',
+          'Cornerstone in the metallurgical industry',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/pig-iron/',
+        image: 'https://images.unsplash.com/photo-1534063223030-defb741031c2?q=80&w=1400&auto=format&fit=crop',
+      },
+
+      /* ─── 3.4 Manganese Ore ─── */
+      {
+        name: 'Manganese Ore',
+        slug: 'manganese-ore',
+        shortDescription:
+          'Key industrial raw material — in ferro and silicomanganese, the most essential ingredients in steel.',
+        overview:
+          'Mn ore consumption is among the key indicators of industrial development. In the form of ferro and silicomanganese alloys, it provides the most essential ingredients in the production of steel, both crude and stainless.',
+        detailedDescription:
+          'Mn ores containing iron oxides are reduced in blast furnaces or electric furnaces with carbon to yield ferromanganese, used in steelmaking. Manganese has greater affinity for sulfur than iron, converting low-melting iron sulfide to high-melting manganese sulfide.',
+        productType: 'Ore',
+        commonSpecs: 'Mn 30–48% (Lumps / Fines)',
+        specTable: [
+          { parameter: 'Manganese (Mn) Grade', value: '30%–48%' },
+          { parameter: 'Type', value: 'Ore' },
+          { parameter: 'Size', value: 'Lumps / Fines' },
+          { parameter: 'Mn in finished steel', value: 'Generally less than 1%' },
+        ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Mn","SiO2","Fe"],
+        rows: [
+          ["Grade 1","2%","32-36%","7-9%"],
+          ["Grade 2","30%","30-34%","7-9%"],
+          ["Grade 3","32%","28-32%","7-9%"],
+        ]
+      }
+    ],
+        physicalSpecs: ['Lumps', 'Fines'],
+        productionMethod:
+          'Mined from manganese-bearing deposits. Reduced in blast/electric furnaces with carbon to yield ferromanganese.',
+        applications: [
+          'Ferro manganese production',
+          'Silico manganese production',
+          'Steel chemistry balancing',
+          'Sulfur control in steelmaking',
+        ],
+        keyPoints: [
+          'Mn Grade: 30%–48%',
+          'Supplied in lumps and fines',
+          'Essential for crude and stainless steel production',
+          'Mn has greater affinity for sulfur than iron',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/manganese-ore/',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Manganese_ore_macro.jpg/800px-Manganese_ore_macro.jpg',
       },
     ],
   },
@@ -340,7 +980,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'noble-ferro-alloys',
     description:
       'Special alloys for advanced steel chemistry and premium grades, used for micro-alloying and precision property control.',
-    image: '/quality_lab.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ferrotitanium.jpg/800px-Ferrotitanium.jpg',
     products: [
       /* ─── 2.1 Ferro Molybdenum ─── */
       {
@@ -364,6 +1004,15 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Particle Size', value: '10–100 mm' },
           { parameter: 'Melting Point', value: '1900°C' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Mo","C","S","P","Si","Al"],
+        rows: [
+          ["Standard FeMo","60% min","0.10% max","0.08% max","0.06% max","1.50% max","0.50% max"],
+        ]
+      }
+    ],
         productionMethod:
           'Aluminothermic reduction of technical grade molybdic oxide and ferrosilicon. Milled and sieved after solidification.',
         applications: [
@@ -382,7 +1031,7 @@ export const productCatalog: ProductCategory[] = [
           'Milled and sieved to correct particle size',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-molybdenum/',
-        image: '/quality_lab.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Molybdenum.jpg/800px-Molybdenum.jpg',
       },
 
       /* ─── 2.2 Ferro Vanadium ─── */
@@ -404,6 +1053,16 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Sulphur (S)', value: '0.08–0.1% Max' },
           { parameter: 'Aluminium (Al)', value: '1–1.5% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","V","C","Si","S","Al","size"],
+        rows: [
+          ["Standard Grade 1","78%","0.02% max","1.5% max","0.08% max","1.5% max","10-50mm (90% Min)"],
+          ["Standard Grade 2","50-52% min","0.02% max","4% max","0.10% max","1% max","20-70mm (90% Min)"],
+        ]
+      }
+    ],
         subProducts: [
           {
             name: 'Ferro Vanadium FeV 78%',
@@ -444,7 +1103,7 @@ export const productCatalog: ProductCategory[] = [
           'Enhances yield strength and toughness',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-vanadium/',
-        image: '/hero_foundry.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Vanadium_etched.jpg/800px-Vanadium_etched.jpg',
       },
 
       /* ─── 2.3 Ferro Titanium ─── */
@@ -465,6 +1124,15 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Carbon (C)', value: 'Small amount' },
           { parameter: 'Reactivity', value: 'Highly reactive with S, C, O, N' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Ti","C","S","P","Si","Al","Fe"],
+        rows: [
+          ["Standard FeTi","28% min","0.10% max","0.05% max","0.05% max","1.50% max","8.00% max","Balance"],
+        ]
+      }
+    ],
         productionMethod:
           'Manufactured by mixing titanium sponge and scrap with iron and melting together in an induction furnace.',
         applications: [
@@ -482,7 +1150,7 @@ export const productCatalog: ProductCategory[] = [
           'Yields finer grain structure in steel',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-titanium/',
-        image: '/hero_foundry.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Ferrotitanium.jpg/800px-Ferrotitanium.jpg',
       },
 
       /* ─── 2.4 Ferro Nickel ─── */
@@ -504,6 +1172,15 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Silicon (Si)', value: '0.5–3.0% Max' },
           { parameter: 'Cobalt (Co)', value: '1% Max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Ni","Co","Cr","S","P","C","Si"],
+        rows: [
+          ["Low Carbon FeNi","30% min","1% max","0.05% max","0.03% max","0.03% max","0.05% max","0.5% max"],
+        ]
+      }
+    ],
         subProducts: [
           {
             name: 'Low Carbon Ferro Nickel',
@@ -544,7 +1221,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced by RKEF process from lateritic nickel ores',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-nickel/',
-        image: '/contact_yard.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nickel_chunk.jpg/800px-Nickel_chunk.jpg',
       },
 
       /* ─── 2.5 Ferro Niobium ─── */
@@ -566,6 +1243,15 @@ export const productCatalog: ProductCategory[] = [
           { parameter: 'Silicon (Si)', value: '2.5% max' },
           { parameter: 'Carbon (C)', value: '0.2% max' },
         ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Nb","C","S","P","Si","Al","Fe"],
+        rows: [
+          ["Standard FeNb","60% min","0.10% max","0.10% max","0.60% max","1.50% max","1.50% max","Balance"],
+        ]
+      }
+    ],
         productionMethod:
           'Manufactured in an electric furnace using the aluminothermy method.',
         applications: [
@@ -581,7 +1267,7 @@ export const productCatalog: ProductCategory[] = [
           'Made by aluminothermy in electric furnace',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-niobium/',
-        image: '/contact_yard.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Niobium_crystals_and_1cm3_cube.jpg/800px-Niobium_crystals_and_1cm3_cube.jpg',
       },
 
       /* ─── 2.6 Ferro Boron ─── */
@@ -617,7 +1303,7 @@ export const productCatalog: ProductCategory[] = [
           'Key component in NdFeB magnetic materials',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-boron/',
-        image: '/products_stack.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Boron.jpg/800px-Boron.jpg',
       },
 
       /* ─── 2.7 Ferro Aluminum ─── */
@@ -697,7 +1383,7 @@ export const productCatalog: ProductCategory[] = [
           'Controls grain size in killed steels',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-aluminum/',
-        image: '/capabilities_worker.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Aluminium.jpg/800px-Aluminium.jpg',
       },
 
       /* ─── 2.8 Ferro Tungsten ─── */
@@ -738,540 +1424,11 @@ export const productCatalog: ProductCategory[] = [
           'Essential for high-temperature cutting applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-tungsten/',
-        image: '/quality_lab.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Tungsten.jpg/800px-Tungsten.jpg',
       },
     ],
   },
 
-  /* ═══════════════════════════════════════════════════════ */
-  /*  3. ORE & METALS                                        */
-  /* ═══════════════════════════════════════════════════════ */
-  {
-    name: 'ORE & Metals',
-    slug: 'ore-and-metals',
-    description:
-      'Raw and semi-processed metal inputs supporting steel value chain — from ore to metal.',
-    image: '/contact_yard.jpg',
-    products: [
-      /* ─── 3.1 Iron Ore ─── */
-      {
-        name: 'Iron Ore',
-        slug: 'iron-ore',
-        shortDescription:
-          'Vital raw material in steel production — high iron content fuels manufacturing of steel products.',
-        overview:
-          'Iron ore, a vital raw material in steel production, is a key player in global industrial processes. Mined from abundant reserves worldwide, its high iron content fuels the manufacturing of essential steel products.',
-        detailedDescription:
-          'As steel demand continues to rise, iron ore significance in sustaining various industries remains indispensable. Iron ore is fundamental to blast furnace operations, sinter plant feed, and pellet production across the globe.',
-        productType: 'Ore',
-        commonSpecs: 'Fe 52–62%+ (Lumps / Fines)',
-        specTable: [
-          { parameter: 'Iron (Fe) Grade', value: '52%–62%+' },
-          { parameter: 'Type', value: 'Ore' },
-          { parameter: 'Size', value: 'Lumps / Fines' },
-          { parameter: 'Application', value: 'Blast furnaces, sinter plants, pellet plants' },
-        ],
-        physicalSpecs: ['Lumps', 'Fines'],
-        applications: [
-          'Blast furnace feed',
-          'Sinter plants',
-          'Pellet production',
-          'Steel manufacturing',
-        ],
-        keyPoints: [
-          'Vital raw material in global steel production',
-          'Supplied in lumps and fines',
-          'Fe grade: 52%–62%+',
-          'Fundamental to blast furnace operations',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/iron-ore/',
-        image: '/contact_yard.jpg',
-      },
-
-      /* ─── 3.2 Sponge Iron ─── */
-      {
-        name: 'Sponge Iron',
-        slug: 'sponge-iron',
-        shortDescription:
-          'Crucial intermediate in steel production — high purity, uniform composition, eco-friendly.',
-        overview:
-          'Sponge iron, a crucial intermediate in steel production, is produced by reducing iron ore in a direct reduction process. It exhibits high purity and uniform composition, contributing to superior steel quality.',
-        detailedDescription:
-          'Widely used in electric arc furnaces, sponge iron enhances efficiency, reduces greenhouse gas emissions, and ensures cost-effective steel manufacturing. Its adaptability and eco-friendly attributes make sponge iron a pivotal component in modern metallurgy.',
-        productType: 'Direct Reduced Iron (DRI)',
-        commonSpecs: 'Fe 80–88%, Lump +3mm, Fines 0–3mm',
-        specTable: [
-          { parameter: 'Iron (Fe) Grade', value: '80%–88%' },
-          { parameter: 'Type', value: 'Direct Reduced Iron (DRI)' },
-          { parameter: 'Size (Lump)', value: '+3mm' },
-          { parameter: 'Size (Fines)', value: '0–3mm' },
-        ],
-        physicalSpecs: ['Lump +3 mm', 'Fines 0–3 mm'],
-        productionMethod:
-          'Produced by reducing iron ore in a direct reduction process (DRI). Oxygen is removed without melting.',
-        applications: [
-          'Electric arc furnaces (EAF)',
-          'Induction furnaces',
-          'Mini steel plants',
-          'Blended metallic charge',
-        ],
-        keyPoints: [
-          'Produced by direct reduction (DRI)',
-          'High purity and uniform composition',
-          'Fe Grade: 80%–88%',
-          'Physical sizes: Lump +3mm, Fines 0–3mm',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/sponge-iron/',
-        image: '/hero_foundry.jpg',
-      },
-
-      /* ─── 3.3 Pig Iron ─── */
-      {
-        name: 'Pig Iron',
-        slug: 'pig-iron',
-        shortDescription:
-          'Fundamental in iron and steel production — obtained by smelting iron ore in a blast furnace.',
-        overview:
-          'Pig iron, a fundamental stage in iron and steel production, is obtained by smelting iron ore in a blast furnace. Characterized by high carbon content, pig iron serves as the primary raw material for various steelmaking processes.',
-        detailedDescription:
-          'Its versatility lies in its ability to be refined into diverse steel grades, making it a cornerstone in the metallurgical industry. Pig iron plays a pivotal role in meeting the growing global demand for steel products.',
-        productType: 'Blast Furnace Iron',
-        commonSpecs: 'C 3.5–4.5%, Si 1.0–3.0%, Ingots',
-        specTable: [
-          { parameter: 'Carbon (C) Grade', value: '3.5%–4.5%' },
-          { parameter: 'Silicon (Si) Grade', value: '1.0%–3.0%' },
-          { parameter: 'Type', value: 'Blast Furnace Iron' },
-          { parameter: 'Size / Form', value: 'Ingots' },
-        ],
-        physicalSpecs: ['Ingots'],
-        productionMethod:
-          'Obtained by smelting iron ore in a blast furnace. Then refined into diverse steel grades.',
-        applications: [
-          'Foundry castings',
-          'Steelmaking hot metal mix',
-          'Cast iron production',
-          'Machinery cast components',
-        ],
-        keyPoints: [
-          'C 3.5–4.5%, Si 1.0–3.0%',
-          'Obtained from blast furnace smelting of iron ore',
-          'Supplied as ingots',
-          'Cornerstone in the metallurgical industry',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/pig-iron/',
-        image: '/hero_foundry.jpg',
-      },
-
-      /* ─── 3.4 Manganese Ore ─── */
-      {
-        name: 'Manganese Ore',
-        slug: 'manganese-ore',
-        shortDescription:
-          'Key industrial raw material — in ferro and silicomanganese, the most essential ingredients in steel.',
-        overview:
-          'Mn ore consumption is among the key indicators of industrial development. In the form of ferro and silicomanganese alloys, it provides the most essential ingredients in the production of steel, both crude and stainless.',
-        detailedDescription:
-          'Mn ores containing iron oxides are reduced in blast furnaces or electric furnaces with carbon to yield ferromanganese, used in steelmaking. Manganese has greater affinity for sulfur than iron, converting low-melting iron sulfide to high-melting manganese sulfide.',
-        productType: 'Ore',
-        commonSpecs: 'Mn 30–48% (Lumps / Fines)',
-        specTable: [
-          { parameter: 'Manganese (Mn) Grade', value: '30%–48%' },
-          { parameter: 'Type', value: 'Ore' },
-          { parameter: 'Size', value: 'Lumps / Fines' },
-          { parameter: 'Mn in finished steel', value: 'Generally less than 1%' },
-        ],
-        physicalSpecs: ['Lumps', 'Fines'],
-        productionMethod:
-          'Mined from manganese-bearing deposits. Reduced in blast/electric furnaces with carbon to yield ferromanganese.',
-        applications: [
-          'Ferro manganese production',
-          'Silico manganese production',
-          'Steel chemistry balancing',
-          'Sulfur control in steelmaking',
-        ],
-        keyPoints: [
-          'Mn Grade: 30%–48%',
-          'Supplied in lumps and fines',
-          'Essential for crude and stainless steel production',
-          'Mn has greater affinity for sulfur than iron',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/manganese-ore/',
-        image: '/contact_yard.jpg',
-      },
-    ],
-  },
-
-  /* ═══════════════════════════════════════════════════════ */
-  /*  4. STEEL PRODUCTS                                      */
-  /* ═══════════════════════════════════════════════════════ */
-  {
-    name: 'Steel Products',
-    slug: 'steel-products',
-    description:
-      'Finished and semi-finished steel products supplied across structural, fabrication, and industrial sectors.',
-    image: '/products_stack.jpg',
-    products: [
-      /* ─── 4.1 Billets & Blooms ─── */
-      {
-        name: 'Billets & Blooms',
-        slug: 'billets-and-blooms',
-        shortDescription: 'Semi-finished solid steel lengths used as primary feed for rolling mills.',
-        overview: 'Steel billets and blooms are semi-finished cast products used as primary feed for hot rolling mills and forging. They form the building blocks for a vast array of wire rods, seamless pipes, and structural steel.',
-        detailedDescription: 'Available in various dimensions, our billets and blooms are cast using advanced continuous casting machines to ensure structural integrity. They are carefully cooled and inspected for internal soundness and surface finish. Suitable for structural, forging, and special engineering applications depending on the carbon and alloy grades.',
-        productType: 'Semi-finished Steel',
-        commonSpecs: 'Cast to precise dimensional tolerances',
-        specTable: [
-          { parameter: 'Length', value: '3m to 12m' },
-          { parameter: 'Surface', value: 'Hot Cast / Unmachined' }
-        ],
-        subProducts: [
-          {
-            name: '100x100 Billet',
-            specTable: [
-              { parameter: 'Size', value: '100x100 mm' },
-              { parameter: 'Grade', value: 'Carbon Steel / IS 2830' },
-              { parameter: 'Application', value: 'Light Sections, TMT Bars' }
-            ]
-          },
-          {
-            name: '160x160 Billet',
-            specTable: [
-              { parameter: 'Size', value: '160x160 mm' },
-              { parameter: 'Grade', value: 'Carbon / Alloy Steel' },
-              { parameter: 'Application', value: 'Medium Structural Sections' }
-            ]
-          },
-          {
-            name: '200x250 Bloom',
-            specTable: [
-              { parameter: 'Size', value: '200x250 mm' },
-              { parameter: 'Grade', value: 'High Carbon / Alloy' },
-              { parameter: 'Application', value: 'Heavy Beams, Forging Applications' }
-            ]
-          }
-        ],
-        applications: ['TMT bar rolling', 'Structural section rolling', 'Seamless pipe manufacturing', 'Forging components'],
-        keyPoints: ['Available in 100mm to 200mm+ cross-sections', 'Uniform microstructure', 'Low inclusion content', 'Available in custom alloy chemistries'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/products_stack.jpg',
-      },
-
-      /* ─── 4.2 Carbon, Alloy & Spring Steel ─── */
-      {
-        name: 'Carbon & Alloy Steel',
-        slug: 'carbon-alloy-spring-steel',
-        shortDescription: 'High-grade rounds, squares, and flats formulated for precision automotive and engineering uses.',
-        overview: 'Specialized steel products crafted with precise carbon, alloy, and spring steel compositions. These are critical inputs for automotive parts, industrial machinery, and heavy equipment manufacturing.',
-        detailedDescription: 'From versatile Round Bars to Rounded Corner Squares (RCS) and Spring Steel Flats, our alloy products meet demanding strength, wear, and fatigue resistance criteria. Manufactured to stringent global standards including SAE, EN, and IS specifications.',
-        productType: 'Finished Steel Product',
-        commonSpecs: 'Available in diverse structural formats',
-        specTable: [
-          { parameter: 'Finish', value: 'Hot Rolled / Bright Bar Finish' },
-          { parameter: 'Standard', value: 'SAE, EN, IS, DIN' }
-        ],
-        subProducts: [
-          {
-            name: 'Round Bars',
-            specTable: [
-              { parameter: 'Size Range', value: '20mm - 125mm' },
-              { parameter: 'Common Grades', value: 'SAE 1008, EN8D, SAE 4140, EN1A' },
-              { parameter: 'Application', value: 'Axles, Shafts, Fasteners' }
-            ]
-          },
-          {
-            name: 'RCS (Rounded Corner Square)',
-            specTable: [
-              { parameter: 'Size Range', value: '40mm - 125mm' },
-              { parameter: 'Common Grades', value: 'SAE 8620, EN353, 20MnCr5, EN19' },
-              { parameter: 'Application', value: 'Gears, Automotive Forgings' }
-            ]
-          },
-          {
-            name: 'Spring Steel Flats',
-            specTable: [
-              { parameter: 'Dimensions', value: '70x8mm to 360x20mm' },
-              { parameter: 'Common Grades', value: 'EN45A, 65Si7, SUP9, 55Si7' },
-              { parameter: 'Application', value: 'Leaf Springs, Suspension Systems' }
-            ]
-          }
-        ],
-        applications: ['Automotive forgings', 'Gear & shaft manufacturing', 'Suspension systems (Leaf Springs)', 'Precision machined components'],
-        keyPoints: ['Rounds from 20-125mm', 'RCS from 40-125mm', 'Superior fatigue life', 'Tight dimensional tolerances'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/capabilities_worker.jpg',
-      },
-
-      /* ─── 4.3 Structural Sections ─── */
-      {
-        name: 'Structural Sections',
-        slug: 'structural-sections',
-        shortDescription: 'Hot-rolled steel beams, channels, and angles forming the backbone of infrastructure.',
-        overview: 'Structural steel sections are hot-rolled products available in an array of cross-sections like I, U, and L shapes. They are designed to carry high continuous loads efficiently.',
-        detailedDescription: 'Essential for the construction of pre-engineered buildings, bridges, and industrial structures. Our range covers Angles, Channels, and Beams manufactured to high yield strength standards to ensure maximum structural stability and safety.',
-        productType: 'Construction Steel',
-        commonSpecs: 'Hot-rolled structural shapes',
-        specTable: [
-          { parameter: 'Grades', value: 'IS 2062 E250 / E350, ASTM A36' },
-          { parameter: 'Length', value: 'Standard 6m, 9m, 12m or custom cut' }
-        ],
-        subProducts: [
-          {
-            name: 'MS Angles',
-            specTable: [
-              { parameter: 'Size Range', value: '25x25x3mm to 200x200x20mm' },
-              { parameter: 'Type', value: 'Equal & Unequal' },
-              { parameter: 'Application', value: 'Transmission Towers, Sheds' }
-            ]
-          },
-          {
-            name: 'MS Channels',
-            specTable: [
-              { parameter: 'Size Range', value: '75x40mm to 400x100mm' },
-              { parameter: 'Profile', value: 'U-Shape (ISMC)' },
-              { parameter: 'Application', value: 'Industrial Factory Frames, Chassis' }
-            ]
-          },
-          {
-            name: 'Beams & Joists',
-            specTable: [
-              { parameter: 'Size Range', value: '100x50mm to 600x210mm' },
-              { parameter: 'Profile', value: 'I-Beam (ISMB / NPB / W-Shape)' },
-              { parameter: 'Application', value: 'Pre-Engineered Buildings, Bridges' }
-            ]
-          }
-        ],
-        applications: ['Pre-Engineered Buildings (PEB)', 'Telecom and Transmission Towers', 'Bridge Girders', 'Heavy Industrial Sheds'],
-        keyPoints: ['Comprehensive range of cross-sections', 'High load-bearing capacity', 'Weldable and formable', 'IS 2062 compliant'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/products_stack.jpg',
-      },
-
-      /* ─── 4.4 Steel Sheets & Coils ─── */
-      {
-        name: 'Steel Sheets & Coils',
-        slug: 'steel-sheets-coils',
-        shortDescription: 'Flat-rolled steel items available in hot-rolled, cold-rolled, and galvanized finishes.',
-        overview: 'Flat steel products form the basis of countless fabricated end-products. They are rolled into precise thicknesses and are available in continuous coils or precut sheets.',
-        detailedDescription: 'Whether you need the rugged malleability of Hot Rolled (HR) steel, the precise finish of Cold Rolled (CR) steel, or the corrosion resistance of Galvanized (GP/GI) materials, our product line meets stringent thickness and flatness tolerances.',
-        productType: 'Flat Steel Product',
-        commonSpecs: 'Available in Coil or Cut-to-length Sheet form',
-        specTable: [
-          { parameter: 'Form', value: 'Coil or Sheet' },
-          { parameter: 'Width', value: '1000mm to 2000mm standard' }
-        ],
-        subProducts: [
-          {
-            name: 'HR Coils / Sheets',
-            specTable: [
-              { parameter: 'Thickness', value: '1.2mm to 20mm' },
-              { parameter: 'Finish', value: 'Black / Pickled & Oiled' },
-              { parameter: 'Application', value: 'Heavy structures, Pipes, Tanks' }
-            ]
-          },
-          {
-            name: 'CR Coils / Sheets',
-            specTable: [
-              { parameter: 'Thickness', value: '0.15mm to 3.0mm' },
-              { parameter: 'Finish', value: 'Bright / Matte / Dull' },
-              { parameter: 'Application', value: 'White goods, Auto body panels' }
-            ]
-          },
-          {
-            name: 'Galvanized (GI) Coils',
-            specTable: [
-              { parameter: 'Coating', value: 'Z60 to Z275 (Zinc)' },
-              { parameter: 'Spangle', value: 'Zero, Minimized, or Regular' },
-              { parameter: 'Application', value: 'Roofing, Ducting, White goods' }
-            ]
-          }
-        ],
-        applications: ['Automotive body manufacturing', 'Roofing and cladding', 'Home appliances', 'HVAC ducting'],
-        keyPoints: ['High dimensional accuracy', 'Consistent surface finish', 'Superior drawing and forming properties', 'Excellent corrosion resistance in GI'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/capabilities_worker.jpg',
-      },
-
-      /* ─── 4.5 TMT Rebars ─── */
-      {
-        name: 'TMT Rebars',
-        slug: 'tmt-rebars',
-        shortDescription: 'Thermo-Mechanically Treated bars providing superior strength and ductility for concrete reinforcement.',
-        overview: 'TMT (Thermo-Mechanically Treated) bars are high-strength reinforcement bars essential for all types of concrete structures. They feature a tough outer core and a soft, ductile inner core.',
-        detailedDescription: 'Produced using an advanced quenching and self-tempering process, our TMT bars resist seismic forces, fire, and corrosion. They offer superior bendability and weldability without loss of structural strength. Available in standard lengths of 12 meters.',
-        productType: 'Construction Steel',
-        commonSpecs: 'Sizes from 8mm to 36mm',
-        specTable: [
-          { parameter: 'Standard', value: 'IS 1786' },
-          { parameter: 'Length', value: '12 meters standard' }
-        ],
-        subProducts: [
-          {
-            name: 'Fe 500',
-            specTable: [
-              { parameter: 'Yeild Strength', value: '≥ 500 N/sq.mm' },
-              { parameter: 'Elongation', value: '≥ 12%' },
-              { parameter: 'Application', value: 'General Residential & Commercial Buildings' }
-            ]
-          },
-          {
-            name: 'Fe 500D',
-            specTable: [
-              { parameter: 'Yeild Strength', value: '≥ 500 N/sq.mm' },
-              { parameter: 'Elongation', value: '≥ 16% (High Ductility)' },
-              { parameter: 'Application', value: 'High-Rise, Bridges, Seismic Zones' }
-            ]
-          },
-          {
-            name: 'Fe 550D',
-            specTable: [
-              { parameter: 'Yeild Strength', value: '≥ 550 N/sq.mm' },
-              { parameter: 'Elongation', value: '≥ 14.5% (High Ductility)' },
-              { parameter: 'Application', value: 'Heavy Infrastructure, Dams, Tunnels' }
-            ]
-          }
-        ],
-        applications: ['Residential & Commercial construction', 'Bridges and flyovers', 'Dams and heavy infrastructure', 'Earthquake-prone areas'],
-        keyPoints: ['Earthquake and fire resistant', 'High rib depth for superior concrete grip', 'Excellent weldability and bendability', 'Corrosion-resistant grades available (CRS/Epoxy)'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/products_stack.jpg',
-      },
-
-      /* ─── 4.6 Industrial Wires & Fencing ─── */
-      {
-        name: 'Industrial Wires',
-        slug: 'industrial-wires',
-        shortDescription: 'From mild steel binding wires to heavy-duty galvanized fencing solutions.',
-        overview: 'Steel wires are versatile products drawn from wire rods. They serve critical roles in construction tie-downs, manufacturing applications, and agricultural fencing.',
-        detailedDescription: 'We provide uniformly drawn steel wires featuring consistent tensile strength and clean surface finishes. Galvanized variants offer excellent resistance to rust, making them ideal for outdoor and agricultural applications.',
-        productType: 'Wire Products',
-        commonSpecs: 'Supplied in coils or spool formats',
-        specTable: [
-          { parameter: 'Material', value: 'Low to Medium Carbon Steel' },
-          { parameter: 'Packaging', value: 'Coil, Spool, or Bundle' }
-        ],
-        subProducts: [
-          {
-            name: 'Binding Wire',
-            specTable: [
-              { parameter: 'Gauge', value: '18 SWG to 22 SWG' },
-              { parameter: 'Finish', value: 'Soft Annealed' },
-              { parameter: 'Application', value: 'Tying rebars in construction' }
-            ]
-          },
-          {
-            name: 'GI Wire',
-            specTable: [
-              { parameter: 'Gauge', value: '8 SWG to 24 SWG' },
-              { parameter: 'Coating', value: 'Hot-dip Galvanized' },
-              { parameter: 'Application', value: 'Fencing, Wire Meshes' }
-            ]
-          },
-          {
-            name: 'Barbed / Fencing Wire',
-            specTable: [
-              { parameter: 'Format', value: 'Stranded with 4-point barbs' },
-              { parameter: 'Spacing', value: '3 to 6 inches between barbs' },
-              { parameter: 'Application', value: 'Agricultural, Security Fencing' }
-            ]
-          }
-        ],
-        applications: ['Construction rebar tying', 'Agricultural boundaries', 'High-security fencing', 'Wire mesh and nail manufacturing'],
-        keyPoints: ['Available in black annealed or galvanized finishes', 'High rust resistance in GI grades', 'Consistent wire diameter and tensile strength', 'Easy to twist and tie'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/capabilities_worker.jpg',
-      },
-
-      /* ─── 4.7 Steel Pipes & Tubes ─── */
-      {
-        name: 'Steel Pipes & Tubes',
-        slug: 'steel-pipes-tubes',
-        shortDescription: 'Durable piping solutions for water, gas, and structural scaffolding.',
-        overview: 'Steel pipes and tubular hollow sections are critical for fluid transport and structural scaffolding. Our range includes both welded and seamless tubular products in various schedules.',
-        detailedDescription: 'Manufactured with high-strength seam welds (ERW) or through seamless extrusion, our pipes meet a broad spectrum of pressure and environmental requirements. Hollow sections (SHS/RHS) are also widely favored for modern architectural and structural frameworks.',
-        productType: 'Tubular Steel',
-        commonSpecs: 'Circular, Square, and Rectangular profiles',
-        specTable: [
-          { parameter: 'Standard Length', value: '6 meters (Custom cuts available)' },
-          { parameter: 'Standards', value: 'IS 1239, IS 3589, IS 4923' }
-        ],
-        subProducts: [
-          {
-            name: 'MS Black Pipes',
-            specTable: [
-              { parameter: 'NB Size', value: '15mm to 300mm' },
-              { parameter: 'Wall Thickness', value: 'Light, Medium, Heavy' },
-              { parameter: 'Application', value: 'Scaffolding, Structural, Non-critical fluids' }
-            ]
-          },
-          {
-            name: 'GI Pipes',
-            specTable: [
-              { parameter: 'NB Size', value: '15mm to 150mm' },
-              { parameter: 'Coating', value: 'Hot-Dip Galvanized Zinc' },
-              { parameter: 'Application', value: 'Water supply, Firefighting, Plumbing' }
-            ]
-          },
-          {
-            name: 'Hollow Sections (RHS/SHS)',
-            specTable: [
-              { parameter: 'Shape', value: 'Square & Rectangular' },
-              { parameter: 'Thickness', value: '1.2mm to 10.0mm' },
-              { parameter: 'Application', value: 'PEB trusses, Aesthetic structures' }
-            ]
-          }
-        ],
-        applications: ['Water and gas distribution', 'Industrial scaffolding systems', 'Architectural space frames', 'Firefighting sprinkler systems'],
-        keyPoints: ['Rigorous hydrostatic testing for fluid grades', 'Uniform zinc coating for GI pipes', 'High strength-to-weight ratio for SHS/RHS', 'Seamless variants available for high pressure'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/products_stack.jpg',
-      },
-      
-      /* ─── 4.8 Primary Feedstock ─── */
-      {
-        name: 'Primary Feedstock',
-        slug: 'primary-feedstock',
-        shortDescription: 'Sponge iron and pig iron serving as essential raw material for steelmaking.',
-        overview: 'These primary iron products act as the fundamental metallic feed for electric arc, induction, and basic oxygen furnaces. They govern the purity and chemical baseline of the finished steel.',
-        detailedDescription: 'Sponge Iron (Direct Reduced Iron) is produced by reducing iron ore without melting, maintaining high metallization and low tramp elements. Pig Iron, cast from blast furnaces, offers higher carbon content perfect for foundries and specific steelmaking chemistries.',
-        productType: 'Raw Materials',
-        commonSpecs: 'High iron content materials for smelting',
-        specTable: [
-          { parameter: 'Form', value: 'Lumps, Fines, or Ingots' },
-          { parameter: 'Handling', value: 'Bulk bulk-loaded or bagged (for fines)' }
-        ],
-        subProducts: [
-          {
-            name: 'Sponge Iron (DRI)',
-            specTable: [
-              { parameter: 'Total Iron (Fe)', value: '78% - 82% Min' },
-              { parameter: 'Metallization', value: '85% - 88% Min' },
-              { parameter: 'Application', value: 'Induction / Electric Arc Furnaces' }
-            ]
-          },
-          {
-            name: 'Steel Grade Pig Iron',
-            specTable: [
-              { parameter: 'Silicon (Si)', value: '1.25% Max' },
-              { parameter: 'Carbon (C)', value: '3.5% - 4.5%' },
-              { parameter: 'Application', value: 'Diluting scrap, Basic oxygen steelmaking' }
-            ]
-          },
-          {
-            name: 'Foundry Grade Pig Iron',
-            specTable: [
-              { parameter: 'Silicon (Si)', value: '1.5% - 2.5% Min' },
-              { parameter: 'Carbon (C)', value: '3.5% - 4.5%' },
-              { parameter: 'Application', value: 'Cast iron production in foundries' }
-            ]
-          }
-        ],
-        applications: ['Steel making via EAF or IF', 'Diluting impurities from scrap metal', 'Manufacturing of cast iron components'],
-        keyPoints: ['Consistent chemistry to stabilize furnace operations', 'Low sulphur and phosphorus content', 'Enhances steel purity', 'Available in varying sizes/grades'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: '/capabilities_worker.jpg',
-      }
-    ],
-  },
 ];
 
 /* ─── Lookup helpers ─── */

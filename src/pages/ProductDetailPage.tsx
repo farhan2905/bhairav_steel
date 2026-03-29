@@ -126,32 +126,6 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
-          {/* ── Overview & Detailed Description ── */}
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-              <h3 className="font-display text-xl font-bold text-slate-900 mb-4">Overview</h3>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{product.overview}</p>
-            </div>
-
-            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
-              <h3 className="font-display text-xl font-bold text-slate-900 mb-4">Detailed Description</h3>
-              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{product.detailedDescription}</p>
-            </div>
-          </div>
-
-          {/* ── Production Method ── */}
-          {product.productionMethod && (
-            <div className="mt-6 rounded-3xl border border-amber-100 bg-amber-50 p-6 sm:p-8">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500">
-                  <Factory className="text-white" size={18} />
-                </div>
-                <h3 className="font-display text-xl font-bold text-amber-900">Production Method</h3>
-              </div>
-              <p className="text-amber-800 leading-relaxed text-sm sm:text-base">{product.productionMethod}</p>
-            </div>
-          )}
-
           {/* ── Sub-Product Type Selector + Specification Table ── */}
           {activeSpecTable && activeSpecTable.length > 0 && (
             <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
@@ -191,31 +165,97 @@ export default function ProductDetailPage() {
                 <h4 className="font-display text-lg font-bold text-blue-700 mb-4">{activeSpecTitle}</h4>
               )}
 
-              {/* ── Specification Table ── */}
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[480px] border-collapse">
-                  <thead>
-                    <tr className="border-b-2 border-slate-200 text-left">
-                      <th className="py-3 pr-6 text-xs uppercase tracking-wide text-slate-500 font-semibold w-1/2">Parameter</th>
-                      <th className="py-3 text-xs uppercase tracking-wide text-slate-500 font-semibold">Value / Detail</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {activeSpecTable.map((row, idx) => (
-                      <tr
-                        key={`${row.parameter}-${idx}-spec`}
-                        className={`border-b border-slate-100 text-sm ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}`}
-                      >
-                        <td className="py-3.5 pr-6 font-semibold text-slate-800">{row.parameter}</td>
-                        <td className="py-3.5 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              
+              {/* Specification Table */}
+              {product.gradeTables && product.gradeTables.length > 0 ? (
+                <div className="space-y-8 mt-2">
+                  {product.gradeTables.map((gt, gIdx) => (
+                    <div key={gIdx} className="overflow-hidden rounded-xl border border-slate-200">
+                      {gt.name && (
+                        <div className="bg-slate-100 py-3 px-5 border-b border-slate-200">
+                          <h4 className="font-semibold text-slate-800">{gt.name}</h4>
+                        </div>
+                      )}
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse">
+                          <thead>
+                            <tr className="border-b-2 border-slate-200 bg-slate-50">
+                              {gt.headers.map((h, hIdx) => (
+                                <th key={hIdx} className="py-3 px-5 text-sm font-bold text-slate-700 whitespace-nowrap">
+                                  {h}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {gt.rows.map((row, rIdx) => (
+                              <tr key={rIdx} className="border-b border-slate-100 last:border-0 hover:bg-slate-50/50 transition-colors">
+                                {row.map((cell, cIdx) => (
+                                  <td key={cIdx} className="py-3 px-5 text-sm text-slate-700 whitespace-nowrap">
+                                    {cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="overflow-x-auto rounded-xl border border-slate-200">
+                  <table className="w-full text-left border-collapse">
+                    <tbody>
+                      {activeSpecTable.map((row, idx) => (
+                        <tr
+                          key={`${row.parameter}-${idx}-spec`}
+                          className="border-b border-slate-200 last:border-0 hover:bg-slate-50/50 transition-colors"
+                        >
+                          <td className="py-3.5 px-6 font-medium text-slate-700 bg-slate-50/50 w-1/2 border-r border-slate-200">
+                            {row.parameter}
+                          </td>
+                          <td className="py-3.5 px-6 text-slate-800 font-semibold">
+                            {row.value}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
           )}
 
+          
+          {/* ── Overview & Detailed Description ── */}
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+              <h3 className="font-display text-xl font-bold text-slate-900 mb-4">Overview</h3>
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{product.overview}</p>
+            </div>
+
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
+              <h3 className="font-display text-xl font-bold text-slate-900 mb-4">Detailed Description</h3>
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{product.detailedDescription}</p>
+            </div>
+          </div>
+
+          
+          {/* ── Production Method ── */}
+          {product.productionMethod && (
+            <div className="mt-6 rounded-3xl border border-amber-100 bg-amber-50 p-6 sm:p-8 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex items-center gap-3 md:w-1/3 flex-shrink-0">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-500">
+                  <Factory className="text-white" size={18} />
+                </div>
+                <h3 className="font-display text-xl font-bold text-amber-900">Production Method</h3>
+              </div>
+              <p className="text-amber-800 leading-relaxed text-sm sm:text-base md:w-2/3">{product.productionMethod}</p>
+            </div>
+          )}
+
+          
           {/* ── Applications ── */}
           <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
             <h3 className="font-display text-2xl font-bold text-slate-900 mb-5">Common Applications</h3>
@@ -229,6 +269,7 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
+          
           {/* ── Key Technical Points ── */}
           <div className="mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-6 sm:p-8">
             <h3 className="font-display text-2xl font-bold text-slate-900 mb-5">Key Technical Points</h3>
@@ -243,7 +284,8 @@ export default function ProductDetailPage() {
           </div>
 
         </div>
-      </section>
+      
+        </section>
 
       {/* ── Related products in same category ── */}
       <section className="pb-20 bg-slate-50">

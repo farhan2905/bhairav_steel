@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-03-29",
+    "description": "Reference data for chemical elements used in ferro alloys and steel specifications"
+  },
+  "elements": {
+    "Al": {
+      "name": "Aluminum",
+      "atomicNumber": 13,
+      "symbol": "Al",
+      "displayName": "Aluminium",
+      "typicalRange": "0.01-8%",
+      "commonIn": ["Ferro Silicon", "Ferro Titanium", "Ferro Molybdenum", "Ferro Vanadium"],
+      "purpose": "Deoxidizer, grain refiner",
+      "notes": "Controlled for steel cleanliness; can cause inclusions"
+    },
+    "C": {
+      "name": "Carbon",
+      "atomicNumber": 6,
+      "symbol": "C",
+      "displayName": "Carbon",
+      "typicalRange": "0.02-9.5%",
+      "commonIn": ["All ferro alloys", "Steel"],
+      "purpose": "Primary hardening element, determines strength",
+      "notes": "Critical for steel properties; controlled based on grade"
+    },
+    "Co": {
+      "name": "Cobalt",
+      "atomicNumber": 27,
+      "symbol": "Co",
+      "displayName": "Cobalt",
+      "typicalRange": "0-1%",
+      "commonIn": ["Ferro Nickel"],
+      "purpose": "Increases hardness and wear resistance",
+      "notes": "Limited content in ferro alloys"
+    },
+    "Cr": {
+      "name": "Chromium",
+      "atomicNumber": 24,
+      "symbol": "Cr",
+      "displayName": "Chromium",
+      "typicalRange": "30-65%",
+      "commonIn": ["Ferro Chrome", "Stainless Steel", "Tool Steel"],
+      "purpose": "Corrosion resistance, hardness, wear resistance",
+      "notes": "Primary element in stainless steel"
+    },
+    "Fe": {
+      "name": "Iron",
+      "atomicNumber": 26,
+      "symbol": "Fe",
+      "displayName": "Iron",
+      "typicalRange": "Balance",
+      "commonIn": ["All ferro alloys", "Steel"],
+      "purpose": "Base metal",
+      "notes": "Remainder of composition after other elements"
+    },
+    "Mn": {
+      "name": "Manganese",
+      "atomicNumber": 25,
+      "symbol": "Mn",
+      "displayName": "Manganese",
+      "typicalRange": "40-80%",
+      "commonIn": ["Ferro Manganese", "Silico Manganese", "Steel"],
+      "purpose": "Deoxidizer, sulfur control, strengthener",
+      "notes": "Essential in steelmaking; improves hot working"
+    },
+    "Mo": {
+      "name": "Molybdenum",
+      "atomicNumber": 42,
+      "symbol": "Mo",
+      "displayName": "Molybdenum",
+      "typicalRange": "55-70%",
+      "commonIn": ["Ferro Molybdenum", "Alloy Steel"],
+      "purpose": "Hardness, strength, corrosion resistance",
+      "notes": "Critical for high-temperature applications"
+    },
+    "Nb": {
+      "name": "Niobium",
+      "atomicNumber": 41,
+      "symbol": "Nb",
+      "displayName": "Niobium",
+      "typicalRange": "60-70%",
+      "commonIn": ["Ferro Niobium"],
+      "purpose": "Grain refinement, precipitation hardening",
+      "notes": "Used in HSLA steels for strength"
+    },
+    "Ni": {
+      "name": "Nickel",
+      "atomicNumber": 28,
+      "symbol": "Ni",
+      "displayName": "Nickel",
+      "typicalRange": "30-35%",
+      "commonIn": ["Ferro Nickel", "Stainless Steel"],
+      "purpose": "Corrosion resistance, toughness",
+      "notes": "Austenite stabilizer"
+    },
+    "P": {
+      "name": "Phosphorus",
+      "atomicNumber": 15,
+      "symbol": "P",
+      "displayName": "Phosphorus",
+      "typicalRange": "0.015-0.6%",
+      "commonIn": ["All ferro alloys", "Steel"],
+      "purpose": "Generally undesirable impurity",
+      "notes": "Kept as low as possible; can improve machinability"
+    },
+    "S": {
+      "name": "Sulfur",
+      "atomicNumber": 16,
+      "symbol": "S",
+      "displayName": "Sulphur",
+      "typicalRange": "0.02-0.10%",
+      "commonIn": ["All ferro alloys", "Steel"],
+      "purpose": "Generally undesirable impurity",
+      "notes": "Kept low; can improve machinability in free-cutting steels"
+    },
+    "Si": {
+      "name": "Silicon",
+      "atomicNumber": 14,
+      "symbol": "Si",
+      "displayName": "Silicon",
+      "typicalRange": "0.5-75%",
+      "commonIn": ["Ferro Silicon", "Silico Manganese", "Steel"],
+      "purpose": "Deoxidizer, increases hardness",
+      "notes": "Primary element in ferro silicon alloys"
+    },
+    "Ti": {
+      "name": "Titanium",
+      "atomicNumber": 22,
+      "symbol": "Ti",
+      "displayName": "Titanium",
+      "typicalRange": "28-75%",
+      "commonIn": ["Ferro Titanium"],
+      "purpose": "Deoxidizer, desulfurizer, grain refiner",
+      "notes": "Highly reactive with oxygen, sulfur, carbon, nitrogen"
+    },
+    "V": {
+      "name": "Vanadium",
+      "atomicNumber": 23,
+      "symbol": "V",
+      "displayName": "Vanadium",
+      "typicalRange": "50-85%",
+      "commonIn": ["Ferro Vanadium"],
+      "purpose": "Strengthener, carbide former, grain refiner",
+      "notes": "Improves wear resistance and strength"
+    }
+  },
+  "gradeNamingConventions": {
+    "ferroManganese": {
+      "pattern": "HC/MC/LC FeMn XX%",
+      "examples": ["HC FeMn Grade 1 (65-70% Mn)", "LC FeMn (0.10% C max)"],
+      "notes": "HC = High Carbon, MC = Medium Carbon, LC = Low Carbon"
+    },
+    "ferroSilicon": {
+      "pattern": "FeSi XX%",
+      "examples": ["FeSi75", "FeSi50"],
+      "notes": "Number indicates minimum silicon percentage"
+    },
+    "ferroChrome": {
+      "pattern": "HC/LC FeCr XX% C max",
+      "examples": ["HC FeCr 60% Cr 2% Si 9% C", "LC FeCr 65% Cr 0.15% C"],
+      "notes": "Low carbon grades specify max carbon content"
+    },
+    "silicoManganese": {
+      "pattern": "HC/MC/LC SiMn XX%",
+      "examples": ["HC SiMn 70% Mn 18% Si", "LC SiMn 65% Mn 28% Si"],
+      "notes": "Contains both manganese and silicon"
+    }
+  },
+  "testingStandards": {
+    "chemicalAnalysis": {
+      "ASTM": ["ASTM E415 - Standard Test Method for Analysis of Carbon and Low-Alloy Steel", "ASTM E1086 - Optical Emission Vacuum Spectrometric Analysis"],
+      "ISO": ["ISO 14284 - Steel and Iron - Sampling and Preparation of Samples"],
+      "relevantMethods": ["Optical Emission Spectroscopy (OES)", "X-Ray Fluorescence (XRF)", "Combustion Analysis"]
+    },
+    "mechanicalTesting": {
+      "ASTM": ["ASTM E8 - Tension Testing", "ASTM E23 - Charpy Impact Testing"],
+      "ISO": ["ISO 6892 - Metallic Materials Tensile Testing"]
+    }
+  },
+  "commonApplications": {
+    "stainlessSteel": {
+      "elements": ["Cr (min 10.5%)", "Ni", "Mo"],
+      "typicalGrades": ["304", "316", "430"],
+      "properties": ["Corrosion resistance", "Aesthetic appeal"]
+    },
+    "carbonSteel": {
+      "elements": ["C (0.05-2.1%)", "Mn", "Si"],
+      "typicalGrades": ["1018", "1045", "1095"],
+      "properties": ["Versatility", "Machinability", "Weldability"]
+    },
+    "alloySteel": {
+      "elements": ["Cr", "Ni", "Mo", "V", "Nb"],
+      "typicalGrades": ["4140", "4340", "8620"],
+      "properties": ["Strength", "Toughness", "Hardenability"]
+    },
+    "toolSteel": {
+      "elements": ["C", "Cr", "Mo", "V", "W"],
+      "typicalGrades": ["D2", "O1", "M2"],
+      "properties": ["Hardness", "Wear resistance", "Red hardness"]
+    },
+    "springSteel": {
+      "elements": ["Si", "Mn", "Cr", "V"],
+      "typicalGrades": ["5160", "9260", "6150"],
+      "properties": ["Elasticity", "Fatigue resistance"]
+    }
+  },
+  "qualityParameters": {
+    "acceptableImpurityLevels": {
+      "phosphorus": {
+        "standard": "0.05% max",
+        "lowPhosphorus": "0.02% max",
+        "ultraLow": "0.015% max"
+      },
+      "sulfur": {
+        "standard": "0.05% max",
+        "lowSulfur": "0.03% max",
+        "ultraLow": "0.01% max"
+      }
+    },
+    "sizeSpecifications": {
+      "lumpy": {
+        "standard": "10-100mm",
+        "common": "10-50mm",
+        "fine": "3-10mm"
+      },
+      "granular": {
+        "standard": "1-10mm",
+        "fine": "0.5-3mm"
+      }
+    }
+  },
+  "safetyHandling": {
+    "generalPrecautions": [
+      "Wear appropriate PPE (gloves, safety glasses, dust mask)",
+      "Avoid inhalation of dust and fumes",
+      "Store in dry, covered areas",
+      "Follow MSDS guidelines",
+      "Use proper lifting techniques for heavy bags"
+    ],
+    "specificHazards": {
+      "manganese": "Manganese fumes can cause metal fume fever; chronic exposure affects nervous system",
+      "chromium": "Hexavalent chromium (Cr VI) is carcinogenic; avoid inhalation of dust",
+      "vanadium": "Vanadium pentoxide fumes are toxic; respiratory protection required"
+    }
+  },
+  "packagingOptions": {
+    "standard": ["25kg bags", "50kg bags", "1MT jumbo bags"],
+    "bulk": ["Bulk bags (1-2MT)", "Loose bulk"],
+    "special": ["Nitrogen-purged bags", "Vacuum-sealed containers"]
+  },
+  "storageRequirements": {
+    "environment": ["Dry, covered storage", "Away from moisture", "Protected from elements"],
+    "segregation": ["Separate different grades", "Label clearly", "FIFO rotation"],
+    "shelfLife": "Indefinite when stored properly; quality may degrade with moisture absorption"
+  }
+}
