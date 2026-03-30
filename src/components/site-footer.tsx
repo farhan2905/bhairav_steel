@@ -18,7 +18,7 @@ const footerLinks = {
     { label: 'Contact Us', href: '/contact' },
     { label: 'FAQs', href: '#' },
     { label: 'Documentation', href: '#' },
-    { label: 'Quality Certs', href: '/quality' },
+    { label: 'Quality Certs', href: '/services' },
   ],
 };
 
@@ -53,8 +53,7 @@ export default function SiteFooter() {
               </span>
             </Link>
             <p className="text-slate-400 mb-6 max-w-sm">
-              Manufacturing high-performance steel products for infrastructure,
-              energy, and heavy industry worldwide.
+              Precision manufacturing and reliable transport of specialized bulk steel orders.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">

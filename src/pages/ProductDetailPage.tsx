@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CheckCircle2, Factory, FlaskConical, Package, Tag, Layers, Beaker } from 'lucide-react';
+import { CheckCircle2, Factory, FlaskConical, Package, Tag, Layers, Beaker , Phone} from 'lucide-react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { DetailLayout } from '../components/detail-layout';
 import { getProductBySlugs } from '../lib/products-data';
@@ -47,13 +47,13 @@ export default function ProductDetailPage() {
           </div>
 
           {/* ── Hero Grid: Image + Quick Facts ── */}
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start xl:items-start">
             {/* Product image */}
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-sm">
               <img
                 src={product.image}
                 alt={product.name}
-                className="h-[280px] w-full object-cover sm:h-[380px] transition-transform duration-500 hover:scale-105"
+                className="h-[280px] w-full object-cover sm:h-[400px] transition-transform duration-500 hover:scale-105"
               />
             </div>
 
@@ -287,8 +287,34 @@ export default function ProductDetailPage() {
             </div>
           </div>
 
+          {/* Ready to Order Contact Card (Moved to bottom) */}
+          <div className="mt-8 rounded-3xl border border-blue-100 bg-blue-50/50 p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="text-center sm:text-left text-balance">
+                <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">Ready to Order {product.name}?</h3>
+                <p className="text-slate-600 max-w-lg">Get in touch with our sales team for custom dimensions, bulk pricing, and specialized requirements.</p>
+              </div>
+              
+              <div className="flex flex-col w-full sm:w-auto gap-3">
+                <a
+                  href="tel:+918283845490"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-3.5 text-sm font-bold text-white shadow-xl shadow-blue-600/20 transition-all hover:-translate-y-1 hover:bg-blue-700 hover:shadow-blue-600/30"
+                >
+                  <Phone size={18} />
+                  Call Now
+                </a>
+                <a
+                  href="mailto:bhairavsteels20@gmail.com"
+                  className="flex items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-white px-8 py-3.5 text-sm font-bold text-slate-700 transition-all hover:border-slate-300 hover:bg-slate-50 relative overflow-hidden group"
+                >
+                  <span className="relative z-10 font-bold group-hover:text-blue-900 transition-colors">Request Quote via Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
-      
+
         </section>
 
       {/* ── Related products in same category ── */}

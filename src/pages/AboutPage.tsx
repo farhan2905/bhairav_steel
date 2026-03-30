@@ -1,4 +1,4 @@
-import { Building2, Calendar, CheckCircle2, Factory, Globe, Shield, Users } from 'lucide-react';
+import { Building2, Calendar, CheckCircle2, Factory, Globe, Shield, Users, TrendingUp } from 'lucide-react';
 import { DetailLayout } from '../components/detail-layout';
 
 const pillars = [
@@ -25,10 +25,10 @@ const pillars = [
 ];
 
 const companyStats = [
-  { icon: Calendar, label: 'Year Established', value: '1998' },
-  { icon: Building2, label: 'Companies Served', value: '1000+' },
-  { icon: Globe, label: 'Countries Supplied', value: '50+' },
-  { icon: Users, label: 'Workforce Strength', value: '600+' },
+  { icon: Calendar, label: 'Year Established', value: '2025' },
+  { icon: Building2, label: 'Companies Served', value: '20+' },
+  { icon: Globe, label: 'Countries Supplied', value: '7+' },
+  { icon: TrendingUp, label: 'Tons Delivered', value: '10K+' },
 ];
 
 const industries = [
@@ -42,26 +42,25 @@ export default function AboutPage() {
   return (
     <DetailLayout
       sectionLabel="About Bhairav Steel"
-      title="Decades of Excellence in Steel Manufacturing"
-      subtitle="Founded on principles of precision and quality, Bhairav Steel has evolved into a leading manufacturer of high-performance steel products."
+      title="Precision Steel Manufacturing & Transport"
+      subtitle="Founded in 2025, Bhairav Steel specializes in the manufacturing, transport, and reliable execution of bulk specialized steel orders."
     >
       <section className="section-padding bg-white">
         <div className="container-custom grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-3xl font-bold text-slate-900">About Us</h2>
             <p className="mt-5 text-slate-600 leading-relaxed">
-              Founded on principles of precision and quality, Bhairav Steel has evolved into a leading manufacturer of high-performance steel products.
-              Our journey from a modest beginning to an industry leader reflects our unwavering commitment to excellence.
+              Founded in 2025, Bhairav Steel has rapidly established itself as a trusted partner in the manufacture and transport of high-performance steel products and bulk ferro alloys. Our agile approach allows us to confidently tackle specialized orders with precision and care.
             </p>
             <p className="mt-5 text-slate-600 leading-relaxed">
-              We serve diverse sectors including infrastructure, energy, automotive, and heavy industry with products that meet the highest international standards.
+              With a strong focus on manufacturing efficiency and streamlined transport, our team ensures seamless logistics and top-tier product quality for every specialized requirement, no matter the scale.
             </p>
             <ul className="mt-8 space-y-4">
               {[
-                'State-of-the-art manufacturing facility',
-                'ISO 9001:2015 certified processes',
-                'Dedicated R&D team',
-                'Global supply chain network',
+                'Agile manufacturing and transport framework',
+                'MSME Certified quality processes',
+                'Specialized handling of bulk orders',
+                'Global supply chain and logistics network',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-slate-700">
                   <CheckCircle2 className="text-blue-600" size={18} />

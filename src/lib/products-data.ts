@@ -52,7 +52,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'bulk-ferro-alloys',
     description:
       'Primary high-volume ferro additives used in industrial steelmaking as deoxidizers and alloying elements for chemistry and strength control.',
-    image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
+    image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
     products: [
       /* ═══ 1.1 Silico Manganese (consolidated: HC / MC / LC) ═══ */
       {
@@ -139,7 +139,7 @@ export const productCatalog: ProductCategory[] = [
           'Low carbon grades eliminate final-step decarburization in stainless production',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-silico-manganese/',
-        image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/002_A_pile_of_rough_metallic_ore_chunks_is_presented_umJTbO-6.jpg',
       },
 
       /* ═══ 1.2 Ferro Manganese (consolidated: HC / MC / LC) ═══ */
@@ -223,7 +223,7 @@ export const productCatalog: ProductCategory[] = [
           'HC/MC/LC grades produced via different processes',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-manganese/',
-        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/003_A_pile_of_irregular_angular_metallic_ore_pieces_DRb43aqq.png',
       },
 
       /* ═══ 1.3 Ferro Chrome (consolidated: HC / LC) ═══ */
@@ -303,7 +303,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced via submerged arc smelting (AC) or open arc smelting (DC)',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-chrome/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/004_A_pile_of_dark_metallic_ore_chunks_is_arranged_zIMF9P71.png',
       },
 
       /* ─── 1.4 Ferro Silicon ─── */
@@ -357,7 +357,7 @@ export const productCatalog: ProductCategory[] = [
           'Used in silicon steel for electrical applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-silicon/',
-        image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1200',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
       },
 
       /* ─── 1.5 Silico Chrome ─── */
@@ -402,7 +402,7 @@ export const productCatalog: ProductCategory[] = [
           'Dual-action: deoxidizer + chromium additive',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/silico-chrome/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/002_A_pile_of_rough_metallic_ore_chunks_is_presented_umJTbO-6.jpg',
       },
     ],
   },
@@ -415,378 +415,154 @@ export const productCatalog: ProductCategory[] = [
     slug: 'steel-products',
     description:
       'Finished and semi-finished steel products supplied across structural, fabrication, and industrial sectors.',
-    image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
-    products: [
-      /* ─── 4.1 Billets & Blooms ─── */
+    image: '/images/Bhairav-Steel---Steel-Products/003_Stacks_of_raw_steel_beams_are_arranged_in_an_MVnXr3BN.jpg',
+        products: [
       {
-        name: 'Billets & Blooms',
-        slug: 'billets-and-blooms',
-        shortDescription: 'Semi-finished solid steel lengths used as primary feed for rolling mills.',
-        overview: 'Steel billets and blooms are semi-finished cast products used as primary feed for hot rolling mills and forging. They form the building blocks for a vast array of wire rods, seamless pipes, and structural steel.',
-        detailedDescription: 'Available in various dimensions, our billets and blooms are cast using advanced continuous casting machines to ensure structural integrity. They are carefully cooled and inspected for internal soundness and surface finish. Suitable for structural, forging, and special engineering applications depending on the carbon and alloy grades.',
-        productType: 'Semi-finished Steel',
-        commonSpecs: 'Cast to precise dimensional tolerances',
-        specTable: [
-          { parameter: 'Length', value: '3m to 12m' },
-          { parameter: 'Surface', value: 'Hot Cast / Unmachined' }
-        ],
-        subProducts: [
-          {
-            name: '100x100 Billet',
-            specTable: [
-              { parameter: 'Size', value: '100x100 mm' },
-              { parameter: 'Grade', value: 'Carbon Steel / IS 2830' },
-              { parameter: 'Application', value: 'Light Sections, TMT Bars' }
-            ]
-          },
-          {
-            name: '160x160 Billet',
-            specTable: [
-              { parameter: 'Size', value: '160x160 mm' },
-              { parameter: 'Grade', value: 'Carbon / Alloy Steel' },
-              { parameter: 'Application', value: 'Medium Structural Sections' }
-            ]
-          },
-          {
-            name: '200x250 Bloom',
-            specTable: [
-              { parameter: 'Size', value: '200x250 mm' },
-              { parameter: 'Grade', value: 'High Carbon / Alloy' },
-              { parameter: 'Application', value: 'Heavy Beams, Forging Applications' }
-            ]
-          }
-        ],
-        applications: ['TMT bar rolling', 'Structural section rolling', 'Seamless pipe manufacturing', 'Forging components'],
-        keyPoints: ['Available in 100mm to 200mm+ cross-sections', 'Uniform microstructure', 'Low inclusion content', 'Available in custom alloy chemistries'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
-      },
-
-      /* ─── 4.2 Carbon, Alloy & Spring Steel ─── */
-      {
-        name: 'Carbon & Alloy Steel',
-        slug: 'carbon-alloy-spring-steel',
-        shortDescription: 'High-grade rounds, squares, and flats formulated for precision automotive and engineering uses.',
-        overview: 'Specialized steel products crafted with precise carbon, alloy, and spring steel compositions. These are critical inputs for automotive parts, industrial machinery, and heavy equipment manufacturing.',
-        detailedDescription: 'From versatile Round Bars to Rounded Corner Squares (RCS) and Spring Steel Flats, our alloy products meet demanding strength, wear, and fatigue resistance criteria. Manufactured to stringent global standards including SAE, EN, and IS specifications.',
-        productType: 'Finished Steel Product',
-        commonSpecs: 'Available in diverse structural formats',
-        specTable: [
-          { parameter: 'Finish', value: 'Hot Rolled / Bright Bar Finish' },
-          { parameter: 'Standard', value: 'SAE, EN, IS, DIN' }
-        ],
-        subProducts: [
-          {
-            name: 'Round Bars',
-            specTable: [
-              { parameter: 'Size Range', value: '20mm - 125mm' },
-              { parameter: 'Common Grades', value: 'SAE 1008, EN8D, SAE 4140, EN1A' },
-              { parameter: 'Application', value: 'Axles, Shafts, Fasteners' }
-            ]
-          },
-          {
-            name: 'RCS (Rounded Corner Square)',
-            specTable: [
-              { parameter: 'Size Range', value: '40mm - 125mm' },
-              { parameter: 'Common Grades', value: 'SAE 8620, EN353, 20MnCr5, EN19' },
-              { parameter: 'Application', value: 'Gears, Automotive Forgings' }
-            ]
-          },
-          {
-            name: 'Spring Steel Flats',
-            specTable: [
-              { parameter: 'Dimensions', value: '70x8mm to 360x20mm' },
-              { parameter: 'Common Grades', value: 'EN45A, 65Si7, SUP9, 55Si7' },
-              { parameter: 'Application', value: 'Leaf Springs, Suspension Systems' }
-            ]
-          }
-        ],
-        applications: ['Automotive forgings', 'Gear & shaft manufacturing', 'Suspension systems (Leaf Springs)', 'Precision machined components'],
-        keyPoints: ['Rounds from 20-125mm', 'RCS from 40-125mm', 'Superior fatigue life', 'Tight dimensional tolerances'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200',
-      },
-
-      /* ─── 4.3 Structural Sections ─── */
-      {
-        name: 'Structural Sections',
-        slug: 'structural-sections',
-        shortDescription: 'Hot-rolled steel beams, channels, and angles forming the backbone of infrastructure.',
-        overview: 'Structural steel sections are hot-rolled products available in an array of cross-sections like I, U, and L shapes. They are designed to carry high continuous loads efficiently.',
-        detailedDescription: 'Essential for the construction of pre-engineered buildings, bridges, and industrial structures. Our range covers Angles, Channels, and Beams manufactured to high yield strength standards to ensure maximum structural stability and safety.',
+        name: 'TMT Bars',
+        slug: 'tmt-bars',
+        shortDescription: 'High-strength thermo-mechanically treated steel bars for superior construction reinforcement.',
+        overview: 'TMT (Thermo Mechanically Treated) steel bars are essential in modern construction, providing high yield strength combined with necessary ductility to reinforce concrete structures safely.',
+        detailedDescription: 'Thermo Mechanically Treated bars renowned for their durability, superior tensile strength, and firm bonding with concrete. Heavily ribbed for optimal concrete bonding, they are the trusted choice for heavy load-bearing infrastructure.',
         productType: 'Construction Steel',
-        commonSpecs: 'Hot-rolled structural shapes',
+        commonSpecs: 'Fe-500, Fe-500D, Fe-550, Fe-600',
         specTable: [
-          { parameter: 'Grades', value: 'IS 2062 E250 / E350, ASTM A36' },
-          { parameter: 'Length', value: 'Standard 6m, 9m, 12m or custom cut' }
+          { parameter: 'Diameter', value: '8mm to 32mm' },
+          { parameter: 'Standard Length', value: '12 Meters' }
         ],
-        subProducts: [
-          {
-            name: 'MS Angles',
-            specTable: [
-              { parameter: 'Size Range', value: '25x25x3mm to 200x200x20mm' },
-              { parameter: 'Type', value: 'Equal & Unequal' },
-              { parameter: 'Application', value: 'Transmission Towers, Sheds' }
-            ]
-          },
-          {
-            name: 'MS Channels',
-            specTable: [
-              { parameter: 'Size Range', value: '75x40mm to 400x100mm' },
-              { parameter: 'Profile', value: 'U-Shape (ISMC)' },
-              { parameter: 'Application', value: 'Industrial Factory Frames, Chassis' }
-            ]
-          },
-          {
-            name: 'Beams & Joists',
-            specTable: [
-              { parameter: 'Size Range', value: '100x50mm to 600x210mm' },
-              { parameter: 'Profile', value: 'I-Beam (ISMB / NPB / W-Shape)' },
-              { parameter: 'Application', value: 'Pre-Engineered Buildings, Bridges' }
-            ]
-          }
-        ],
-        applications: ['Pre-Engineered Buildings (PEB)', 'Telecom and Transmission Towers', 'Bridge Girders', 'Heavy Industrial Sheds'],
-        keyPoints: ['Comprehensive range of cross-sections', 'High load-bearing capacity', 'Weldable and formable', 'IS 2062 compliant'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200',
+        applications: ['Residential housing', 'Bridges and flyovers', 'Dams and power plants', 'High-rise commercial buildings'],
+        keyPoints: ['High seismic resistance', 'Superior concrete bonding', 'Excellent bendability', 'Earthquake Resistant'],
+        sourceUrl: '#',
+        image: '/images/Bhairav-Steel---Steel-Products/001_In_a_realistic_style_stacks_of_rebar_are_bundled_b0dlSVF5.png'
       },
-
-      /* ─── 4.4 Steel Sheets & Coils ─── */
       {
-        name: 'Steel Sheets & Coils',
-        slug: 'steel-sheets-coils',
-        shortDescription: 'Flat-rolled steel items available in hot-rolled, cold-rolled, and galvanized finishes.',
-        overview: 'Flat steel products form the basis of countless fabricated end-products. They are rolled into precise thicknesses and are available in continuous coils or precut sheets.',
-        detailedDescription: 'Whether you need the rugged malleability of Hot Rolled (HR) steel, the precise finish of Cold Rolled (CR) steel, or the corrosion resistance of Galvanized (GP/GI) materials, our product line meets stringent thickness and flatness tolerances.',
-        productType: 'Flat Steel Product',
-        commonSpecs: 'Available in Coil or Cut-to-length Sheet form',
+        name: 'Angle',
+        slug: 'ms-angle',
+        shortDescription: 'Mild steel angles used for structural support in framing and engineering.',
+        overview: 'Mild Steel (MS) Angles are L-shaped structural steel components that provide high strength and reliability in forming frameworks, braces, and general structural supports.',
+        detailedDescription: 'L-shaped mild steel cross sections serving as essential support frames in diverse construction and engineering applications. Excellent weldability and formability make them a versatile staple across fabrication shops.',
+        productType: 'Structural Steel',
+        commonSpecs: 'Mild Steel',
         specTable: [
-          { parameter: 'Form', value: 'Coil or Sheet' },
-          { parameter: 'Width', value: '1000mm to 2000mm standard' }
+          { parameter: 'Sizes', value: '20x20x3 mm to 130x130x12 mm' },
+          { parameter: 'Length', value: 'Standard length of 6 meters' }
         ],
-        subProducts: [
-          {
-            name: 'HR Coils / Sheets',
-            specTable: [
-              { parameter: 'Thickness', value: '1.2mm to 20mm' },
-              { parameter: 'Finish', value: 'Black / Pickled & Oiled' },
-              { parameter: 'Application', value: 'Heavy structures, Pipes, Tanks' }
-            ]
-          },
-          {
-            name: 'CR Coils / Sheets',
-            specTable: [
-              { parameter: 'Thickness', value: '0.15mm to 3.0mm' },
-              { parameter: 'Finish', value: 'Bright / Matte / Dull' },
-              { parameter: 'Application', value: 'White goods, Auto body panels' }
-            ]
-          },
-          {
-            name: 'Galvanized (GI) Coils',
-            specTable: [
-              { parameter: 'Coating', value: 'Z60 to Z275 (Zinc)' },
-              { parameter: 'Spangle', value: 'Zero, Minimized, or Regular' },
-              { parameter: 'Application', value: 'Roofing, Ducting, White goods' }
-            ]
-          }
-        ],
-        applications: ['Automotive body manufacturing', 'Roofing and cladding', 'Home appliances', 'HVAC ducting'],
-        keyPoints: ['High dimensional accuracy', 'Consistent surface finish', 'Superior drawing and forming properties', 'Excellent corrosion resistance in GI'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+        applications: ['Transmission towers', 'Warehouse frameworks', 'Brackets and joining', 'Shelving and racking'],
+        keyPoints: ['Equal and unequal variants', 'High structural integrity', 'Easily welded and machined', 'Durable load distribution'],
+        sourceUrl: '#',
+        image: '/images/001_In_a_realistic_style_this_image_displays_a_mfisa7Vi.png'
       },
-
-      /* ─── 4.5 TMT Rebars ─── */
       {
-        name: 'TMT Rebars',
-        slug: 'tmt-rebars',
-        shortDescription: 'Thermo-Mechanically Treated bars providing superior strength and ductility for concrete reinforcement.',
-        overview: 'TMT (Thermo-Mechanically Treated) bars are high-strength reinforcement bars essential for all types of concrete structures. They feature a tough outer core and a soft, ductile inner core.',
-        detailedDescription: 'Produced using an advanced quenching and self-tempering process, our TMT bars resist seismic forces, fire, and corrosion. They offer superior bendability and weldability without loss of structural strength. Available in standard lengths of 12 meters.',
-        productType: 'Construction Steel',
-        commonSpecs: 'Sizes from 8mm to 36mm',
+        name: 'Channel',
+        slug: 'ms-channel',
+        shortDescription: 'C-shaped mild steel channels designed for robust structural reinforcement.',
+        overview: 'MS Channels are C-shaped structural profiles engineered to withstand heavy vertical and bending stresses.',
+        detailedDescription: 'C-shaped mild steel profiles ensuring rigid structural support in commercial and industrial scale constructions.',
+        productType: 'Structural Steel',
+        commonSpecs: 'Mild Steel',
         specTable: [
-          { parameter: 'Standard', value: 'IS 1786' },
-          { parameter: 'Length', value: '12 meters standard' }
+          { parameter: 'Dimensions', value: '75x40 mm to 300x90 mm' },
+          { parameter: 'Weight', value: 'Varies by dimension' },
+          { parameter: 'Length', value: '6 Meters, 12 Meters' }
         ],
-        subProducts: [
-          {
-            name: 'Fe 500',
-            specTable: [
-              { parameter: 'Yeild Strength', value: '≥ 500 N/sq.mm' },
-              { parameter: 'Elongation', value: '≥ 12%' },
-              { parameter: 'Application', value: 'General Residential & Commercial Buildings' }
-            ]
-          },
-          {
-            name: 'Fe 500D',
-            specTable: [
-              { parameter: 'Yeild Strength', value: '≥ 500 N/sq.mm' },
-              { parameter: 'Elongation', value: '≥ 16% (High Ductility)' },
-              { parameter: 'Application', value: 'High-Rise, Bridges, Seismic Zones' }
-            ]
-          },
-          {
-            name: 'Fe 550D',
-            specTable: [
-              { parameter: 'Yeild Strength', value: '≥ 550 N/sq.mm' },
-              { parameter: 'Elongation', value: '≥ 14.5% (High Ductility)' },
-              { parameter: 'Application', value: 'Heavy Infrastructure, Dams, Tunnels' }
-            ]
-          }
-        ],
-        applications: ['Residential & Commercial construction', 'Bridges and flyovers', 'Dams and heavy infrastructure', 'Earthquake-prone areas'],
-        keyPoints: ['Earthquake and fire resistant', 'High rib depth for superior concrete grip', 'Excellent weldability and bendability', 'Corrosion-resistant grades available (CRS/Epoxy)'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
+        applications: ['Factory frameworks', 'Automotive chassis', 'Heavy duty racks', 'Commercial structural supports'],
+        keyPoints: ['Optimal strength-to-weight', 'High load bearing capacity', 'Predictable uniform dimensions', 'Versatile fabrication'],
+        sourceUrl: '#',
+        image: '/images/Factory-and-Manufacturing-Images/003_In_a_gritty_industrial_style_heavy_machinery_9vXO7pUZ.png'
       },
-
-      /* ─── 4.6 Industrial Wires & Fencing ─── */
       {
-        name: 'Industrial Wires',
-        slug: 'industrial-wires',
-        shortDescription: 'From mild steel binding wires to heavy-duty galvanized fencing solutions.',
-        overview: 'Steel wires are versatile products drawn from wire rods. They serve critical roles in construction tie-downs, manufacturing applications, and agricultural fencing.',
-        detailedDescription: 'We provide uniformly drawn steel wires featuring consistent tensile strength and clean surface finishes. Galvanized variants offer excellent resistance to rust, making them ideal for outdoor and agricultural applications.',
-        productType: 'Wire Products',
-        commonSpecs: 'Supplied in coils or spool formats',
+        name: 'Pipes',
+        slug: 'steel-pipes',
+        shortDescription: 'Round, square, and rectangular steel pipes and tubes for fluid transmission or structural building.',
+        overview: 'High-grade hollow sections designed for both structural framework applications and fluid transportation systems.',
+        detailedDescription: 'Robust metallic tubes and pipes for fluid logistics, scaffolding, and load-bearing framework. Available as seamless or welded (ERW), our pipes are meticulously inspected to ensure leak-proof performance and uniform wall thickness.',
+        productType: 'Hollow Steel Sections',
+        commonSpecs: 'ERW / Seamless Hollow Sections',
         specTable: [
-          { parameter: 'Material', value: 'Low to Medium Carbon Steel' },
-          { parameter: 'Packaging', value: 'Coil, Spool, or Bundle' }
+          { parameter: 'Section', value: 'Round, Square & Rectangular' },
+          { parameter: 'Thickness', value: '1.2mm to 10mm' }
         ],
-        subProducts: [
-          {
-            name: 'Binding Wire',
-            specTable: [
-              { parameter: 'Gauge', value: '18 SWG to 22 SWG' },
-              { parameter: 'Finish', value: 'Soft Annealed' },
-              { parameter: 'Application', value: 'Tying rebars in construction' }
-            ]
-          },
-          {
-            name: 'GI Wire',
-            specTable: [
-              { parameter: 'Gauge', value: '8 SWG to 24 SWG' },
-              { parameter: 'Coating', value: 'Hot-dip Galvanized' },
-              { parameter: 'Application', value: 'Fencing, Wire Meshes' }
-            ]
-          },
-          {
-            name: 'Barbed / Fencing Wire',
-            specTable: [
-              { parameter: 'Format', value: 'Stranded with 4-point barbs' },
-              { parameter: 'Spacing', value: '3 to 6 inches between barbs' },
-              { parameter: 'Application', value: 'Agricultural, Security Fencing' }
-            ]
-          }
-        ],
-        applications: ['Construction rebar tying', 'Agricultural boundaries', 'High-security fencing', 'Wire mesh and nail manufacturing'],
-        keyPoints: ['Available in black annealed or galvanized finishes', 'High rust resistance in GI grades', 'Consistent wire diameter and tensile strength', 'Easy to twist and tie'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+        applications: ['Liquid and gas transmission', 'Scaffolding', 'Piling and columns', 'Structural poles'],
+        keyPoints: ['High pressure tolerance', 'Corrosion-resistant options', 'Precision dimensions', 'Smooth internal finish'],
+        sourceUrl: '#',
+        image: '/images/Bhairav-Steel---Steel-Products/004_In_a_realistic_style_stacks_of_large_metal_pipes_sw1lbrFo.png'
       },
-
-      /* ─── 4.7 Steel Pipes & Tubes ─── */
       {
-        name: 'Steel Pipes & Tubes',
-        slug: 'steel-pipes-tubes',
-        shortDescription: 'Durable piping solutions for water, gas, and structural scaffolding.',
-        overview: 'Steel pipes and tubular hollow sections are critical for fluid transport and structural scaffolding. Our range includes both welded and seamless tubular products in various schedules.',
-        detailedDescription: 'Manufactured with high-strength seam welds (ERW) or through seamless extrusion, our pipes meet a broad spectrum of pressure and environmental requirements. Hollow sections (SHS/RHS) are also widely favored for modern architectural and structural frameworks.',
-        productType: 'Tubular Steel',
-        commonSpecs: 'Circular, Square, and Rectangular profiles',
+        name: 'Beam',
+        slug: 'ms-beam',
+        shortDescription: 'Heavy-duty structural forms like I-Beams and H-Beams critical for carrying significant bending moments.',
+        overview: 'Used to provide massive structural integrity, MS Beams consist of a central web and two external flanges designed to resist bending under heavy weight.',
+        detailedDescription: 'Heavy-duty structural forms like I-Beams and H-Beams critical for carrying significant bending moments. These components are vital for large clear-span buildings, acting as the main skeleton supporting immense loads.',
+        productType: 'Heavy Structural Steel',
+        commonSpecs: 'IS 2062',
         specTable: [
-          { parameter: 'Standard Length', value: '6 meters (Custom cuts available)' },
-          { parameter: 'Standards', value: 'IS 1239, IS 3589, IS 4923' }
+          { parameter: 'Type', value: 'I-Beams, H-Beams' },
+          { parameter: 'Size', value: '100x50 mm to 600x210 mm' }
         ],
-        subProducts: [
-          {
-            name: 'MS Black Pipes',
-            specTable: [
-              { parameter: 'NB Size', value: '15mm to 300mm' },
-              { parameter: 'Wall Thickness', value: 'Light, Medium, Heavy' },
-              { parameter: 'Application', value: 'Scaffolding, Structural, Non-critical fluids' }
-            ]
-          },
-          {
-            name: 'GI Pipes',
-            specTable: [
-              { parameter: 'NB Size', value: '15mm to 150mm' },
-              { parameter: 'Coating', value: 'Hot-Dip Galvanized Zinc' },
-              { parameter: 'Application', value: 'Water supply, Firefighting, Plumbing' }
-            ]
-          },
-          {
-            name: 'Hollow Sections (RHS/SHS)',
-            specTable: [
-              { parameter: 'Shape', value: 'Square & Rectangular' },
-              { parameter: 'Thickness', value: '1.2mm to 10.0mm' },
-              { parameter: 'Application', value: 'PEB trusses, Aesthetic structures' }
-            ]
-          }
-        ],
-        applications: ['Water and gas distribution', 'Industrial scaffolding systems', 'Architectural space frames', 'Firefighting sprinkler systems'],
-        keyPoints: ['Rigorous hydrostatic testing for fluid grades', 'Uniform zinc coating for GI pipes', 'High strength-to-weight ratio for SHS/RHS', 'Seamless variants available for high pressure'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
+        applications: ['Skyscrapers', 'Industrial flooring', 'Girders', 'Bridges'],
+        keyPoints: ['Maximum bend resistance', 'Heavy load distribution', 'Dimensionally stable', 'Reliable rigid support'],
+        sourceUrl: '#',
+        image: '/images/Bhairav-Steel---Steel-Products/003_Stacks_of_raw_steel_beams_are_arranged_in_an_MVnXr3BN.jpg'
       },
-      
-      /* ─── 4.8 Primary Feedstock ─── */
       {
-        name: 'Primary Feedstock',
-        slug: 'primary-feedstock',
-        shortDescription: 'Sponge iron and pig iron serving as essential raw material for steelmaking.',
-        overview: 'These primary iron products act as the fundamental metallic feed for electric arc, induction, and basic oxygen furnaces. They govern the purity and chemical baseline of the finished steel.',
-        detailedDescription: 'Sponge Iron (Direct Reduced Iron) is produced by reducing iron ore without melting, maintaining high metallization and low tramp elements. Pig Iron, cast from blast furnaces, offers higher carbon content perfect for foundries and specific steelmaking chemistries.',
-        productType: 'Raw Materials',
-        commonSpecs: 'High iron content materials for smelting',
+        name: 'Flat',
+        slug: 'ms-flat',
+        shortDescription: 'Flat carbon steel bars used generally for fabrication and mechanical frames.',
+        overview: 'Solid, rectangular pieces of metal ranging across varying widths and thicknesses, used largely as fabrication raw material.',
+        detailedDescription: 'Basic rectangular steel bars offering high utility for grating, base plates, and structural joint attachments. Their dimensional accuracy makes them ideal for manufacturing bespoke parts and mechanical tools.',
+        productType: 'Carbon Steel Bars',
+        commonSpecs: 'Mild Steel',
         specTable: [
-          { parameter: 'Form', value: 'Lumps, Fines, or Ingots' },
-          { parameter: 'Handling', value: 'Bulk bulk-loaded or bagged (for fines)' }
+          { parameter: 'Width', value: '12mm to 150mm' },
+          { parameter: 'Thickness', value: '3mm to 20mm' },
+          { parameter: 'Length', value: 'Standard 6 Meters' }
         ],
-        subProducts: [
-          {
-            name: 'Sponge Iron (DRI)',
-            specTable: [
-              { parameter: 'Total Iron (Fe)', value: '78% - 82% Min' },
-              { parameter: 'Metallization', value: '85% - 88% Min' },
-              { parameter: 'Application', value: 'Induction / Electric Arc Furnaces' }
-            ]
-          },
-          {
-            name: 'Steel Grade Pig Iron',
-            specTable: [
-              { parameter: 'Silicon (Si)', value: '1.25% Max' },
-              { parameter: 'Carbon (C)', value: '3.5% - 4.5%' },
-              { parameter: 'Application', value: 'Diluting scrap, Basic oxygen steelmaking' }
-            ]
-          },
-          {
-            name: 'Foundry Grade Pig Iron',
-            specTable: [
-              { parameter: 'Silicon (Si)', value: '1.5% - 2.5% Min' },
-              { parameter: 'Carbon (C)', value: '3.5% - 4.5%' },
-              { parameter: 'Application', value: 'Cast iron production in foundries' }
-            ]
-          }
+        applications: ['Architectural grating', 'Base plates', 'Component fabrication', 'General welding projects'],
+        keyPoints: ['Excellent formability', 'High machinability', 'Uniform rectangular profile', 'Broad utility span'],
+        sourceUrl: '#',
+        image: '/images/Bhairav-Steel---Steel-Products/002_Stacks_of_dark_flat_materials_rest_on_wooden_DbFgrA-K.jpg'
+      },
+      {
+        name: 'Wire Rod',
+        slug: 'wire-rod',
+        shortDescription: 'Hot-rolled wire rods serving as raw material for drawn wire, nails, and mesh.',
+        overview: 'Steel wire rods are hot-rolled coils used extensively as feedstock for cold drawing and manufacturing fasteners.',
+        detailedDescription: 'Hot rolled wire rods delivered in coils, primarily serving as feedstock for structural and mechanical wire drawing. They feature a clean surface finish, optimizing them for further processing without breaking or scaling.',
+        productType: 'Rolled Steel Coils',
+        commonSpecs: 'Low Carbon, High Carbon',
+        specTable: [
+          { parameter: 'Diameter', value: '5.5mm to 12mm' },
+          { parameter: 'Coil Weight', value: '1 to 2 MT' }
         ],
-        applications: ['Steel making via EAF or IF', 'Diluting impurities from scrap metal', 'Manufacturing of cast iron components'],
-        keyPoints: ['Consistent chemistry to stabilize furnace operations', 'Low sulphur and phosphorus content', 'Enhances steel purity', 'Available in varying sizes/grades'],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-products/',
-        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+        applications: ['Nail and screw manufacturing', 'Fencing wire', 'Welding electrodes', 'Tying wire'],
+        keyPoints: ['High drawability', 'Consistent tensile properties', 'Minimal surface defects', 'Available in varying carbon content'],
+        sourceUrl: '#',
+        image: '/images/Bhairav-Steel---Steel-Products/001_In_a_realistic_style_stacks_of_rebar_are_bundled_b0dlSVF5.png'
+      },
+      {
+        name: 'Sheets',
+        slug: 'steel-sheets',
+        shortDescription: 'Broad sheets available in hot rolled, cold rolled, and galvanized finishes for manufacturing.',
+        overview: 'MS Sheets are flat-rolled steel products that serve as the foundational material for tanks, panels, and heavy containers.',
+        detailedDescription: 'Hot rolled and cold rolled steel sheets utilized in heavy fabrication and manufacturing. Formed to precise thicknesses and widths, they are indispensable for structural covers, vehicle bodies, and protective shielding.',
+        productType: 'Flat Rolled Steel',
+        commonSpecs: 'Hot Rolled (HR), Cold Rolled (CR), Galvanized (GI)',
+        specTable: [
+          { parameter: 'Thickness', value: '0.15mm to 10mm+' },
+          { parameter: 'Sizes', value: 'Custom and Standard Widths' }
+        ],
+        applications: ['Automobile bodies', 'Storage tanks', 'Industrial roofing', 'Heavy duty paneling'],
+        keyPoints: ['Uniform dimensional profiles', 'Surface treated for corrosion (GI)', 'Excellent deep-drawing capability', 'Scalable for large runs'],
+        sourceUrl: '#',
+        image: '/images/Bhairav-Steel---Steel-Products/002_Stacks_of_dark_flat_materials_rest_on_wooden_DbFgrA-K.jpg'
       }
-    ],
+      ]
   },
-  /* ═══════════════════════════════════════════════════════ */
-  /*  3. ORE & METALS                                        */
-  /* ═══════════════════════════════════════════════════════ */
   {
     name: 'ORE & Metals',
     slug: 'ore-and-metals',
     description:
       'Raw and semi-processed metal inputs supporting steel value chain — from ore to metal.',
-    image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+    image: '/images/Minerals-and-Ores-Product-Images-Set-1/001_In_a_macro_photography_style_a_cluster_of_rough_559gNtec.png',
     products: [
       /* ─── 3.1 Iron Ore ─── */
       {
@@ -820,7 +596,7 @@ export const productCatalog: ProductCategory[] = [
           'Fundamental to blast furnace operations',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/iron-ore/',
-        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+        image: '/images/Minerals-and-Ores-Product-Images-Set-1/001_In_a_macro_photography_style_a_cluster_of_rough_559gNtec.png',
       },
 
       /* ─── 3.2 Sponge Iron ─── */
@@ -871,7 +647,7 @@ export const productCatalog: ProductCategory[] = [
           'Physical sizes: Lump +3mm, Fines 0–3mm',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/sponge-iron/',
-        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+        image: '/images/Minerals-and-Ores-Product-Images-Set-1/002_A_pile_of_rough_dark-colored_minerals_is_8Uha30re.png',
       },
 
       /* ─── 3.3 Pig Iron ─── */
@@ -919,7 +695,7 @@ export const productCatalog: ProductCategory[] = [
           'Cornerstone in the metallurgical industry',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/pig-iron/',
-        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+        image: '/images/Minerals-and-Ores-Product-Images-Set-1/003_A_pile_of_dark_rough-textured_mineral_chunks_is_--2Efe-i.png',
       },
 
       /* ─── 3.4 Manganese Ore ─── */
@@ -967,7 +743,7 @@ export const productCatalog: ProductCategory[] = [
           'Mn has greater affinity for sulfur than iron',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/manganese-ore/',
-        image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+        image: '/images/Minerals-and-Ores-Product-Images-Set-1/004_In_a_macro_photography_style_several_rough_1Up1UDoa.png',
       },
     ],
   },
@@ -980,7 +756,7 @@ export const productCatalog: ProductCategory[] = [
     slug: 'noble-ferro-alloys',
     description:
       'Special alloys for advanced steel chemistry and premium grades, used for micro-alloying and precision property control.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+    image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/001_A_pile_of_raw_unrefined_metallic_ore_nuggets_JFig-V3t.png',
     products: [
       /* ─── 2.1 Ferro Molybdenum ─── */
       {
@@ -1031,7 +807,7 @@ export const productCatalog: ProductCategory[] = [
           'Milled and sieved to correct particle size',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-molybdenum/',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/001_A_pile_of_raw_unrefined_metallic_ore_nuggets_JFig-V3t.png',
       },
 
       /* ─── 2.2 Ferro Vanadium ─── */
@@ -1103,7 +879,7 @@ export const productCatalog: ProductCategory[] = [
           'Enhances yield strength and toughness',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-vanadium/',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/002_In_a_realistic_style_a_pile_of_irregularly_CQQ3CTkJ.png',
       },
 
       /* ─── 2.3 Ferro Titanium ─── */
@@ -1150,7 +926,7 @@ export const productCatalog: ProductCategory[] = [
           'Yields finer grain structure in steel',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-titanium/',
-        image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/003_A_pile_of_raw_metallic_ore_chunks_are_arranged_kW_G6d8x.png',
       },
 
       /* ─── 2.4 Ferro Nickel ─── */
@@ -1221,7 +997,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced by RKEF process from lateritic nickel ores',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-nickel/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/004_A_pile_of_metallic_ore_chunks_sits_on_a_7hHWd0s0.png',
       },
 
       /* ─── 2.5 Ferro Niobium ─── */
@@ -1267,7 +1043,7 @@ export const productCatalog: ProductCategory[] = [
           'Made by aluminothermy in electric furnace',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-niobium/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/001_A_pile_of_raw_unrefined_metallic_ore_nuggets_JFig-V3t.png',
       },
 
       /* ─── 2.6 Ferro Boron ─── */
@@ -1303,7 +1079,7 @@ export const productCatalog: ProductCategory[] = [
           'Key component in NdFeB magnetic materials',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-boron/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/002_In_a_realistic_style_a_pile_of_irregularly_CQQ3CTkJ.png',
       },
 
       /* ─── 2.7 Ferro Aluminum ─── */
@@ -1383,7 +1159,7 @@ export const productCatalog: ProductCategory[] = [
           'Controls grain size in killed steels',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-aluminum/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/003_A_pile_of_raw_metallic_ore_chunks_are_arranged_kW_G6d8x.png',
       },
 
       /* ─── 2.8 Ferro Tungsten ─── */
@@ -1424,7 +1200,7 @@ export const productCatalog: ProductCategory[] = [
           'Essential for high-temperature cutting applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-tungsten/',
-        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200',
+        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/004_A_pile_of_metallic_ore_chunks_sits_on_a_7hHWd0s0.png',
       },
     ],
   },

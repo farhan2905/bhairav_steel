@@ -14,7 +14,7 @@ import ContactPage from './pages/ContactPage';
 import ProductCategoryPage from './pages/ProductCategoryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import ProductsPage from './pages/ProductsPage';
-import QualityPage from './pages/QualityPage';
+
 import ServicesPage from './pages/ServicesPage';
 import './App.css';
 
@@ -43,27 +43,27 @@ function HeroSection() {
 
   const heroSlides = [
     {
-      src: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
+      src: '/images/Factory-and-Manufacturing-Images/001_In_a_gritty_industrial_style_molten_metal_is_mVcdeQAv.jpg',
       title: 'Precision Steel, Delivered Fast',
       subtitle: 'Reliable supply for high-demand projects.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200',
+      src: '/images/Factory-and-Manufacturing-Images/007_A_massive_industrial_rotary_kiln_with_heavy_pipes_bbfg-WyH.png',
       title: 'Built for Infrastructure',
       subtitle: 'Durable grades for structural performance.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200',
+      src: '/images/Factory-and-Manufacturing-Images/002_In_a_dramatic_industrial_setting_molten_metal_2SmfKHQD.jpg',
       title: 'Every Batch Tested',
       subtitle: 'Strict quality control at every stage.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1200',
+      src: '/images/Factory-and-Manufacturing-Images/004_An_aerial_view_captures_an_industrial_mining_8-uh7Y6A.png',
       title: 'Ready for Global Dispatch',
       subtitle: 'Strong logistics with dependable timelines.',
     },
     {
-      src: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
+      src: '/images/Factory-and-Manufacturing-Images/006_In_a_realistic_style_enormous_yellow_dump_trucks_fapYipkl.png',
       title: 'Experience You Can Build On',
       subtitle: 'Decades of steel expertise for demanding industries.',
     },
@@ -203,7 +203,7 @@ function AboutSection() {
           <div className="about-image relative">
             <div className="rounded-3xl overflow-hidden shadow-xl img-zoom">
               <img
-                src="https://images.unsplash.com/photo-1565439399856-11f8e6c46a6f?q=80&w=1200&auto=format&fit=crop"
+                src="/images/Factory-and-Manufacturing-Images/006_In_a_realistic_style_enormous_yellow_dump_trucks_fapYipkl.png"
                 alt="Bhairav Steel Facility"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -282,25 +282,25 @@ function ProductsSection() {
     {
       title: 'Bulk Ferro Alloys',
       description: 'Primary high-volume ferro additives used in industrial steelmaking.',
-      image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1200',
+      image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
       to: '/products/bulk-ferro-alloys',
     },
     {
       title: 'Steel Products',
       description: 'Finished steel products for infrastructure and fabrication needs.',
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200',
+      image: '/images/Bhairav-Steel---Steel-Products/003_Stacks_of_raw_steel_beams_are_arranged_in_an_MVnXr3BN.jpg',
       to: '/products/steel-products',
     },
     {
       title: 'ORE & Metals',
       description: 'Raw and semi-processed metal inputs supporting steel value chain.',
-      image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?q=80&w=1200',
+      image: '/images/Minerals-and-Ores-Product-Images-Set-1/001_In_a_macro_photography_style_a_cluster_of_rough_559gNtec.png',
       to: '/products/ore-and-metals',
     },
     {
       title: 'Noble Ferro Alloys',
       description: 'Special alloys for advanced steel chemistry and premium grades.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200',
+      image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/004_A_pile_of_metallic_ore_chunks_sits_on_a_7hHWd0s0.png',
       to: '/products/noble-ferro-alloys',
     },
   ];
@@ -540,7 +540,7 @@ function QualitySection() {
               ))}
             </ul>
 
-            <Link to="/quality" className="btn-primary">
+            <Link to="/services" className="btn-primary">
               View Certifications
               <ArrowRight size={18} />
             </Link>
@@ -550,7 +550,7 @@ function QualitySection() {
           <div className="quality-image relative">
             <div className="rounded-3xl overflow-hidden shadow-xl img-zoom">
               <img
-                src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=1200&auto=format&fit=crop"
+                src="/images/Factory-and-Manufacturing-Images/003_In_a_gritty_industrial_style_heavy_machinery_9vXO7pUZ.png"
                 alt="Quality Testing Laboratory"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
@@ -593,10 +593,10 @@ function StatsSection() {
   }, []);
 
   const stats = [
-    { icon: TrendingUp, value: '2M+', label: 'Tons Produced' },
-    { icon: Users, value: '1000+', label: 'Happy Clients' },
-    { icon: Globe, value: '50+', label: 'Countries' },
-    { icon: Clock, value: '24/7', label: 'Support' },
+    { icon: TrendingUp, value: '10K+', label: 'Tons Supplied' },
+    { icon: Users, value: '20+', label: 'Corporate Clients' },
+    { icon: Globe, value: '7+', label: 'Countries Served' },
+    { icon: Clock, value: '24/7', label: 'Dedicated Support' },
   ];
 
   return (
@@ -608,87 +608,6 @@ function StatsSection() {
               <stat.icon className="mx-auto text-blue-200 mb-4" size={32} />
               <div className="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-blue-100">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Testimonials Section
-function TestimonialsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo('.testimonial-card-item',
-        { opacity: 0, y: 40 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          stagger: 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 60%',
-            toggleActions: 'play none none reverse',
-          }
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  const testimonials = [
-    {
-      quote: "Bhairav Steel has been our trusted partner for over a decade. Their commitment to quality and on-time delivery is unmatched in the industry.",
-      author: "Rajesh Sharma",
-      role: "CEO, BuildTech Infrastructure",
-    },
-    {
-      quote: "The technical expertise and support we receive from Bhairav Steel team has been instrumental in the success of our projects.",
-      author: "Priya Patel",
-      role: "Project Director, Metro Constructions",
-    },
-    {
-      quote: "Exceptional product quality and professional service. Bhairav Steel understands the demands of international markets.",
-      author: "Michael Chen",
-      role: "Procurement Head, Global Steel Traders",
-    },
-  ];
-
-  return (
-    <section ref={sectionRef} className="section-padding bg-white">
-      <div className="container-custom">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-          <div className="line-deco mx-auto mt-4 mb-6" />
-          <h2 className="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-6">
-            What Our Clients Say
-          </h2>
-        </div>
-
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card testimonial-card-item">
-              <div className="text-blue-600 text-4xl font-display mb-4">"</div>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                {testimonial.quote}
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span className="text-blue-600 font-bold">{testimonial.author[0]}</span>
-                </div>
-                <div>
-                  <div className="font-bold text-slate-900">{testimonial.author}</div>
-                  <div className="text-slate-500 text-sm">{testimonial.role}</div>
-                </div>
-              </div>
             </div>
           ))}
         </div>
@@ -738,9 +657,11 @@ function ContactSection() {
   }, []);
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'sales@bhairavsteel.com' },
-    { icon: Phone, label: 'Phone', value: '+91 98765 43210' },
-    { icon: MapPin, label: 'Address', value: 'Mumbai, Maharashtra, India' },
+    { icon: Phone, label: 'Phone', value: '+91 82838 45490' },
+    { icon: Phone, label: 'Alternative', value: '+91 96023 02808' },
+    { icon: Mail, label: 'Email', value: 'bhairavsteel247@gmail.com' },
+    { icon: MapPin, label: 'Head Office', value: 'Shop 251, Massimo Complex, Althan Canal Rd, Bhimrad, Surat 395017' },
+    { icon: MapPin, label: 'Branch', value: 'Howrah, Kolkata, West Bengal' },
   ];
 
   return (
@@ -777,23 +698,38 @@ function ContactSection() {
           </div>
 
           {/* Contact Actions */}
-          <div className="contact-form bg-white rounded-3xl shadow-xl p-8 lg:p-10">
-            <h3 className="font-display text-2xl font-bold text-slate-900 mb-4">
-              Request a Quote
-            </h3>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              Share your requirements directly with our team by phone or email for faster assistance.
-            </p>
-            <div className="space-y-4">
-              <a href="tel:+919876543210" className="btn-primary w-full">
-                Call Sales Team
-                <ArrowRight size={18} />
-              </a>
-              <a href="mailto:sales@bhairavsteel.com" className="btn-secondary w-full">
-                Email Requirements
-              </a>
-            </div>
+          <div className="flex flex-col gap-6">
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden h-[400px] w-full border border-slate-100 relative group">
+             <iframe 
+                src="https://maps.google.com/maps?hl=en&q=Shop+251,+Massimo+Complex,+Althan+Canal+Rd,+Bhimrad,+Surat+395017&ie=UTF8&t=&z=14&iwloc=B&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Bhairav Steel Location"
+                className="grayscale peer-hover:grayscale-0 transition-all duration-300"
+              ></iframe>
           </div>
+          
+          <div className="bg-white rounded-3xl shadow-xl p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between border border-slate-100">
+             <div>
+                <div className="text-slate-500 text-sm mb-1 uppercase tracking-wider font-semibold">Tax Information</div>
+                <div className="text-slate-900 font-bold font-display text-lg">GST: 24GCEPB3421C1ZF</div>
+             </div>
+             <div className="h-10 w-px bg-slate-200 hidden sm:block"></div>
+             <div className="flex items-center gap-2 mt-4 sm:mt-0">
+                <div className="w-10 h-10 bg-green-100 text-green-700 rounded-full flex items-center justify-center">
+                  <Award size={20} />
+                </div>
+                <div>
+                   <div className="text-slate-500 text-sm font-semibold">Certified</div>
+                   <div className="text-slate-900 font-bold font-display leading-none">MSME Registered</div>
+                </div>
+             </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -820,7 +756,6 @@ function LandingPage() {
         <ServicesSection />
         <QualitySection />
         <StatsSection />
-        <TestimonialsSection />
         <ContactSection />
       </main>
 
@@ -841,7 +776,7 @@ function App() {
         <Route path="/products/:categorySlug" element={<ProductCategoryPage />} />
         <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/quality" element={<QualityPage />} />
+
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>

@@ -11,7 +11,6 @@ const navLinks = [
   { label: 'About', to: '/about' },
   { label: 'Products', to: '/products' },
   { label: 'Services', to: '/services' },
-  { label: 'Quality', to: '/quality' },
 ];
 
 export default function SiteHeader({ forceSolid = false }: SiteHeaderProps) {
