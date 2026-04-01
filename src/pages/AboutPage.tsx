@@ -27,7 +27,7 @@ const pillars = [
 const companyStats = [
   { icon: Calendar, label: 'Year Established', value: '2025' },
   { icon: Building2, label: 'Companies Served', value: '20+' },
-  { icon: Globe, label: 'Countries Supplied', value: '7+' },
+  { icon: Globe, label: 'States Supplied', value: '10+' },
   { icon: TrendingUp, label: 'Tons Delivered', value: '10K+' },
 ];
 
@@ -51,6 +51,9 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl font-bold text-slate-900">About Us</h2>
             <p className="mt-5 text-slate-600 leading-relaxed">
               Founded in 2025, Bhairav Steel has rapidly established itself as a trusted partner in the manufacture and transport of high-performance steel products and bulk ferro alloys. Our agile approach allows us to confidently tackle specialized orders with precision and care.
+            </p>
+            <p className="mt-5 text-slate-600 leading-relaxed">
+              Beyond manufacturing and logistics, we act as a dedicated trading partner and commercial broker for our clients. Our commission agents bridge buyers and suppliers, align quantities, and value-engineer every shipment while protecting commercial discretion.
             </p>
             <p className="mt-5 text-slate-600 leading-relaxed">
               With a strong focus on manufacturing efficiency and streamlined transport, our team ensures seamless logistics and top-tier product quality for every specialized requirement, no matter the scale.

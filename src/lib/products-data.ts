@@ -54,6 +54,144 @@ export const productCatalog: ProductCategory[] = [
       'Primary high-volume ferro additives used in industrial steelmaking as deoxidizers and alloying elements for chemistry and strength control.',
     image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
     products: [
+      /* ─── 1.4 Ferro Silicon ─── */
+      {
+        name: 'Ferro Silicon',
+        slug: 'ferro-silicon',
+        shortDescription:
+          'Silicon-bearing alloy produced by carbothermic reduction, used for deoxidation and alloying.',
+        overview:
+          'The 50% and 75% ferrosilicon (FeSi50 and FeSi75) alloys are produced by carbothermic reduction in a submerged arc furnace. The source of iron is iron ores or scrap, and silicon source is quartz or quartzite.',
+        detailedDescription:
+          'The smelting reaction is characterized by the formation of silicon carbide and SiO gas as intermediary products.',
+        productType: 'Bulk Ferro Alloy',
+        commonSpecs: 'Si 65–75% Min, C 0.05–0.2% Max',
+        specTable: [
+          { parameter: 'Silicon (Si)', value: '65–75% Min (depending on grade)' },
+          { parameter: 'Carbon (C)', value: '0.05–0.2% Max' },
+          { parameter: 'Aluminum (Al)', value: '0.5–2.5% Max' },
+          { parameter: 'Phosphorus (P)', value: '0.05% Max' },
+          { parameter: 'Sulfur (S)', value: '0.05% Max' },
+        ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Si","C","Al","P","S","size"],
+        rows: [
+          ["FeSi50 Option 1","65% min","0.2% max","2.5% max","0.05% max","0.05% max","10-150mm"],
+          ["FeSi50 Option 2","70% min","0.15% max","1.5% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi50 Option 3","70% min","1% max","1% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi75 Option 1","75% min","0.1% max","1% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi75 Low Carbon","75% min","0.05% max","0.5% max","0.05% max","0.05% max","10-60mm"],
+          ["FeSi75 Ultra Low Carbon","75% min","0.03% max","1% max","0.05% max","0.05% max","10-60mm"],
+        ]
+      }
+    ],
+        variants: ['Option 1 (65-70% Si, 10-150mm)', 'Option 2 (75% Min Si, 10-60mm)', 'LC Option (75% Min Si, LC 0.05% Max)'],
+        productionMethod:
+          'Carbothermic reduction in submerged arc furnace. Iron ore/scrap provides Fe; quartz/quartzite provides Si.',
+        applications: [
+          'Stainless Steel Mills',
+          'Automobile Industry',
+          'Casting Industry',
+          'Manufacture of silicon',
+          'Corrosion-resistant ferrous silicon alloys',
+          'High-temperature-resistant ferrous silicon alloys',
+          'Silicon steel for electromotors and transformer cores',
+        ],
+        keyPoints: [
+          'Two standard grades: FeSi50 and FeSi75',
+          'Low Carbon variant available (0.05% Max C)',
+          'Used in silicon steel for electrical applications',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-silicon/',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
+      },
+
+      /* ═══ 1.2 Ferro Manganese (consolidated: HC / MC / LC) ═══ */
+      {
+        name: 'Ferro Manganese',
+        slug: 'ferro-manganese',
+        shortDescription:
+          'The most widely used ferro alloy in steelmaking — essential deoxidizer, desulfurizer, and alloying element.',
+        overview:
+          'Ferro Manganese (FeMn) is the single largest tonnage ferro alloy consumed worldwide. It is an iron-manganese alloy that serves as a deoxidizing agent, desulfurizer, and alloying element in steelmaking. Manganese combines with sulfur to form manganese sulfide (MnS), which floats out of the liquid steel, thereby neutralizing the harmful effects of sulfur.',
+        detailedDescription:
+          'Ferro Manganese is available in High Carbon (C 6–8%), Medium Carbon (C 0.01–3%), and Low Carbon (C 1.0–1.5% Max) grades. High-carbon FeMn is the most widely traded grade and stabilizes the austenite phase — steels with 12–14% Mn are fully austenitic for superior wear resistance. Medium-carbon FeMn is produced by the aluminothermic or MOR process and is used for E6013 electrode production and welding. Low-carbon FeMn is used in tool steel, 18-8 austenitic non-magnetic stainless steel, and structural steel applications.',
+        productType: 'Bulk Ferro Alloy',
+        commonSpecs: 'Mn 65–85%, C 0.01–8%',
+        specTable: [
+          { parameter: 'Manganese (Mn)', value: '65–85%' },
+          { parameter: 'Carbon (C)', value: '0.01–8% (grade dependent)' },
+          { parameter: 'Silicon (Si)', value: '1.2–3.0% Max' },
+          { parameter: 'Phosphorus (P)', value: '0.20–0.30% Max' },
+          { parameter: 'Sulfur (S)', value: '0.02–0.05% Max' },
+        ],
+    gradeTables: [
+      {
+        name: 'Standard Chemical Composition',
+        headers: ["grade","Mn","Si","C","P","S"],
+        rows: [
+          ["Grade 1","65%-70%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
+          ["Grade 2","70%-75%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
+          ["Grade 3","75%-80%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
+        ]
+      }
+    ],
+        subProducts: [
+          {
+            name: 'High Carbon Ferro Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '65–80%' },
+              { parameter: 'Carbon (C)', value: '6–8%' },
+              { parameter: 'Silicon (Si)', value: '1.5% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.3% Max' },
+              { parameter: 'Sulfur (S)', value: '0.02–0.05%' },
+            ],
+          },
+          {
+            name: 'Medium Carbon Ferro Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '74–85%' },
+              { parameter: 'Carbon (C)', value: '0.01–3.0%' },
+              { parameter: 'Silicon (Si)', value: '3.0% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.30% Max' },
+              { parameter: 'Sulfur (S)', value: '0.05% Max' },
+            ],
+          },
+          {
+            name: 'Low Carbon Ferro Manganese',
+            specTable: [
+              { parameter: 'Manganese (Mn)', value: '70–80% Min' },
+              { parameter: 'Carbon (C)', value: '1.0–1.5% Max' },
+              { parameter: 'Silicon (Si)', value: '1.2% Max' },
+              { parameter: 'Phosphorus (P)', value: '0.20% Max' },
+              { parameter: 'Sulfur (S)', value: '0.03% Max' },
+            ],
+          },
+        ],
+        productionMethod:
+          'High Carbon: Carbothermic reduction in submerged arc electric furnaces. Medium Carbon: Aluminothermic process or MOR process. Low Carbon: Aluminothermic process.',
+        applications: [
+          'Steelmaking as deoxidizing agent',
+          'Sulfur control in liquid steel',
+          'Wear and abrasion-resistant steel (12-14% Mn steels)',
+          'Tool Steel',
+          '18-8 Austenitic Non-Magnetic Stainless Steel',
+          'E6013 welding electrodes',
+          'Casting industries',
+        ],
+        keyPoints: [
+          'Largest tonnage ferro alloy used globally',
+          'Available in High Carbon, Medium Carbon, and Low Carbon grades',
+          'Combines with sulfur to form MnS that floats out of melt',
+          'Stabilizes austenite phase in high-Mn steels',
+          'HC/MC/LC grades produced via different processes',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-manganese/',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/003_A_pile_of_irregular_angular_metallic_ore_pieces_DRb43aqq.png',
+      },
+
       /* ═══ 1.1 Silico Manganese (consolidated: HC / MC / LC) ═══ */
       {
         name: 'Silico Manganese',
@@ -142,89 +280,7 @@ export const productCatalog: ProductCategory[] = [
         image: '/images/Bulk-Ferro-Alloys-Product-Images/002_A_pile_of_rough_metallic_ore_chunks_is_presented_umJTbO-6.jpg',
       },
 
-      /* ═══ 1.2 Ferro Manganese (consolidated: HC / MC / LC) ═══ */
-      {
-        name: 'Ferro Manganese',
-        slug: 'ferro-manganese',
-        shortDescription:
-          'The most widely used ferro alloy in steelmaking — essential deoxidizer, desulfurizer, and alloying element.',
-        overview:
-          'Ferro Manganese (FeMn) is the single largest tonnage ferro alloy consumed worldwide. It is an iron-manganese alloy that serves as a deoxidizing agent, desulfurizer, and alloying element in steelmaking. Manganese combines with sulfur to form manganese sulfide (MnS), which floats out of the liquid steel, thereby neutralizing the harmful effects of sulfur.',
-        detailedDescription:
-          'Ferro Manganese is available in High Carbon (C 6–8%), Medium Carbon (C 0.01–3%), and Low Carbon (C 1.0–1.5% Max) grades. High-carbon FeMn is the most widely traded grade and stabilizes the austenite phase — steels with 12–14% Mn are fully austenitic for superior wear resistance. Medium-carbon FeMn is produced by the aluminothermic or MOR process and is used for E6013 electrode production and welding. Low-carbon FeMn is used in tool steel, 18-8 austenitic non-magnetic stainless steel, and structural steel applications.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Mn 65–85%, C 0.01–8%',
-        specTable: [
-          { parameter: 'Manganese (Mn)', value: '65–85%' },
-          { parameter: 'Carbon (C)', value: '0.01–8% (grade dependent)' },
-          { parameter: 'Silicon (Si)', value: '1.2–3.0% Max' },
-          { parameter: 'Phosphorus (P)', value: '0.20–0.30% Max' },
-          { parameter: 'Sulfur (S)', value: '0.02–0.05% Max' },
-        ],
-    gradeTables: [
-      {
-        name: 'Standard Chemical Composition',
-        headers: ["grade","Mn","Si","C","P","S"],
-        rows: [
-          ["Grade 1","65%-70%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
-          ["Grade 2","70%-75%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
-          ["Grade 3","75%-80%","1.5% max","6%-8%","0.3% max","0.02%-0.05%"],
-        ]
-      }
-    ],
-        subProducts: [
-          {
-            name: 'High Carbon Ferro Manganese',
-            specTable: [
-              { parameter: 'Manganese (Mn)', value: '65–80%' },
-              { parameter: 'Carbon (C)', value: '6–8%' },
-              { parameter: 'Silicon (Si)', value: '1.5% Max' },
-              { parameter: 'Phosphorus (P)', value: '0.3% Max' },
-              { parameter: 'Sulfur (S)', value: '0.02–0.05%' },
-            ],
-          },
-          {
-            name: 'Medium Carbon Ferro Manganese',
-            specTable: [
-              { parameter: 'Manganese (Mn)', value: '74–85%' },
-              { parameter: 'Carbon (C)', value: '0.01–3.0%' },
-              { parameter: 'Silicon (Si)', value: '3.0% Max' },
-              { parameter: 'Phosphorus (P)', value: '0.30% Max' },
-              { parameter: 'Sulfur (S)', value: '0.05% Max' },
-            ],
-          },
-          {
-            name: 'Low Carbon Ferro Manganese',
-            specTable: [
-              { parameter: 'Manganese (Mn)', value: '70–80% Min' },
-              { parameter: 'Carbon (C)', value: '1.0–1.5% Max' },
-              { parameter: 'Silicon (Si)', value: '1.2% Max' },
-              { parameter: 'Phosphorus (P)', value: '0.20% Max' },
-              { parameter: 'Sulfur (S)', value: '0.03% Max' },
-            ],
-          },
-        ],
-        productionMethod:
-          'High Carbon: Carbothermic reduction in submerged arc electric furnaces. Medium Carbon: Aluminothermic process or MOR process. Low Carbon: Aluminothermic process.',
-        applications: [
-          'Steelmaking as deoxidizing agent',
-          'Sulfur control in liquid steel',
-          'Wear and abrasion-resistant steel (12-14% Mn steels)',
-          'Tool Steel',
-          '18-8 Austenitic Non-Magnetic Stainless Steel',
-          'E6013 welding electrodes',
-          'Casting industries',
-        ],
-        keyPoints: [
-          'Largest tonnage ferro alloy used globally',
-          'Available in High Carbon, Medium Carbon, and Low Carbon grades',
-          'Combines with sulfur to form MnS that floats out of melt',
-          'Stabilizes austenite phase in high-Mn steels',
-          'HC/MC/LC grades produced via different processes',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/high-carbon-ferro-manganese/',
-        image: '/images/Bulk-Ferro-Alloys-Product-Images/003_A_pile_of_irregular_angular_metallic_ore_pieces_DRb43aqq.png',
-      },
+
 
       /* ═══ 1.3 Ferro Chrome (consolidated: HC / LC) ═══ */
       {
@@ -306,59 +362,7 @@ export const productCatalog: ProductCategory[] = [
         image: '/images/Bulk-Ferro-Alloys-Product-Images/004_A_pile_of_dark_metallic_ore_chunks_is_arranged_zIMF9P71.png',
       },
 
-      /* ─── 1.4 Ferro Silicon ─── */
-      {
-        name: 'Ferro Silicon',
-        slug: 'ferro-silicon',
-        shortDescription:
-          'Silicon-bearing alloy produced by carbothermic reduction, used for deoxidation and alloying.',
-        overview:
-          'The 50% and 75% ferrosilicon (FeSi50 and FeSi75) alloys are produced by carbothermic reduction in a submerged arc furnace. The source of iron is iron ores or scrap, and silicon source is quartz or quartzite.',
-        detailedDescription:
-          'The smelting reaction is characterized by the formation of silicon carbide and SiO gas as intermediary products.',
-        productType: 'Bulk Ferro Alloy',
-        commonSpecs: 'Si 65–75% Min, C 0.05–0.2% Max',
-        specTable: [
-          { parameter: 'Silicon (Si)', value: '65–75% Min (depending on grade)' },
-          { parameter: 'Carbon (C)', value: '0.05–0.2% Max' },
-          { parameter: 'Aluminum (Al)', value: '0.5–2.5% Max' },
-          { parameter: 'Phosphorus (P)', value: '0.05% Max' },
-          { parameter: 'Sulfur (S)', value: '0.05% Max' },
-        ],
-    gradeTables: [
-      {
-        name: 'Standard Chemical Composition',
-        headers: ["grade","Si","C","Al","P","S","size"],
-        rows: [
-          ["FeSi50 Option 1","65% min","0.2% max","2.5% max","0.05% max","0.05% max","10-150mm"],
-          ["FeSi50 Option 2","70% min","0.15% max","1.5% max","0.05% max","0.05% max","10-60mm"],
-          ["FeSi50 Option 3","70% min","1% max","1% max","0.05% max","0.05% max","10-60mm"],
-          ["FeSi75 Option 1","75% min","0.1% max","1% max","0.05% max","0.05% max","10-60mm"],
-          ["FeSi75 Low Carbon","75% min","0.05% max","0.5% max","0.05% max","0.05% max","10-60mm"],
-          ["FeSi75 Ultra Low Carbon","75% min","0.03% max","1% max","0.05% max","0.05% max","10-60mm"],
-        ]
-      }
-    ],
-        variants: ['Option 1 (65-70% Si, 10-150mm)', 'Option 2 (75% Min Si, 10-60mm)', 'LC Option (75% Min Si, LC 0.05% Max)'],
-        productionMethod:
-          'Carbothermic reduction in submerged arc furnace. Iron ore/scrap provides Fe; quartz/quartzite provides Si.',
-        applications: [
-          'Stainless Steel Mills',
-          'Automobile Industry',
-          'Casting Industry',
-          'Manufacture of silicon',
-          'Corrosion-resistant ferrous silicon alloys',
-          'High-temperature-resistant ferrous silicon alloys',
-          'Silicon steel for electromotors and transformer cores',
-        ],
-        keyPoints: [
-          'Two standard grades: FeSi50 and FeSi75',
-          'Low Carbon variant available (0.05% Max C)',
-          'Used in silicon steel for electrical applications',
-        ],
-        sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-silicon/',
-        image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
-      },
+
 
       /* ─── 1.5 Silico Chrome ─── */
       {
@@ -449,7 +453,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Transmission towers', 'Warehouse frameworks', 'Brackets and joining', 'Shelving and racking'],
         keyPoints: ['Equal and unequal variants', 'High structural integrity', 'Easily welded and machined', 'Durable load distribution'],
         sourceUrl: '#',
-        image: '/images/001_In_a_realistic_style_this_image_displays_a_mfisa7Vi.png'
+        image: '/images/In_a_photorealistic_style_stacked_steel_beams_JTfDneJ2.jpg'
       },
       {
         name: 'Channel',
@@ -467,7 +471,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Factory frameworks', 'Automotive chassis', 'Heavy duty racks', 'Commercial structural supports'],
         keyPoints: ['Optimal strength-to-weight', 'High load bearing capacity', 'Predictable uniform dimensions', 'Versatile fabrication'],
         sourceUrl: '#',
-        image: '/images/Factory-and-Manufacturing-Images/003_In_a_gritty_industrial_style_heavy_machinery_9vXO7pUZ.png'
+        image: '/images/Gemini_Generated_Image_9cd77d9cd77d9cd7.png'
       },
       {
         name: 'Pipes',
@@ -744,6 +748,60 @@ export const productCatalog: ProductCategory[] = [
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/manganese-ore/',
         image: '/images/Minerals-and-Ores-Product-Images-Set-1/004_In_a_macro_photography_style_several_rough_1Up1UDoa.png',
+      },
+
+      /* ─── 3.5 Billet ─── */
+      {
+        name: 'Billet',
+        slug: 'billet',
+        shortDescription:
+          'Semi-finished steel product with square cross-section — essential raw material for long products like bars, rods, and wire.',
+        overview:
+          'Steel billets are semi-finished products cast from molten steel, characterized by their square or rectangular cross-section. They serve as the fundamental raw material for manufacturing long steel products including rebars, wire rods, angles, channels, and other structural sections.',
+        detailedDescription:
+          'Billets are produced through continuous casting or ingot casting processes. In continuous casting, molten steel is solidified into a continuous strand and cut to desired lengths. Billets typically have cross-sections ranging from 100mm x 100mm to 150mm x 150mm. They are hot-rolled or further processed to produce finished steel products. The quality of billets is critical as it directly impacts the mechanical properties and surface finish of downstream products.',
+        productType: 'Semi-Finished Steel',
+        commonSpecs: 'C 0.10–0.25%, Cross-section 100x100mm to 150x150mm',
+        specTable: [
+          { parameter: 'Carbon (C)', value: '0.10–0.25%' },
+          { parameter: 'Manganese (Mn)', value: '0.30–0.90%' },
+          { parameter: 'Silicon (Si)', value: '0.10–0.35%' },
+          { parameter: 'Phosphorus (P)', value: '0.04% Max' },
+          { parameter: 'Sulfur (S)', value: '0.04% Max' },
+          { parameter: 'Cross-Section', value: '100x100mm to 150x150mm' },
+          { parameter: 'Length', value: '6–12 Meters' },
+        ],
+        gradeTables: [
+          {
+            name: 'Standard Chemical Composition',
+            headers: ["grade","C","Mn","Si","P","S","cross-section"],
+            rows: [
+              ["Low Carbon Billet","0.10-0.15%","0.30-0.60%","0.10-0.20%","0.04% max","0.04% max","100x100mm"],
+              ["Medium Carbon Billet","0.16-0.22%","0.50-0.80%","0.15-0.30%","0.04% max","0.04% max","125x125mm"],
+              ["High Carbon Billet","0.23-0.28%","0.60-0.90%","0.20-0.35%","0.04% max","0.04% max","150x150mm"],
+            ]
+          }
+        ],
+        physicalSpecs: ['Square cross-section', 'Rectangular cross-section'],
+        productionMethod:
+          'Produced via continuous casting of molten steel or ingot casting. In continuous casting, steel is solidified into a continuous strand and cut to length. Ingot casting involves pouring steel into molds and allowing it to solidify.',
+        applications: [
+          'Rebar manufacturing',
+          'Wire rod production',
+          'Angle and channel sections',
+          'Flat bars and rounds',
+          'Structural steel products',
+          'Fastener manufacturing',
+        ],
+        keyPoints: [
+          'Semi-finished steel with square/rectangular cross-section',
+          'Cross-section: 100x100mm to 150x150mm',
+          'C 0.10–0.25%, Mn 0.30–0.90%',
+          'Raw material for long steel products',
+          'Produced via continuous or ingot casting',
+        ],
+        sourceUrl: 'https://shreebhagwatigroup.co.in/steel-billet/',
+        image: '/images/Minerals-and-Ores-Product-Images-Set-1/005_A_collection_of_raw_iridescent_ore_chunks_with_3ko6Ez5i.png',
       },
     ],
   },
@@ -1043,7 +1101,7 @@ export const productCatalog: ProductCategory[] = [
           'Made by aluminothermy in electric furnace',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-niobium/',
-        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/001_A_pile_of_raw_unrefined_metallic_ore_nuggets_JFig-V3t.png',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/001_A_pile_of_raw_metallic_ore_chunks_rests_on_a_Il5ZNfL7.jpg',
       },
 
       /* ─── 2.6 Ferro Boron ─── */
@@ -1079,7 +1137,7 @@ export const productCatalog: ProductCategory[] = [
           'Key component in NdFeB magnetic materials',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-boron/',
-        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/002_In_a_realistic_style_a_pile_of_irregularly_CQQ3CTkJ.png',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/002_A_pile_of_rough_metallic_ore_chunks_is_presented_umJTbO-6.jpg',
       },
 
       /* ─── 2.7 Ferro Aluminum ─── */
@@ -1159,7 +1217,7 @@ export const productCatalog: ProductCategory[] = [
           'Controls grain size in killed steels',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-aluminum/',
-        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/003_A_pile_of_raw_metallic_ore_chunks_are_arranged_kW_G6d8x.png',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/003_A_pile_of_irregular_angular_metallic_ore_pieces_DRb43aqq.png',
       },
 
       /* ─── 2.8 Ferro Tungsten ─── */
@@ -1200,7 +1258,7 @@ export const productCatalog: ProductCategory[] = [
           'Essential for high-temperature cutting applications',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/ferro-tungsten/',
-        image: '/images/Bhairav-Steel---Noble-Ferro-Alloys/004_A_pile_of_metallic_ore_chunks_sits_on_a_7hHWd0s0.png',
+        image: '/images/Bulk-Ferro-Alloys-Product-Images/004_A_pile_of_dark_metallic_ore_chunks_is_arranged_zIMF9P71.png',
       },
     ],
   },
