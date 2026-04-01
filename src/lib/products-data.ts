@@ -540,7 +540,7 @@ export const productCatalog: ProductCategory[] = [
         applications: ['Nail and screw manufacturing', 'Fencing wire', 'Welding electrodes', 'Tying wire'],
         keyPoints: ['High drawability', 'Consistent tensile properties', 'Minimal surface defects', 'Available in varying carbon content'],
         sourceUrl: '#',
-        image: '/images/Bhairav-Steel---Steel-Products/001_In_a_realistic_style_stacks_of_rebar_are_bundled_b0dlSVF5.png'
+        image: '/images/Gemini_Generated_Image_knhw89knhw89knhw.png'
       },
       {
         name: 'Sheets',

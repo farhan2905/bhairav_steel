@@ -1,33 +1,33 @@
-import { Building2, Calendar, CheckCircle2, Factory, Globe, Shield, Users, TrendingUp } from 'lucide-react';
+import { Building2, Calendar, CheckCircle2, Globe, Shield, Users, TrendingUp } from 'lucide-react';
 import { DetailLayout } from '../components/detail-layout';
 
 const pillars = [
   {
-    icon: Factory,
-    title: 'Manufacturing Depth',
-    description: 'Integrated facilities for plate processing, bar rolling, and custom profile production.',
+    icon: TrendingUp,
+    title: 'Trading Expertise',
+    description: 'Market-aware sourcing and deal structuring for steel and bulk ferro alloy requirements.',
   },
   {
     icon: Shield,
-    title: 'Quality Discipline',
-    description: 'Traceability and batch-level testing designed for high-compliance projects.',
-  },
-  {
-    icon: Globe,
-    title: 'Global Reach',
-    description: 'Export-ready documentation and logistics support for large multi-country programs.',
+    title: 'Commercial Assurance',
+    description: 'Transparent documentation, clear terms, and disciplined execution across every transaction.',
   },
   {
     icon: Users,
-    title: 'People First',
-    description: 'Experienced metallurgists and project teams focused on reliable execution.',
+    title: 'Commission Network',
+    description: 'Reliable commission agents connecting vetted buyers and suppliers with confidentiality.',
+  },
+  {
+    icon: Globe,
+    title: 'Pan India Supply',
+    description: 'Consistent fulfillment support across regions through an agile partner ecosystem.',
   },
 ];
 
 const companyStats = [
-  { icon: Calendar, label: 'Year Established', value: '2025' },
-  { icon: Building2, label: 'Companies Served', value: '20+' },
-  { icon: Globe, label: 'States Supplied', value: '10+' },
+  { icon: Calendar, label: 'Year Established', value: '2019' },
+  { icon: Building2, label: 'Companies Served', value: '120+ ' },
+  { icon: Globe, label: 'States Supplied', value: 'pan india' },
   { icon: TrendingUp, label: 'Tons Delivered', value: '10K+' },
 ];
 
@@ -42,28 +42,28 @@ export default function AboutPage() {
   return (
     <DetailLayout
       sectionLabel="About Bhairav Steel"
-      title="Precision Steel Manufacturing & Transport"
-      subtitle="Founded in 2025, Bhairav Steel specializes in the manufacturing, transport, and reliable execution of bulk specialized steel orders."
+      title="Steel Trading & Commission Brokerage"
+      subtitle="Founded in 2019, Bhairav Steel is a trusted trading and commission partner for steel products and bulk ferro alloys across pan India."
     >
       <section className="section-padding bg-white">
         <div className="container-custom grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-display text-3xl font-bold text-slate-900">About Us</h2>
             <p className="mt-5 text-slate-600 leading-relaxed">
-              Founded in 2025, Bhairav Steel has rapidly established itself as a trusted partner in the manufacture and transport of high-performance steel products and bulk ferro alloys. Our agile approach allows us to confidently tackle specialized orders with precision and care.
+              Founded in 2019, Bhairav Steel has grown as a trusted trading partner for high-performance steel products and bulk ferro alloys. Our agile commercial approach helps clients secure specialized requirements with speed, clarity, and consistency.
             </p>
             <p className="mt-5 text-slate-600 leading-relaxed">
-              Beyond manufacturing and logistics, we act as a dedicated trading partner and commercial broker for our clients. Our commission agents bridge buyers and suppliers, align quantities, and value-engineer every shipment while protecting commercial discretion.
+              We operate with a strong commission-based brokerage model where our team bridges buyers and suppliers, aligns volumes, negotiates practical terms, and protects commercial discretion at every stage.
             </p>
             <p className="mt-5 text-slate-600 leading-relaxed">
-              With a strong focus on manufacturing efficiency and streamlined transport, our team ensures seamless logistics and top-tier product quality for every specialized requirement, no matter the scale.
+              From sourcing strategy to dispatch coordination, we focus on dependable deal execution and supply continuity, ensuring each transaction is value-driven and aligned to customer timelines.
             </p>
             <ul className="mt-8 space-y-4">
               {[
-                'Agile manufacturing and transport framework',
-                'MSME Certified quality processes',
-                'Specialized handling of bulk orders',
-                'Global supply chain and logistics network',
+                'Commission-driven buyer-supplier matchmaking',
+                'Strong steel and ferro alloys trading network',
+                'Specialized handling of bulk and custom orders',
+                'Commercially confidential and transparent execution',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-slate-700">
                   <CheckCircle2 className="text-blue-600" size={18} />

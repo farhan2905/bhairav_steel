@@ -595,7 +595,7 @@ function StatsSection() {
   const stats = [
     { icon: TrendingUp, value: '10K+', label: 'Tons Supplied' },
     { icon: Users, value: '20+', label: 'Corporate Clients' },
-    { icon: Globe, value: '10+', label: 'States Served' },
+    { icon: Globe, value: 'Pan India', label: 'India Served' },
     { icon: Clock, value: '24/7', label: 'Dedicated Support' },
   ];
 
