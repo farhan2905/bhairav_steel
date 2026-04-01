@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [react()],
   server: {
     allowedHosts: ["prebroadcasting-teresa-undiminishably.ngrok-free.dev"],
