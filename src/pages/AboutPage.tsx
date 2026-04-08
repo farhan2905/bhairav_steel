@@ -27,7 +27,7 @@ const pillars = [
 const companyStats = [
   { icon: Calendar, label: 'Year Established', value: '2019' },
   { icon: Building2, label: 'Companies Served', value: '120+ ' },
-  { icon: Globe, label: 'States Supplied', value: 'pan india' },
+  { icon: Globe, label: 'States Supplied', value: 'PAN INDIA' },
   { icon: TrendingUp, label: 'Tons Delivered', value: '10K+' },
 ];
 
@@ -42,8 +42,8 @@ export default function AboutPage() {
   return (
     <DetailLayout
       sectionLabel="About Bhairav Steel"
-      title="Steel Trading & Commission Brokerage"
-      subtitle="Founded in 2019, Bhairav Steel is a trusted trading and commission partner for steel products and bulk ferro alloys across pan India."
+      title="Decades of Excellence in Steel Manufacturing"
+      subtitle="Founded on principles of precision and quality, Bhairav Steel has evolved into a leading manufacturer of high-performance steel products."
     >
       <section className="section-padding bg-white">
         <div className="container-custom grid gap-12 lg:grid-cols-2 lg:gap-16">
