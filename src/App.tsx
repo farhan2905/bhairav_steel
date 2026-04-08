@@ -43,9 +43,9 @@ function HeroSection() {
 
   const heroSlides = [
     {
-      src: '/images/Factory-and-Manufacturing-Images/001_In_a_gritty_industrial_style_molten_metal_is_mVcdeQAv.jpg',
-      title: 'Precision Steel, Delivered Fast',
-      subtitle: 'Reliable supply for high-demand projects.',
+      src: '/images/Factory-and-Manufacturing-Images/006_In_a_realistic_style_enormous_yellow_dump_trucks_fapYipkl.png',
+      title: 'Decades of Excellence in Steel Manufacturing',
+      subtitle: 'Founded on principles of precision and quality, serving diverse industries with proven expertise.',
     },
     {
       src: '/images/Factory-and-Manufacturing-Images/007_A_massive_industrial_rotary_kiln_with_heavy_pipes_bbfg-WyH.png',
@@ -63,9 +63,9 @@ function HeroSection() {
       subtitle: 'Strong logistics with dependable timelines.',
     },
     {
-      src: '/images/Factory-and-Manufacturing-Images/006_In_a_realistic_style_enormous_yellow_dump_trucks_fapYipkl.png',
+      src: '/images/Factory-and-Manufacturing-Images/001_In_a_gritty_industrial_style_molten_metal_is_mVcdeQAv.jpg',
       title: 'Experience You Can Build On',
-      subtitle: 'Decades of steel expertise for demanding industries.',
+      subtitle: 'Industry-leading standards and commitment to excellence.',
     },
   ];
 
