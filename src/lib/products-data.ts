@@ -651,7 +651,7 @@ export const productCatalog: ProductCategory[] = [
           'Physical sizes: Lump +3mm, Fines 0–3mm',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/sponge-iron/',
-        image: '/images/Minerals-and-Ores-Product-Images-Set-1/002_A_pile_of_rough_dark-colored_minerals_is_8Uha30re.png',
+        image: '/sponge iron.png',
       },
 
       /* ─── 3.3 Pig Iron ─── */
@@ -699,7 +699,7 @@ export const productCatalog: ProductCategory[] = [
           'Cornerstone in the metallurgical industry',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/pig-iron/',
-        image: '/images/Minerals-and-Ores-Product-Images-Set-1/003_A_pile_of_dark_rough-textured_mineral_chunks_is_--2Efe-i.png',
+        image: '/Pig ore.png',
       },
 
       /* ─── 3.4 Manganese Ore ─── */
@@ -801,7 +801,7 @@ export const productCatalog: ProductCategory[] = [
           'Produced via continuous or ingot casting',
         ],
         sourceUrl: 'https://shreebhagwatigroup.co.in/steel-billet/',
-        image: '/images/Minerals-and-Ores-Product-Images-Set-1/005_A_collection_of_raw_iridescent_ore_chunks_with_3ko6Ez5i.png',
+        image: '/billet.png',
       },
     ],
   },
