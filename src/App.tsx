@@ -44,8 +44,8 @@ function HeroSection() {
   const heroSlides = [
     {
       src: '/images/Factory-and-Manufacturing-Images/006_In_a_realistic_style_enormous_yellow_dump_trucks_fapYipkl.png',
-      title: 'Decades of Excellence in Steel Manufacturing',
-      subtitle: 'Founded on principles of precision and quality, serving diverse industries with proven expertise.',
+      title: 'Trusted Steel Trading Partners',
+      subtitle: 'Connecting buyers and suppliers with speed, clarity, and consistency for specialized requirements.',
     },
     {
       src: '/images/Factory-and-Manufacturing-Images/007_A_massive_industrial_rotary_kiln_with_heavy_pipes_bbfg-WyH.png',
@@ -187,10 +187,10 @@ function AboutSection() {
   }, []);
 
   const features = [
-    'State-of-the-art manufacturing facility',
-    'ISO 9001:2015 certified processes',
-    'Dedicated R&D team',
-    'Global supply chain network',
+    'Commission-driven buyer-supplier matchmaking',
+    'Strong steel and ferro alloys trading network',
+    'Specialized handling of bulk and custom orders',
+    'Commercially confidential and transparent execution',
   ];
 
   return (
@@ -217,19 +217,20 @@ function AboutSection() {
             <div className="line-deco mt-4 mb-6" />
 
             <h2 className="font-display text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-6">
-              Decades of Excellence in Steel Manufacturing
+              Excellence in Steel Trading
             </h2>
 
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Founded on principles of precision and quality, Bhairav Steel has evolved
-              into a leading manufacturer of high-performance steel products. Our journey
-              from a modest beginning to an industry leader reflects our unwavering
-              commitment to excellence.
+              Founded in 2019, Bhairav Steel has grown as a trusted trading partner for
+              high-performance steel products and bulk ferro alloys. Our agile commercial
+              approach helps clients secure specialized requirements with speed, clarity,
+              and consistency.
             </p>
 
             <p className="text-slate-600 leading-relaxed mb-8">
-              We serve diverse sectors including infrastructure, energy, automotive,
-              and heavy industry with products that meet the highest international standards.
+              We serve diverse sectors including infrastructure and urban mobility projects,
+              energy and process industries, automotive and engineering supply chains,
+              and heavy fabrication and industrial construction.
             </p>
 
             <ul className="space-y-4 mb-8">
