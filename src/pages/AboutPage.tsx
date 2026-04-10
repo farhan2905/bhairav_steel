@@ -27,8 +27,8 @@ const pillars = [
 const companyStats = [
   { icon: Calendar, label: 'Year Established', value: '2019' },
   { icon: Building2, label: 'Companies Served', value: '120+ ' },
-  { icon: Globe, label: 'States Supplied', value: 'PAN INDIA' },
-  { icon: TrendingUp, label: 'Tons Delivered', value: '10K+' },
+  { icon: Globe, label: 'Globally Supplied', value: 'PAN INDIA ' },
+  { icon: TrendingUp, label: 'Tons Delivered', value: '10M+' },
 ];
 
 const industries = [
