@@ -594,9 +594,9 @@ function StatsSection() {
   }, []);
 
   const stats = [
-    { icon: TrendingUp, value: '10K+', label: 'Tons Supplied' },
+    { icon: TrendingUp, value: '10M+', label: 'Tons Supplied' },
     { icon: Users, value: '120+', label: 'Companies Served' },
-    { icon: Globe, value: 'Pan India', label: 'India Served' },
+    { icon: Globe, value: 'PAN INDIA + (EXPORT)', label: 'Globally Served' },
     { icon: Clock, value: '24/7', label: 'Dedicated Support' },
   ];
 
